@@ -11,34 +11,48 @@ import Actividad from "../../Componentes/Actividad";
 import Publicacion from "../../Componentes/Publicacion";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { loginStackParamList } from "../../../types";
-
+import {
+  ContainerPrincipal,
+  ContainerSuperior,
+  ContainerInferior,
+  Navegacion,
+  Titulo,
+  TituloText,
+  Botones,
+  DestacadoView,
+  PublicacionView,
+  ActividadView,
+} from "../StyledComponents/StyledComponents";
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
 };
 
-export default function PerfilPublico({navigation}:Props) {
+export default function PerfilPublico({ navigation }: Props) {
   return (
     <ScrollView>
-      <View style={styles.container}>
-        <View style={styles.container1}>
+      <ContainerPrincipal>
+        <ContainerSuperior>
           <BarraIconos titulo={""} />
-          <TouchableOpacity
-            style={styles.titulo}
-            onPress={() => {
-              navigation.navigate("PerfilProPublico");
-            }}
-          >
-            <Text style={styles.tituloText}>Perfil profesional</Text>
-            <Icon
-              name="arrow-right-bold"
-              type="material-community"
-              color="#4E31EB"
-              size={20}
-            />
-          </TouchableOpacity>
+          <Navegacion>
+            <View></View>
+            {/* para ordenar la navegacion */}
+            <Titulo
+              onPress={() => {
+                navigation.navigate("PerfilProPublico");
+              }}
+            >
+              <TituloText>Perfil profesional</TituloText>
+              <Icon
+                name="arrow-right-bold"
+                type="material-community"
+                color="#4E31EB"
+                size={20}
+              />
+            </Titulo>
+          </Navegacion>
           <Info />
-          <View style={styles.botones}>
+          <Botones>
             <BotonAzul
               ancho={177}
               alto={55.08}
@@ -51,24 +65,24 @@ export default function PerfilPublico({navigation}:Props) {
               texto={"MENSAGE"}
               icon={"forum"}
             />
-          </View>
-        </View>
-        <View style={styles.container2}>
+          </Botones>
+        </ContainerSuperior>
+        <ContainerInferior>
           <Explorar titulo={"Contenido destacado"} />
-          <View style={styles.destacado}>
+          <DestacadoView>
             <Destacado />
             <Destacado />
-          </View>
+          </DestacadoView>
           <Explorar titulo={"Actividad"} />
-          <View style={styles.actividad}>
+          <ActividadView>
             <Actividad />
             <Actividad />
-          </View>{" "}
-          <View style={styles.publicacion}>
+          </ActividadView>{" "}
+          <PublicacionView>
             <Publicacion />
-          </View>
-        </View>
-      </View>
+          </PublicacionView>
+        </ContainerInferior>
+      </ContainerPrincipal>
     </ScrollView>
   );
 }

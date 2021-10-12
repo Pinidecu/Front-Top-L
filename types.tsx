@@ -41,5 +41,6 @@ export type loginStackParamList = {
   Inicio: undefined;
   Explorar: undefined;
   Publicacion: undefined;
-  PerfilProPublico:undefined;
+  PerfilPublico: undefined;
+  PerfilProPublico: undefined;
 };

@@ -13,6 +13,7 @@ export default {
   white: "#FFFFFF",
   black: "#000000",
   textoGris:'#909090',
+  SecondaryPurpleLight:'#F9F7FE',
   light: {
     text: "#000",
     background: "#fff",

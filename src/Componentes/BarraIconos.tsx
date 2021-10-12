@@ -12,10 +12,8 @@ interface Props {
 const Container = styled.View`
   flex-direction: row;
   width: 100%;
-  padding-left: 10;
-  padding-right: 10;
+  padding: 10px 20px;
   justify-content: space-between;
-  margin: 10px;
 `;
 const StyledText = styled.Text`
   color: ${Colors.mainCOlorPurpleLigth};

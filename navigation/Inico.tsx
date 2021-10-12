@@ -9,8 +9,8 @@ const Stack = createStackNavigator();
 export const Inicio = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="PerfilProPublico" component={PerfilProPublico} />
       <Stack.Screen name="PerfilPublico" component={PerfilPublico} />
+      <Stack.Screen name="PerfilProPublico" component={PerfilProPublico} />
     </Stack.Navigator>
   );
 };

@@ -14,6 +14,17 @@ import { loginStackParamList } from "../../../types";
 import Colors from "../../../constants/Colors";
 import TextoGris from "../../Componentes/TextoGris";
 import InfoPro from "../../Componentes/InfoPro";
+import {
+  ContainerPrincipal,
+  ContainerSuperior,
+  ContainerInferior,
+  Navegacion,
+  Titulo,
+  TituloText,
+  Botones,
+  Parentesis,
+  Puntaje,
+} from "../StyledComponents/StyledComponents";
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
@@ -25,14 +36,13 @@ let textoGris: string =
 export default function PerfilProPublico({ navigation }: Props) {
   return (
     <ScrollView>
-      <View style={styles.container}>
-        <View style={styles.container1}>
+      <ContainerPrincipal>
+        <ContainerSuperior>
           <BarraIconos titulo={""} />
-          <View style={styles.navegacion}>
-            <TouchableOpacity
-              style={styles.titulo}
+          <Navegacion>
+            <Titulo
               onPress={() => {
-                navigation.navigate("PerfilProPublico");
+                navigation.navigate("PerfilPublico");
               }}
             >
               <Icon
@@ -41,33 +51,33 @@ export default function PerfilProPublico({ navigation }: Props) {
                 color="#4E31EB"
                 size={20}
               />
-              <Text style={styles.tituloText}>Perfil social</Text>
-            </TouchableOpacity>
-            <View style={styles.titulo}>
+              <TituloText>Perfil social</TituloText>
+            </Titulo>
+            <Titulo>
               <Icon
                 name="star-border"
                 color={Colors.mainCOlorPurpleDark}
                 size={20}
               />
-              <Text style={styles.puntaje}>4.5</Text>
-              <Text style={styles.parentesis}>(128)</Text>
-            </View>
-          </View>
+              <Puntaje>4.5</Puntaje>
+              <Parentesis>(128)</Parentesis>
+            </Titulo>
+          </Navegacion>
           <Info />
-          <View style={styles.botones}>
+          <Botones>
             <BotonAzul
               ancho={344}
               alto={55.08}
               texto={"AGENDAR ASESORÍA"}
               icon={""}
             />
-          </View>
-        </View>
-        <View style={styles.container2}>
+          </Botones>
+        </ContainerSuperior>
+        <ContainerInferior>
           <TextoGris texto={textoGris} />
           <InfoPro />
-        </View>
-      </View>
+        </ContainerInferior>
+      </ContainerPrincipal>
     </ScrollView>
   );
 }
