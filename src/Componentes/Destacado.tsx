@@ -75,7 +75,7 @@ export default function Destacado() {
         weight={400}
         fs={"normal"}
         lh={16.8}
-        color={Colors.mainCOlorBlack}
+        color={Colors.mainColorBlack}
       >
         {datos.titulo}
       </StyledText>
@@ -93,7 +93,7 @@ export default function Destacado() {
         weight={400}
         fs={"normal"}
         lh={14}
-        color={Colors.mainCOlorBlack}
+        color={Colors.mainColorBlack}
       >
         {datos.descripcion}
       </StyledText>

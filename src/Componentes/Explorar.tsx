@@ -18,11 +18,11 @@ interface StyledTextProps {
 
 const ExplorarView = styled.View`
   flex-direction: row;
-  margin: 10px;
-  width:100%;
+  margin: 0 10px;
+  width: 100%;
   padding: 0px 10px;
   justify-content: space-between;
-  `;
+`;
 const StyledText = styled.Text<StyledTextProps>`
   font-family: Proxima Nova;
   font-size: ${(props) => props.size};
@@ -38,7 +38,6 @@ const Rigth = styled.View`
   align-self: center;
 `;
 
-
 export default function Explorar({ titulo }: Props) {
   return (
     <ExplorarView>
@@ -47,7 +46,7 @@ export default function Explorar({ titulo }: Props) {
         weight={700}
         fs={"normal"}
         lh={24}
-        color={Colors.mainCOlorBlack}
+        color={Colors.mainColorBlack}
       >
         {titulo}
       </StyledText>

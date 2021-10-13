@@ -7,9 +7,8 @@ import Colors from "../../constants/Colors";
 
 interface datosInfo {
   nombre: string;
-  profesion: string;
+  crear: string;
   foto: string;
-  rubros: string[];
   tags: string[];
 }
 interface StyledImgProps {
@@ -66,13 +65,11 @@ const StyledText = styled.Text<StyledTextProps>`
   color: ${(props) => props.color};
 `;
 
-
-export default function Info() {
+export default function InfoMiPerfil() {
   const datos: datosInfo = {
     nombre: "Alejandra Martinez Ruiz",
-    profesion: "Instructora de yoga",
+    crear: "Crear perfil profesional",
     foto: "https://lorempixel.com/200/200/people/",
-    rubros: ["Yoga", "Meditacion holística"],
     tags: [
       "#uxui",
       "#freelance",
@@ -101,36 +98,34 @@ export default function Info() {
         />
       </IconView>
       <Datos>
-        <StyledText 
+        <StyledText
           size={16}
           weight={700}
           fs={"normal"}
           lh={24}
-          color={Colors.mainColorBlack}>{datos.nombre}
-        </StyledText>
-        <StyledText 
-          size={12}
-          weight={700}
-          fs={"normal"}
-          lh={14}
           color={Colors.mainColorBlack}
-        >{datos.profesion}</StyledText>
-        <StyledText 
+        >
+          {datos.nombre}
+        </StyledText>
+        <StyledText
           size={12}
           weight={400}
           fs={"normal"}
           lh={14}
-          color={Colors.mainCOlorPurpleLigth}>
-          {datos.rubros.join("  •  ")}
+          color={Colors.mainCOlorPurpleLigth}
+        >
+          {datos.crear}
         </StyledText>
         <LinearGradient colors={["#6560F0", "#7F8FFF"]} style={styles.linea} />
-        <StyledText 
+        <StyledText
           size={12}
           weight={400}
           fs={"normal"}
           lh={14}
           color={Colors.SecondaryGray}
-        >{datos.tags.join(", ")}</StyledText>
+        >
+          {datos.tags.join(", ")}
+        </StyledText>
       </Datos>
     </Container>
   );

@@ -33,13 +33,13 @@ export default function PerfilPublico({ navigation }: Props) {
     <ScrollView>
       <ContainerPrincipal>
         <ContainerSuperior>
-          <BarraIconos titulo={""} />
+          <BarraIconos titulo={""} margin={'0px'}/>
           <Navegacion>
             <View></View>
             {/* para ordenar la navegacion */}
             <Titulo
               onPress={() => {
-                navigation.navigate("PerfilProPublico");
+                navigation.navigate("PerfilVistaPersonal");
               }}
             >
               <TituloText>Perfil profesional</TituloText>
@@ -77,7 +77,7 @@ export default function PerfilPublico({ navigation }: Props) {
           <ActividadView>
             <Actividad />
             <Actividad />
-          </ActividadView>{" "}
+          </ActividadView>
           <PublicacionView>
             <Publicacion />
           </PublicacionView>

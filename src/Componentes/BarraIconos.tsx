@@ -6,13 +6,19 @@ import Colors from "../../constants/Colors";
 
 interface Props {
   titulo: string;
+  margin: string;
+}
+
+interface StyledContainerProps {
+  margin: string;
 }
 
 
-const Container = styled.View`
+const Container = styled.View<StyledContainerProps>`
   flex-direction: row;
   width: 100%;
   padding: 10px 20px;
+  margin-bottom: ${(props) => props.margin};
   justify-content: space-between;
 `;
 const StyledText = styled.Text`
@@ -22,15 +28,16 @@ const StyledText = styled.Text`
   font-size: 14;
   font-weight: 700;
   line-height: 18;
+  margin-left: 25px;
 `;
 const RigthContainer = styled.View`
   flex-direction: row;
   column-gap: 5;
 `;
 
-export default function BarraIconos({ titulo }: Props) {
+export default function BarraIconos({ titulo, margin }: Props) {
   return (
-    <Container>
+    <Container margin={margin}>
       <Icon name="chevron-left" color={Colors.mainCOlorPurpleLigth} size={20} />
       <StyledText>{titulo}</StyledText>
       <RigthContainer>

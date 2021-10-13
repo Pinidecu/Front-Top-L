@@ -2,7 +2,7 @@ const tintColorLight = "#2f95dc";
 const tintColorDark = "#fff";
 
 export default {
-  mainCOlorBlack: "#424049",
+  mainColorBlack: "#424049",
   mainCOlorPurpleLigth: "#5B74FB",
   mainCOlorPurpleDark: "#4E31EB",
   SecondaryGray: "#7E8FB9",
@@ -12,8 +12,8 @@ export default {
   bordeDestacado: "#C2C4EE",
   white: "#FFFFFF",
   black: "#000000",
-  textoGris:'#909090',
-  SecondaryPurpleLight:'#F9F7FE',
+  textoGris: "#909090",
+  SecondaryPurpleLight: "#F9F7FE",
   light: {
     text: "#000",
     background: "#fff",

@@ -84,7 +84,7 @@ export default function Publicacion() {
             weight={400}
             fs={"normal"}
             lh={14}
-            color={Colors.mainCOlorBlack}
+            color={Colors.mainColorBlack}
           >
             {datos.nombre.join("  •  ")}
           </StyledText>
