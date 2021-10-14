@@ -1,14 +1,9 @@
 import React from "react";
-import { Text, View, ScrollView, TouchableOpacity } from "react-native";
+import {  ScrollView } from "react-native";
 import Info from "../../Componentes/info";
 import BotonAzul from "../../Componentes/BotonAzul";
 import { Icon } from "react-native-elements";
-import { styles } from "./Perfil-ProPublico.module";
 import BarraIconos from "../../Componentes/BarraIconos";
-import Explorar from "../../Componentes/Explorar";
-import Destacado from "../../Componentes/Destacado";
-import Actividad from "../../Componentes/Actividad";
-import Publicacion from "../../Componentes/Publicacion";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { loginStackParamList } from "../../../types";
 import Colors from "../../../constants/Colors";
@@ -38,7 +33,7 @@ export default function PerfilProPublico({ navigation }: Props) {
     <ScrollView>
       <ContainerPrincipal>
         <ContainerSuperior>
-          <BarraIconos titulo={""} />
+          <BarraIconos titulo={""} margin={"0px"} />
           <Navegacion>
             <Titulo
               onPress={() => {
@@ -53,7 +48,11 @@ export default function PerfilProPublico({ navigation }: Props) {
               />
               <TituloText>Perfil social</TituloText>
             </Titulo>
-            <Titulo>
+            <Titulo
+              onPress={() => {
+                navigation.navigate("PerfilVistaPersonal");
+              }}
+            >
               <Icon
                 name="star-border"
                 color={Colors.mainCOlorPurpleDark}

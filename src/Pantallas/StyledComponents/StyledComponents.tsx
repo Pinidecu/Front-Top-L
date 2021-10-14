@@ -4,11 +4,12 @@ import styled from "styled-components/native";
 import Colors from "../../../constants/Colors";
 
 export const ContainerPrincipal = styled.View`
-  background-color: ${Colors.SecondaryPurpleLight};
+  background-color: ${Colors.white};
   align-items: center;
   justify-content: center;
   width: 383;
   align-self: center;
+  font-family: Cambria;
 `;
 
 export const ContainerSuperior = styled.View`
@@ -94,4 +95,29 @@ export const PublicacionView = styled.View`
   width: 100%;
   margin: 20px;
   padding: 0 10px;
+`;
+
+export const ContainerAgenda = styled.View`
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+`;
+
+export const Linea = styled.View`
+  width: 100%;
+  height: 1px;
+  margin: 10px;
+  background-color: ${Colors.bordeDestacado};
+`;
+
+export const TextoConfiguracion = styled.Text`
+  color: ${Colors.SecondaryGray};
+  font-family: Proxima Nova;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14;
+  line-height: 16.8;
+  width: 90%;
+  text-align: left;
+  margin: 10px;
 `;

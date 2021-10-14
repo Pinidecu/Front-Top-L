@@ -32,6 +32,7 @@ const Container = styled.View`
   width: 344;
   border-radius: 8;
   box-shadow: 0px 0px 4px rgba(180, 188, 206, 0.5);
+  margin: 10px;
 `;
 const StyledImg = styled.Image<StyledImgProps>`
   width: ${(props) => props.width};

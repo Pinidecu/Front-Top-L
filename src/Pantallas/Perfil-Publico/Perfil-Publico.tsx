@@ -1,9 +1,8 @@
 import React from "react";
-import { Text, View, ScrollView, TouchableOpacity } from "react-native";
+import {  View, ScrollView } from "react-native";
 import Info from "../../Componentes/info";
 import BotonAzul from "../../Componentes/BotonAzul";
 import { Icon } from "react-native-elements";
-import { styles } from "./Perfil-Publico.module";
 import BarraIconos from "../../Componentes/BarraIconos";
 import Explorar from "../../Componentes/Explorar";
 import Destacado from "../../Componentes/Destacado";
@@ -39,7 +38,7 @@ export default function PerfilPublico({ navigation }: Props) {
             {/* para ordenar la navegacion */}
             <Titulo
               onPress={() => {
-                navigation.navigate("PerfilVistaPersonal");
+                navigation.navigate("PerfilProPublico");
               }}
             >
               <TituloText>Perfil profesional</TituloText>

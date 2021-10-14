@@ -17,7 +17,7 @@ import {
 import Actividad from "../src/Componentes/Actividad";
 import { Inicio } from "./Inico";
 import InfoPro from "../src/Componentes/InfoPro";
-
+import Colors from "../constants/Colors";
 
 const Tab = createBottomTabNavigator();
 
@@ -25,42 +25,42 @@ export default function Navegacion() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        screenOptions={{
+        screenOptions={({ route }) => ({
           headerShown: false,
-        }}
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName = "home";
+
+            switch (route.name) {
+              case "Inicio":
+                iconName = "home";
+                break;
+              case "Salas":
+                iconName = "videocam";
+                break;
+              case "Explorar":
+                iconName = "online-prediction";
+                break;
+              case "Perfil":
+                iconName = "person-outline";
+                break;
+
+              default:
+                break;
+            }
+
+            return <Icon name={iconName} size={size} color={color} />;
+          },
+          tabBarActiveTintColor: `${Colors.mainCOlorPurpleDark}`,
+          tabBarInactiveTintColor: `${Colors.SecondaryGray}`,
+        })}
       >
-        <Tab.Screen
-          name="Inicio"
-          component={Inicio}
-          options={{
-            tabBarIcon: () => <HomeOutlined style={{ color: "#5B74FB" }} />,
-          }}
-        />
+        <Tab.Screen name="Inicio" component={Inicio} />
         <Tab.Screen
           name="Salas"
           component={() => <Explorar titulo={"Contenido destacado"} />}
-          options={{
-            tabBarIcon: () => (
-              <VideoCameraOutlined style={{ color: "#5B74FB" }} />
-            ),
-          }}
         />
-        <Tab.Screen
-          name="Explorar"
-          component={() => <InfoPro />}
-          options={{
-            tabBarIcon: () => (
-              <Icon name="online-prediction" color="#5B74FB" size={20} />
-            ),
-          }}
-        />
-        <Tab.Screen
-          name="Perfil"
-          component={() => <Publicacion />}
-          options={{
-            tabBarIcon: () => <UserOutlined style={{ color: "#5B74FB" }} />,
-          }}
-        />
+        <Tab.Screen name="Explorar" component={() => <InfoPro />} />
+        <Tab.Screen name="Perfil" component={() => <Publicacion />} />
       </Tab.Navigator>
     </NavigationContainer>
   );
