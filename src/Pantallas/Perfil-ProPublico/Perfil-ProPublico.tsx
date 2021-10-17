@@ -33,7 +33,12 @@ export default function PerfilProPublico({ navigation }: Props) {
     <ScrollView>
       <ContainerPrincipal>
         <ContainerSuperior>
-          <BarraIconos titulo={""} margin={"0px"} />
+          <BarraIconos
+            titulo={""}
+            margin={"0px"}
+            colorIcons={Colors.mainCOlorPurpleDark}
+            threePoints={true}
+          />
           <Navegacion>
             <Titulo
               onPress={() => {

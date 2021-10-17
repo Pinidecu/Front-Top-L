@@ -5,6 +5,7 @@ export default {
   mainColorBlack: "#424049",
   mainCOlorPurpleLigth: "#5B74FB",
   mainCOlorPurpleDark: "#4E31EB",
+  mainColorRed:'#F92B2B',
   SecondaryGray: "#7E8FB9",
   colorBoton: "#4E31EB",
   colorTextBoton: "#FFFFFF",

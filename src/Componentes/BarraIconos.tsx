@@ -7,6 +7,8 @@ import Colors from "../../constants/Colors";
 interface Props {
   titulo: string;
   margin: string;
+  colorIcons:string;
+  threePoints:boolean;
 }
 
 interface StyledContainerProps {
@@ -35,14 +37,14 @@ const RigthContainer = styled.View`
   column-gap: 5;
 `;
 
-export default function BarraIconos({ titulo, margin }: Props) {
+export default function BarraIconos({ titulo, margin, colorIcons, threePoints }: Props) {
   return (
     <Container margin={margin}>
-      <Icon name="chevron-left" color={Colors.mainCOlorPurpleLigth} size={20} />
+      <Icon name="chevron-left" color={colorIcons} size={20} />
       <StyledText>{titulo}</StyledText>
       <RigthContainer>
-        <Icon name="add" color={Colors.mainCOlorPurpleLigth} size={20} />
-        <Icon name="more-horiz" color={Colors.mainCOlorPurpleLigth} size={20} />
+        <Icon name="add" color={colorIcons} size={20} />
+        {threePoints ? <Icon name="more-horiz" color={colorIcons} size={20} /> : null}
       </RigthContainer>
     </Container>
   );

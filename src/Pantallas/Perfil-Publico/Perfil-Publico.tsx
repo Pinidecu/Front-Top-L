@@ -22,6 +22,7 @@ import {
   PublicacionView,
   ActividadView,
 } from "../StyledComponents/StyledComponents";
+import Colors from "../../../constants/Colors";
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
@@ -32,7 +33,12 @@ export default function PerfilPublico({ navigation }: Props) {
     <ScrollView>
       <ContainerPrincipal>
         <ContainerSuperior>
-          <BarraIconos titulo={""} margin={'0px'}/>
+          <BarraIconos
+            titulo={""}
+            margin={"0px"}
+            colorIcons={Colors.mainCOlorPurpleDark}
+            threePoints={true}
+          />
           <Navegacion>
             <View></View>
             {/* para ordenar la navegacion */}

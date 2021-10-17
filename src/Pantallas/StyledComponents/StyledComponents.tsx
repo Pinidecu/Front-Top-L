@@ -3,6 +3,8 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../../constants/Colors";
 
+// PERFIL
+
 export const ContainerPrincipal = styled.View`
   background-color: ${Colors.white};
   align-items: center;
@@ -33,7 +35,7 @@ export const Navegacion = styled.View`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  z-index:1;
+  z-index: 1;
 `;
 export const Titulo = styled.TouchableOpacity`
   flex-direction: row;
@@ -120,4 +122,11 @@ export const TextoConfiguracion = styled.Text`
   width: 90%;
   text-align: left;
   margin: 10px;
+`;
+
+// LIVE
+
+export const ContainerPrincipalLive = styled.View`
+  flex: 1;
+  width: 383px;
 `;

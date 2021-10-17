@@ -15,6 +15,7 @@ import {
   ActividadView,
 } from "../StyledComponents/StyledComponents";
 import Boton from "../../Componentes/Boton";
+import Colors from "../../../constants/Colors";
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
@@ -26,7 +27,12 @@ export default function PerfilVistaPersonal({ navigation }: Props) {
     <ScrollView>
       <ContainerPrincipal>
         <ContainerSuperior>
-          <BarraIconos titulo={"Mi perfil"} margin={"30px"} />
+          <BarraIconos
+            titulo={"Mi perfil"}
+            margin={"30px"}
+            colorIcons={Colors.mainCOlorPurpleDark}
+            threePoints={true}
+          />
           <InfoMiPerfil />
           <TouchableOpacity
             onPress={() => {
