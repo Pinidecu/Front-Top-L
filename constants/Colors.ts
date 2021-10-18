@@ -15,6 +15,7 @@ export default {
   black: "#000000",
   textoGris: "#909090",
   SecondaryPurpleLight: "#F9F7FE",
+  fondoBarraLive2:'#C4C4C4',
   light: {
     text: "#000",
     background: "#fff",

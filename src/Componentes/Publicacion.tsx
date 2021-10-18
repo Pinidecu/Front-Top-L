@@ -59,6 +59,13 @@ const StyledText = styled.Text<StyledTextProps>`
   font-style: ${(props) => props.fs};
 `;
 
+const datos: datosPublicacion = {
+  fotoPerfil: "https://lorempixel.com/200/200/people/",
+  nombre: ["Armando Lopez", "@arlopez21", "2h"],
+  descripcion: "Group name lorem ipsum dolor amet sim athem",
+  imagen: "https://lorempixel.com/200/200/people/",
+};
+
 export default function Publicacion() {
   const datos: datosPublicacion = {
     fotoPerfil: "https://lorempixel.com/200/200/people/",

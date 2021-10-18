@@ -10,6 +10,7 @@ interface ContainerProps {
 
 const Container = styled.View<ContainerProps>`
   background-color: ${(props) => props.color};
+  opacity: 0.92;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
@@ -17,6 +18,8 @@ const Container = styled.View<ContainerProps>`
   column-gap: 10px;
   height: 15vh;
   width: 100%;
+  position: absolute;
+  bottom: 0vh;
 `;
 
 interface StyledILProps {
@@ -29,6 +32,7 @@ export const IconosLive = styled.View<StyledILProps>`
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 0px 4px rgba(180, 188, 206, 0.5);
 `;
 
 

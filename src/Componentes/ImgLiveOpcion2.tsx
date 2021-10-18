@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 import BarraIconos from "./BarraIconos";
+import BarraLiveOpcion2 from "./BarraLiveOpcion2";
 
 
 let urlImg: string = "https://lorempixel.com/375/718/people/";
@@ -15,10 +16,10 @@ const Container = styled.View`
 `;
 
 
-export default function ImgLive() {  
+export default function ImgLiveOpcion2() {  
   return (
     <Container>
-      <BarraIconos titulo={""} margin={"0px"} colorIcons={Colors.white} threePoints={false}/>
+      <BarraLiveOpcion2/>
     </Container>
   );
 }

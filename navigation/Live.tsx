@@ -7,6 +7,7 @@ import PerfilProPublico from "../src/Pantallas/Perfil-ProPublico/Perfil-ProPubli
 import PerfilVistaPersonal from "../src/Pantallas/Perfil-VistaPersonal/Perfil-VistaPersonal";
 import PerfilProEdicion from "../src/Pantallas/Menu-perfilPro-Edicion/Perfil-ProEdicion";
 import AsesoriaLive from "../src/Pantallas/Asesoria-Live/Asesoria-Live";
+import AsesoriaLiveOpcion2 from "../src/Pantallas/Asesoria-Live-Opcion2/Asesoria-Live-Opcion2";
 
 const Stack = createStackNavigator();
 export const Live = () => {
@@ -18,7 +19,10 @@ export const Live = () => {
         }}
       >
         <Stack.Screen name="AsesoriaLive" component={AsesoriaLive} />
-        <Stack.Screen name="PerfilProPublico" component={PerfilProPublico} />
+        <Stack.Screen
+          name="AsesoriaLiveOpcion2"
+          component={AsesoriaLiveOpcion2}
+        />
         <Stack.Screen
           name="PerfilVistaPersonal"
           component={PerfilVistaPersonal}
