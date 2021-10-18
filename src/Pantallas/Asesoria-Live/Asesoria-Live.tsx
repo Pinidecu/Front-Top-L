@@ -2,6 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { loginStackParamList } from "../../../types";
+import styled from "styled-components/native";
 import {
   ContainerPrincipal,
   ContainerAgenda,
@@ -17,12 +18,21 @@ type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
 };
 
+const ViewImg2 = styled.View`
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+  z-index:1;
+`;
+
 export default function AsesoriaLive({ navigation }: Props) {
   return (
     <ContainerPrincipalLive>
       <ImgLive />
-      <ImgLive2 nombre={'@rdaniamor'}/>
-      <NavLive/>
+      <ViewImg2>
+        <ImgLive2 nombre={"@rdaniamor"} />
+      </ViewImg2>
+      <NavLive />
     </ContainerPrincipalLive>
   );
 }

@@ -8,6 +8,7 @@ import PerfilVistaPersonal from "../src/Pantallas/Perfil-VistaPersonal/Perfil-Vi
 import PerfilProEdicion from "../src/Pantallas/Menu-perfilPro-Edicion/Perfil-ProEdicion";
 import AsesoriaLive from "../src/Pantallas/Asesoria-Live/Asesoria-Live";
 import AsesoriaLiveOpcion2 from "../src/Pantallas/Asesoria-Live-Opcion2/Asesoria-Live-Opcion2";
+import EventoLive from "../src/Pantallas/Eventto-Live/Evento-Live";
 
 const Stack = createStackNavigator();
 export const Live = () => {
@@ -18,16 +19,12 @@ export const Live = () => {
           headerShown: false,
         }}
       >
-        <Stack.Screen name="AsesoriaLive" component={AsesoriaLive} />
         <Stack.Screen
           name="AsesoriaLiveOpcion2"
           component={AsesoriaLiveOpcion2}
         />
-        <Stack.Screen
-          name="PerfilVistaPersonal"
-          component={PerfilVistaPersonal}
-        />
-        <Stack.Screen name="PerfilProEdicion" component={PerfilProEdicion} />
+        <Stack.Screen name="AsesoriaLive" component={AsesoriaLive} />
+        <Stack.Screen name="EventoLive" component={EventoLive} />
       </Stack.Navigator>
     </NavigationContainer>
   );

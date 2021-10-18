@@ -128,5 +128,5 @@ export const TextoConfiguracion = styled.Text`
 
 export const ContainerPrincipalLive = styled.View`
   flex: 1;
-  width: 383px;
+  width: 100%;
 `;

@@ -10,12 +10,9 @@ const Container = styled.View`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 110px;
-  height: 23%;
+  width: 28vw;
+  height: 22vh;
   border-radius: 20px;
-  position: absolute;
-  bottom: 3%;
-  right: 5%;
   z-index: 1;
   justify-content: flex-end;
   align-items: center;
