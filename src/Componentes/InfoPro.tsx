@@ -57,13 +57,13 @@ export default function InfoPro() {
     <Container>
       {lista.map((l, i) => (
         <ListItem key={i} bottomDivider={i < lista.length - 1 ? true : false}>
-          {l.logo === "" ? null:
+          {/* {l.logo === "" ? null:
             <Avatar
               source={
                 l.logo === "" ? null : require(`../../assets/images/${l.logo}`)
               }
-            />
-          }
+            />            
+          } */}
           <ListItem.Content>
             <ListItem.Title>{l.titulo}</ListItem.Title>
           </ListItem.Content>

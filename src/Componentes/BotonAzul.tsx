@@ -42,25 +42,7 @@ const StyledText = styled.Text<StyledTextProps>`
   line-height: ${(props) => props.lh};
 `;
 
-/* const styles = StyleSheet.create({
-    container: {
-      flexDirection: "row",
-      backgroundColor: "#4E31EB",
-      alignItems: "center",
-      justifyContent: "center",
-      columnGap: 10,
-      width: ancho,
-      height: alto,
-      borderRadius: 8,
-    },
-    text: {
-      color: "white",
-      fontFamily: "Roboto",
-      fontWeight: 400,
-      fontSize: 16,
-      lineHeight: 24,
-    },
-  }); */
+
 
 export default function BotonAzul({ ancho, alto, texto, icon }: Props) {
   return (

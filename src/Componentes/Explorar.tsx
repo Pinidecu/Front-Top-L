@@ -66,36 +66,4 @@ export default function Explorar({ titulo }: Props) {
   );
 }
 
-/* export const styles = StyleSheet.create({
-  explorar: {
-    flexDirection: "row",
-    margin: 10,
-    width: "100%",
-    paddingLeft: 10,
-    paddingRight: 10,
-    justifyContent: "space-between",
-  },
-  titulo: {
-    fontFamily: "Proxima Nova",
-    fontWeight: 700,
-    fontStyle: "normal",
-    fontSize: 16,
-    lineHeight: 24,
-    color: "#424049",
-  },
-  rigth: {
-    flexDirection: "row",
-    columnGap: 5,
-    alignSelf: "center",
-  },
-  text: {
-    alignSelf: "center",
-    fontFamily: "Proxima Nova",
-    fontWeight: 700,
-    fontStyle: "normal",
-    fontSize: 12,
-    lineHeight: 14,
-    color: "#5B74FB",
-  },
-});
- */
+

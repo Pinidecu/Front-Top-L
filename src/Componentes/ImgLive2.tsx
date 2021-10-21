@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 
 
-let urlImg: string = "https://lorempixel.com/375/718/";
+let urlImg: string = "https://lorempixel.com/375/718/people";
 
 const Container = styled.View`
   background-image: url(${urlImg});

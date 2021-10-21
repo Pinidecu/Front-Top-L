@@ -9,7 +9,7 @@ export const ContainerPrincipal = styled.View`
   background-color: ${Colors.white};
   align-items: center;
   justify-content: center;
-  width: 383;
+  width: 100%;
   align-self: center;
   font-family: Cambria;
 `;
@@ -129,4 +129,26 @@ export const TextoConfiguracion = styled.Text`
 export const ContainerPrincipalLive = styled.View`
   flex: 1;
   width: 100%;
+`;
+
+export const ContainerPrincipalSala = styled.View`
+  flex: 1;
+  background-color: ${Colors.white};
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  align-self: center;
+  font-family: Cambria;
+`;
+
+interface LineaColorProps {
+  color: string;
+  height: string;
+  width: string;
+}
+export const LineaColor = styled.View<LineaColorProps>`
+  background-color: ${(props) => props.color};
+  height: ${(props) => props.height};
+  width: ${(props) => props.width};
+  border-radius: 100px;
 `;

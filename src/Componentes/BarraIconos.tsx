@@ -50,25 +50,4 @@ export default function BarraIconos({ titulo, margin, colorIcons, threePoints }:
   );
 }
 
-export const styles = StyleSheet.create({
-  iconos: {
-    flexDirection: "row",
-    width: "100%",
-    margin: 10,
-    paddingLeft: 10,
-    paddingRight: 10,
-    justifyContent: "space-between",
-  },
-  titulo: {
-    fontFamily: "Proxima Nova",
-    fontWeight: "700",
-    fontStyle: "normal",
-    fontSize: 14,
-    lineHeight: 18,
-    color: "#5B74FB",
-  },
-  rigth: {
-    flexDirection: "row",
-    columnGap: 5,
-  },
-});
+

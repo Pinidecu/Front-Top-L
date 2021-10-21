@@ -39,7 +39,7 @@ const Indicator = styled.View<IndicatorProps>`
 
 const Barra = styled.View`
   background-color: ${Colors.white};
-  opacity: 0.92;
+  /* opacity: 0.92; */
   flex-direction: row;
   align-items: center;
   justify-content: space-around;

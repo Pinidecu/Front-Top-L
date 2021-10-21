@@ -9,11 +9,6 @@ import Publicacion from "../src/Componentes/Publicacion";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "react-native-elements";
-import {
-  HomeOutlined,
-  VideoCameraOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
 import Actividad from "../src/Componentes/Actividad";
 import { Inicio } from "./Inico";
 import InfoPro from "../src/Componentes/InfoPro";
