@@ -16,6 +16,7 @@ interface StyledImgProps {
   height: number;
   radio: any;
   margin: string;
+  left: number;
 }
 interface StyledTextProps {
   size: number;
@@ -38,13 +39,15 @@ const Info = styled.View`
   margin: 10px;
   width: 90%;
   row-gap: 5px;
-  background-color: red;
 `;
+
 const StyledImgPerfil = styled.Image<StyledImgProps>`
   width: ${(props) => props.width}px;
   height: ${(props) => props.height}px;
   border-radius: ${(props) => props.radio};
   margin: ${(props) => props.margin};
+  position: absolute;
+  left: ${(props) => props.left}px;
 `;
 const StyledImg = styled.Image`
   width: 100%;
@@ -82,13 +85,33 @@ const datos: datosEquipoPublicacion = {
 
 const MegustaView = styled.View`
   flex-direction: row;
-  column-gap: 5px;
   width: 90%;
-  align-items: center;
-  background-color: black;
+  height: 40px;
+  column-gap: 10px;
 `;
 
-export default function EquipoPublicacion() {
+const ImagenesViews = styled.View`
+  width: 35%;
+  justify-content: center;
+`;
+const TextoViews = styled.View`
+  width: 65%;
+  justify-content: center;
+`;
+
+interface Props {
+  titulo: string;
+  tags: string;
+  imagen: string;
+  meGusta: string;
+}
+
+export default function EquipoPublicacion({
+  titulo,
+  tags,
+  imagen,
+  meGusta,
+}: Props) {
   return (
     <Container>
       <StyledImg
@@ -113,7 +136,7 @@ export default function EquipoPublicacion() {
           lh={16.8}
           color={Colors.black}
         >
-          {datos.titulo}
+          {titulo}
         </StyledText>
         <StyledText
           size={12}
@@ -122,28 +145,55 @@ export default function EquipoPublicacion() {
           lh={14}
           color={Colors.mainCOlorPurpleLigth}
         >
-          {datos.tags}
+          {tags}
         </StyledText>
 
         <MegustaView>
-          <StyledImgPerfil
-            width={35}
-            height={35}
-            radio={"50%"}
-            margin={"0"}
-            source={{
-              uri: `${datos.fotoPerfil}`,
-            }}
-          />
-          <StyledText
-            size={12}
-            weight={400}
-            fs={"normal"}
-            lh={14}
-            color={Colors.SecondaryGray}
-          >
-            {datos.meGusta}
-          </StyledText>
+          <ImagenesViews>
+            <StyledImgPerfil
+              width={35}
+              height={35}
+              radio={"50%"}
+              margin={"0"}
+              left={0}
+              source={require("../../assets/images/Sala/10.png")}
+            />
+            <StyledImgPerfil
+              width={35}
+              height={35}
+              radio={"50%"}
+              margin={"0"}
+              left={20}
+              source={require("../../assets/images/Sala/8.png")}
+            />
+            <StyledImgPerfil
+              width={35}
+              height={35}
+              radio={"50%"}
+              margin={"0"}
+              left={40}
+              source={require("../../assets/images/Sala/7.png")}
+            />
+            <StyledImgPerfil
+              width={35}
+              height={35}
+              radio={"50%"}
+              margin={"0"}
+              left={60}
+              source={require("../../assets/images/Sala/9.png")}
+            />
+          </ImagenesViews>
+          <TextoViews>
+            <StyledText
+              size={12}
+              weight={400}
+              fs={"normal"}
+              lh={14}
+              color={Colors.SecondaryGray}
+            >
+              {meGusta}
+            </StyledText>
+          </TextoViews>
         </MegustaView>
       </Info>
     </Container>

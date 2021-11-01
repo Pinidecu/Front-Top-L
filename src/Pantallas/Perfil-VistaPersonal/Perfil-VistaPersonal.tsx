@@ -23,7 +23,7 @@ type Props = {
 
 export default function PerfilVistaPersonal({ navigation }: Props) {
   return (
-    <ScrollView>
+    <ScrollView style={{ backgroundColor: "white" }}>
       <ContainerPrincipal>
         <ContainerSuperior>
           <BarraIconos

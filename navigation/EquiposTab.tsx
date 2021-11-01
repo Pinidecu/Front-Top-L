@@ -13,7 +13,11 @@ import Equipos from "../src/Pantallas/Equipos/Equipos";
 const Stack = createStackNavigator();
 export const EquiposTab = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen name="PerfilPublico" component={Equipos} />
       <Stack.Screen name="PerfilProPublico" component={PerfilProPublico} />
       <Stack.Screen

@@ -19,7 +19,7 @@ export const ContainerSuperior = styled.View`
   background-color: ${Colors.SecondaryPurpleLight};
   align-items: center;
   justify-content: center;
-  width: 383;
+  width: 100%;
   align-self: center;
 `;
 
@@ -27,7 +27,7 @@ export const ContainerInferior = styled.View`
   background-color: ${Colors.white};
   align-items: center;
   justify-content: center;
-  width: 383;
+  width: 100%;
   align-self: center;
   padding: 10px 10px 0 10px;
 `;
@@ -165,3 +165,12 @@ export const ContainerPrincipalAgenda = styled.View`
   font-family: Cambria;
 `;
 
+
+export const ContainerPrincipalEquipos = styled.View`
+  background-color: ${Colors.white};
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  align-self: center;
+  font-family: Cambria;
+`;

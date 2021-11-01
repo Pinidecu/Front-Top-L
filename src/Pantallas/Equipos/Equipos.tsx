@@ -15,6 +15,7 @@ import {
   ActividadView,
   ContainerPrincipalAgenda,
   Linea,
+  ContainerPrincipalEquipos,
 } from "../StyledComponents/StyledComponents";
 import Boton from "../../Componentes/Boton";
 import Colors from "../../../constants/Colors";
@@ -25,6 +26,8 @@ import Cronograma from "../../Componentes/Cronograma";
 import Cronograma2 from "../../Componentes/Cronograma2";
 import Publicacion from "../../Componentes/Publicacion";
 import EquipoPublicacion from "../../Componentes/EquipoPublicacion";
+import Equipo1 from "../../../assets/images/Equipo1.png";
+import Equipo2 from "../../../assets/images/Equipo1.png";
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
@@ -93,8 +96,8 @@ const StyledImg = styled.Image<StyledImgProps>`
 
 export default function Equipos({ navigation }: Props) {
   return (
-    <ScrollView>
-      <ContainerPrincipalAgenda>
+    <ScrollView style={{ backgroundColor: "white" }}>
+      <ContainerPrincipalEquipos>
         <BarraIconos
           titulo={"Mis equipos"}
           margin={"0px"}
@@ -102,10 +105,20 @@ export default function Equipos({ navigation }: Props) {
           threePoints={true}
         />
         <EquiposView>
-          <EquipoPublicacion />
-          <EquipoPublicacion />
+          <EquipoPublicacion
+            titulo="Yoga para ti, para mí y para todos! Aeroyogabaq"
+            tags="Bienestar físico •  Alexandra Martinez"
+            imagen={Equipo1}
+            meGusta="tú y 6770 personas más asistirán a ésta sala"
+          />
+          <EquipoPublicacion
+            titulo="Living Barranquilla "
+            tags="Epiritualidad •  Living BAQ"
+            imagen={Equipo2}
+            meGusta="tú y 6770 personas más asistirán a ésta sala"
+          />
         </EquiposView>
-      </ContainerPrincipalAgenda>
+      </ContainerPrincipalEquipos>
     </ScrollView>
   );
 }

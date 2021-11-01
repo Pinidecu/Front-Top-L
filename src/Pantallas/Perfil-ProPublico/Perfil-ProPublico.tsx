@@ -30,7 +30,7 @@ let textoGris: string =
 
 export default function PerfilProPublico({ navigation }: Props) {
   return (
-    <ScrollView>
+    <ScrollView style={{ backgroundColor: "white" }}>
       <ContainerPrincipal>
         <ContainerSuperior>
           <BarraIconos

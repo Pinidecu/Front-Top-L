@@ -12,7 +12,11 @@ import PerfilProEdicion from "../src/Pantallas/Menu-perfilPro-Edicion/Perfil-Pro
 const Stack = createStackNavigator();
 export const Inicio = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen name="PerfilPublico" component={PerfilPublico} />
       <Stack.Screen name="PerfilProPublico" component={PerfilProPublico} />
       <Stack.Screen

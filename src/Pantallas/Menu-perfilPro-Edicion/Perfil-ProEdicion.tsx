@@ -19,7 +19,7 @@ type Props = {
 
 export default function PerfilProEdicion({ navigation }: Props) {
   return (
-    <ScrollView>
+    <ScrollView style={{ backgroundColor: "white" }}>
       <ContainerPrincipal>
         <BarraIconos
           titulo={"Mi espacio"}

@@ -23,18 +23,19 @@ export const Live = () => {
         screenOptions={{
           headerShown: false,
         }}
+        initialRouteName={"HorariosTarifas2"}
       >
-        <Stack.Screen name="HorariosTarifas2" component={HorariosTarifas2} />
-        <Stack.Screen name="EventoDetalle" component={EventoDetalle} />
-        <Stack.Screen name="HorariosTarifas" component={HorariosTarifas} />
-        <Stack.Screen name="AgendaDia" component={AgendaDia} />
-        <Stack.Screen name="SalaDetalle" component={SalaDetalle} />
-        <Stack.Screen name="EventoLive" component={EventoLive} />
+        <Stack.Screen name="AsesoriaLive" component={AsesoriaLive} />
         <Stack.Screen
           name="AsesoriaLiveOpcion2"
           component={AsesoriaLiveOpcion2}
         />
-        <Stack.Screen name="AsesoriaLive" component={AsesoriaLive} />
+        <Stack.Screen name="EventoLive" component={EventoLive} />
+        <Stack.Screen name="SalaDetalle" component={SalaDetalle} />
+        <Stack.Screen name="AgendaDia" component={AgendaDia} />
+        <Stack.Screen name="HorariosTarifas" component={HorariosTarifas} />
+        <Stack.Screen name="EventoDetalle" component={EventoDetalle} />
+        <Stack.Screen name="HorariosTarifas2" component={HorariosTarifas2} />
       </Stack.Navigator>
     </NavigationContainer>
   );

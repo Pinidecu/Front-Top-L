@@ -24,6 +24,7 @@ const Container = styled.View<StyledContainerProps>`
   padding: 10px 20px;
   margin-bottom: ${(props) => props.margin};
   justify-content: space-between;
+  align-items: center;
 `;
 const StyledText = styled.Text`
   color: ${Colors.mainCOlorPurpleLigth};
