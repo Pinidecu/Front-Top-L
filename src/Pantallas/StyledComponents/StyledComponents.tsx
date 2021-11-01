@@ -6,7 +6,8 @@ import Colors from "../../../constants/Colors";
 // PERFIL
 
 export const ContainerPrincipal = styled.View`
-  background-color: ${Colors.white};
+  background-color: ${Colors.white};/* 
+  flex:1; */
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -107,8 +108,8 @@ export const ContainerAgenda = styled.View`
 
 export const Linea = styled.View`
   width: 100%;
-  height: 1px;
-  margin: 10px;
+  height: 1px;/* 
+  margin: 10px; */
   background-color: ${Colors.bordeDestacado};
 `;
 
@@ -129,6 +130,7 @@ export const TextoConfiguracion = styled.Text`
 export const ContainerPrincipalLive = styled.View`
   flex: 1;
   width: 100%;
+  background-color: ${Colors.white};
 `;
 
 export const ContainerPrincipalSala = styled.View`
@@ -152,3 +154,14 @@ export const LineaColor = styled.View<LineaColorProps>`
   width: ${(props) => props.width};
   border-radius: 100px;
 `;
+
+
+export const ContainerPrincipalAgenda = styled.View`
+  background-color: ${Colors.white};
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  align-self: center;
+  font-family: Cambria;
+`;
+

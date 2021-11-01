@@ -38,6 +38,7 @@ export default function PerfilPublico({ navigation }: Props) {
             margin={"0px"}
             colorIcons={Colors.mainCOlorPurpleDark}
             threePoints={true}
+            add={true}
           />
           <Navegacion>
             <View></View>

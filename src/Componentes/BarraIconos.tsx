@@ -8,7 +8,9 @@ interface Props {
   titulo: string;
   margin: string;
   colorIcons:string;
-  threePoints:boolean;
+  add?:boolean;
+  threePoints?:boolean;
+  lupa?:boolean;
 }
 
 interface StyledContainerProps {
@@ -37,14 +39,24 @@ const RigthContainer = styled.View`
   column-gap: 5;
 `;
 
-export default function BarraIconos({ titulo, margin, colorIcons, threePoints }: Props) {
+export default function BarraIconos({
+  titulo,
+  margin,
+  colorIcons,
+  threePoints,
+  lupa,
+  add,
+}: Props) {
   return (
     <Container margin={margin}>
-      <Icon name="chevron-left" color={colorIcons} size={20} />
+      <Icon name="chevron-left" color={colorIcons} size={25} />
       <StyledText>{titulo}</StyledText>
       <RigthContainer>
-        <Icon name="add" color={colorIcons} size={20} />
-        {threePoints ? <Icon name="more-horiz" color={colorIcons} size={20} /> : null}
+        {lupa ? <Icon name="search" color={Colors.black} size={25} /> : null}
+        {add ? <Icon name="add" color={colorIcons} size={25} /> : null}
+        {threePoints ? (
+          <Icon name="more-horiz" color={colorIcons} size={25} />
+        ) : null}
       </RigthContainer>
     </Container>
   );

@@ -18,7 +18,13 @@ const Container = styled.View`
 export default function ImgLive() {  
   return (
     <Container>
-      <BarraIconos titulo={""} margin={"0px"} colorIcons={Colors.white} threePoints={false}/>
+      <BarraIconos
+        titulo={""}
+        margin={"0px"}
+        colorIcons={Colors.white}
+        threePoints={false}
+        add={true}
+      />
     </Container>
   );
 }

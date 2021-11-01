@@ -11,6 +11,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "react-native-elements";
 import Actividad from "../src/Componentes/Actividad";
 import { Inicio } from "./Inico";
+import { EquiposTab } from "./EquiposTab";
 import InfoPro from "../src/Componentes/InfoPro";
 import Colors from "../constants/Colors";
 
@@ -29,7 +30,7 @@ export default function Navegacion() {
               case "Inicio":
                 iconName = "home";
                 break;
-              case "Salas":
+              case "Equipos":
                 iconName = "videocam";
                 break;
               case "Explorar":
@@ -49,11 +50,8 @@ export default function Navegacion() {
           tabBarInactiveTintColor: `${Colors.SecondaryGray}`,
         })}
       >
+        <Tab.Screen name="Equipos" component={EquiposTab} />
         <Tab.Screen name="Inicio" component={Inicio} />
-        <Tab.Screen
-          name="Salas"
-          component={() => <Explorar titulo={"Contenido destacado"} />}
-        />
         <Tab.Screen name="Explorar" component={() => <InfoPro />} />
         <Tab.Screen name="Perfil" component={() => <Publicacion />} />
       </Tab.Navigator>

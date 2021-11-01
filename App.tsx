@@ -7,5 +7,5 @@ import { Live } from "./navigation/Live";
 import Navegacion from "./navigation/Navegacion";
 
 export default function App() {
-  return <Live />;
+  return <Navegacion />;
 }

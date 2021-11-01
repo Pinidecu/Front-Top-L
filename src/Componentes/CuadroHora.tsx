@@ -9,7 +9,7 @@ interface Props {
   ancho: number;
   alto: number;
   texto: string;
-  icon?: string;
+  icon: string;
 }
 interface ContainerProps {
   color: string;
@@ -27,17 +27,16 @@ const Container = styled.View<ContainerProps>`
   flex-direction: row;
   background-color: ${(props) => props.color};
   align-items: center;
-  justify-content: center;
-  column-gap: 10;
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
-  border-radius: 8;
-  align-self: center;
+  justify-content: space-between;
+  width: ${(props) => props.width}px;
+  height: ${(props) => props.height}px;
+  border-radius: 4px;
+  padding: 0px 10px;
 `;
 
 const StyledText = styled.Text<StyledTextProps>`
   color: ${(props) => props.color};
-  font-family: Roboto;
+  font-family: Proxima Nova;
   font-size: ${(props) => props.size};
   font-weight: ${(props) => props.weight};
   line-height: ${(props) => props.lh};
@@ -45,20 +44,19 @@ const StyledText = styled.Text<StyledTextProps>`
 
 
 
-export default function BotonAzul({ ancho, alto, texto, icon }: Props) {
+export default function CuadroHora({ ancho, alto, texto, icon }: Props) {
   return (
-    <Container width={ancho} height={alto} color={Colors.colorBoton}>
+    <Container width={ancho} height={alto} color={Colors.white}>
+      <StyledText weight={400} size={16} lh={16.8} color={Colors.mainColorBlack}>
+        {texto}
+      </StyledText>
       {icon ? (
         <Icon
           name={icon}
-          color="white"
+          color={Colors.mainCOlorPurpleLigth}
           size={35}
-          onPress={() => console.log("hello")}
         />
       ) : null}
-      <StyledText weight={400} size={16} lh={24} color={Colors.colorTextBoton}>
-        {texto}
-      </StyledText>
     </Container>
   );
 }

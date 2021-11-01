@@ -21,7 +21,13 @@ export default function PerfilProEdicion({ navigation }: Props) {
   return (
     <ScrollView>
       <ContainerPrincipal>
-        <BarraIconos titulo={"Mi espacio"} margin={"30px"} colorIcons={Colors.mainCOlorPurpleDark} threePoints={true} />
+        <BarraIconos
+          titulo={"Mi espacio"}
+          margin={"30px"}
+          colorIcons={Colors.mainCOlorPurpleDark}
+          threePoints={true}
+          add={true}
+        />
         <InfoMiPerfil />
         <ContainerAgenda>
           <Edicion titulo={"Ajustes de perfil"} icono={"person-outline"} />

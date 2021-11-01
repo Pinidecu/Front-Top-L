@@ -1,5 +1,5 @@
 import React from "react";
-import {  ScrollView, TouchableOpacity } from "react-native";
+import { ScrollView, TouchableOpacity } from "react-native";
 import InfoMiPerfil from "../../Componentes/InfoMiPerfil";
 import BarraIconos from "../../Componentes/BarraIconos";
 import Explorar from "../../Componentes/Explorar";
@@ -21,7 +21,6 @@ type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
 };
 
-
 export default function PerfilVistaPersonal({ navigation }: Props) {
   return (
     <ScrollView>
@@ -32,6 +31,7 @@ export default function PerfilVistaPersonal({ navigation }: Props) {
             margin={"30px"}
             colorIcons={Colors.mainCOlorPurpleDark}
             threePoints={true}
+            add={true}
           />
           <InfoMiPerfil />
           <TouchableOpacity
@@ -57,7 +57,11 @@ export default function PerfilVistaPersonal({ navigation }: Props) {
             <Actividad />
           </ActividadView>
           <Explorar titulo={"Mi agenda"} />
-          <Agenda />
+          <Agenda
+            titulo="La tertulia sobre marketing contemporaneo 2:00pm - 4:00 pm"
+            hora="21"
+            md="LUN"
+          />
         </ContainerInferior>
       </ContainerPrincipal>
     </ScrollView>

@@ -19,9 +19,9 @@ interface StyledTextProps {
 
 const Container = styled.View`
   flex-direction: row;
-  width: "100%";
-  margin: 10px;
-  column-gap: 5;
+  width: 100%;
+  column-gap: 1%;
+  margin: 5px 0;
 `;
 
 const StyledText = styled.Text<StyledTextProps>`
@@ -36,7 +36,7 @@ const StyledText = styled.Text<StyledTextProps>`
 
 const Info = styled.View`
   background-color: ${Colors.SecondaryPurpleLight};
-  width: 296px;
+  width: 84%;
   height: 54px;
   padding: 9px 14px;
   text-align: center;
@@ -45,20 +45,17 @@ const Info = styled.View`
 `;
 const Hora = styled.View`
   background-color: ${Colors.SecondaryPurpleLight};
-  width: 54.93px;
+  width: 15%;
   height: 54px;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
 `;
 
-export default function Agenda() {
-  const datos: datosAgenda = {
-    titulo: "Yoga para ti, para mí y para todos! 9:00AM - 4:00 PM",
-    hora: "9:00",
-    md: "AM",
-  };
 
+
+export default function Agenda(props: datosAgenda) {
+  
   return (
     <Container>
       <Hora>
@@ -69,7 +66,7 @@ export default function Agenda() {
           lh={24}
           color={Colors.SecondaryGray}
         >
-          {datos.hora}
+          {props.hora}
         </StyledText>
         <StyledText
           size={12}
@@ -78,7 +75,7 @@ export default function Agenda() {
           lh={18}
           color={Colors.SecondaryGray}
         >
-          {datos.md}
+          {props.md}
         </StyledText>
       </Hora>
       <Info>
@@ -89,7 +86,7 @@ export default function Agenda() {
           lh={16.8}
           color={Colors.mainColorBlack}
         >
-          {datos.titulo}
+          {props.titulo}
         </StyledText>
       </Info>
     </Container>

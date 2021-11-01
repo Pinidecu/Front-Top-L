@@ -83,13 +83,18 @@ const datos: datosPublicacion = {
 const MegustaView = styled.View`
   flex-direction: row;
   align-items: center;
+  margin-left: 35%;
   margin-bottom: 5px;
-  column-gap: 5px;
+  column-gap: 20px;
   width: 90%;
 `;
 
-export default function Publicacion() {
-  
+const ActionsView = styled.View`
+  flex-direction: row;
+  column-gap: 3px;
+`;
+
+export default function PublicacionSinImg() {
   return (
     <Container>
       <StyledBookmark
@@ -127,33 +132,33 @@ export default function Publicacion() {
             {datos.descripcion}
           </StyledText>
         </Titulo>
-        {/* <View>
-          <Icon name="bookmark" color="#C2C4EE" size={30} />
-          <Icon name="more-horiz" color="#5B74FB" size={30} />
-        </View> */}
       </Info>
-      <StyledImg
-        width={90}
-        height={158.87}
-        radio={""}
-        margin={"10px"}
-        source={{
-          uri: `${datos.imagen}`,
-        }}
-      />
       <MegustaView>
-        <Icon name="favorite-border" color={Colors.SecondaryGray} size={18} />
-        <StyledText
-          size={12}
-          weight={400}
-          fs={"normal"}
-          lh={18}
-          color={Colors.SecondaryGray}
-        >
-          (128)
-        </StyledText>
+        <ActionsView>
+          <Icon name="favorite-border" color={Colors.SecondaryGray} size={18} />
+          <StyledText
+            size={12}
+            weight={400}
+            fs={"normal"}
+            lh={18}
+            color={Colors.SecondaryGray}
+          >
+            (128)
+          </StyledText>
+        </ActionsView>
+        <ActionsView>
+          <Icon name="chat" color={Colors.SecondaryGray} size={18} />
+          <StyledText
+            size={12}
+            weight={400}
+            fs={"normal"}
+            lh={18}
+            color={Colors.SecondaryGray}
+          >
+            Responder
+          </StyledText>
+        </ActionsView>
       </MegustaView>
     </Container>
   );
 }
-
