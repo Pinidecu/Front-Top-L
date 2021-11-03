@@ -7,6 +7,7 @@ import PerfilProPublico from "../src/Pantallas/Perfil-ProPublico/Perfil-ProPubli
 import PerfilVistaPersonal from "../src/Pantallas/Perfil-VistaPersonal/Perfil-VistaPersonal";
 import PerfilProEdicion from "../src/Pantallas/Menu-perfilPro-Edicion/Perfil-ProEdicion";
 import Equipos from "../src/Pantallas/Equipos/Equipos";
+import EquipoDetalle1 from "../src/Pantallas/Equipo-Detalle-1/Equipo-Detalle1";
 
 
 
@@ -18,8 +19,8 @@ export const EquiposTab = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="PerfilPublico" component={Equipos} />
-      <Stack.Screen name="PerfilProPublico" component={PerfilProPublico} />
+      <Stack.Screen name="EquipoDetalle1" component={EquipoDetalle1} />
+      <Stack.Screen name="Equipos" component={Equipos} />
       <Stack.Screen
         name="PerfilVistaPersonal"
         component={PerfilVistaPersonal}

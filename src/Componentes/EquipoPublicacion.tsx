@@ -30,11 +30,18 @@ const Container = styled.View`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 259px;
+  height: 33vh;
   border-radius: 8px;
   margin: 10px;
   box-shadow: 0px 0px 4px rgba(180, 188, 206, 0.5);
 `;
+const ImgView = styled.View`
+  width: 100%;
+  height: 65%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+`;
+
 const Info = styled.View`
   margin: 10px;
   width: 90%;
@@ -42,8 +49,8 @@ const Info = styled.View`
 `;
 
 const StyledImgPerfil = styled.Image<StyledImgProps>`
-  width: ${(props) => props.width}px;
-  height: ${(props) => props.height}px;
+  width: ${(props) => props.width}vw;
+  height: ${(props) => props.height}vw;
   border-radius: ${(props) => props.radio};
   margin: ${(props) => props.margin};
   position: absolute;
@@ -51,12 +58,9 @@ const StyledImgPerfil = styled.Image<StyledImgProps>`
 `;
 const StyledImg = styled.Image`
   width: 100%;
-  height: 65%;
+  height: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-`;
-const Titulo = styled.View`
-  width: 80%;
 `;
 const StyledText = styled.Text<StyledTextProps>`
   font-family: Proxima Nova;
@@ -71,7 +75,7 @@ const StyledBookmark = styled.Image<StyledImgProps>`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   position: absolute;
-  top: 55.5%;
+  bottom: -26px;
   right: 10px;
 `;
 
@@ -114,20 +118,22 @@ export default function EquipoPublicacion({
 }: Props) {
   return (
     <Container>
-      <StyledImg
-        width={90}
-        height={158.87}
-        radio={""}
-        margin={"10px"}
-        source={{
-          uri: `${datos.imagen}`,
-        }}
-      />
-      <StyledBookmark
-        width={30}
-        height={37}
-        source={require("../../assets/images/bookmark-clicked.png")}
-      />
+      <ImgView>
+        <StyledImg
+          width={90}
+          height={158.87}
+          radio={""}
+          margin={"10px"}
+          source={{
+            uri: `${datos.imagen}`,
+          }}
+        />
+        <StyledBookmark
+          width={30}
+          height={37}
+          source={require("../../assets/images/bookmark-clicked.png")}
+        />
+      </ImgView>
       <Info>
         <StyledText
           size={14}
@@ -151,32 +157,32 @@ export default function EquipoPublicacion({
         <MegustaView>
           <ImagenesViews>
             <StyledImgPerfil
-              width={35}
-              height={35}
+              width={9}
+              height={9}
               radio={"50%"}
               margin={"0"}
               left={0}
               source={require("../../assets/images/Sala/10.png")}
             />
             <StyledImgPerfil
-              width={35}
-              height={35}
+              width={9}
+              height={9}
               radio={"50%"}
               margin={"0"}
               left={20}
               source={require("../../assets/images/Sala/8.png")}
             />
             <StyledImgPerfil
-              width={35}
-              height={35}
+              width={9}
+              height={9}
               radio={"50%"}
               margin={"0"}
               left={40}
               source={require("../../assets/images/Sala/7.png")}
             />
             <StyledImgPerfil
-              width={35}
-              height={35}
+              width={9}
+              height={9}
               radio={"50%"}
               margin={"0"}
               left={60}
