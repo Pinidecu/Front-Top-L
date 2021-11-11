@@ -41,14 +41,14 @@ export default function PerfilProActive({ titulo, active }: Props) {
       <StyledText>{titulo}</StyledText>
       {active ? (
         <StyledImg
-          width={25}
-          height={25}
+          width={20}
+          height={20}
           source={require("../../assets/images/Bullet-selected.png")}
         />
       ) : (
         <StyledImg
-          width={25}
-          height={25}
+          width={20}
+          height={20}
           source={require("../../assets/images/Bullet-select.png")}
         />
       )}

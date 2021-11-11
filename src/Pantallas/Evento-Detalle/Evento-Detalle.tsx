@@ -9,6 +9,7 @@ import {
   Linea,
   TextoConfiguracion,
   ContainerPrincipalLive,
+  ContainerPrincipalEventoLive,
 } from "../StyledComponents/StyledComponents";
 import ImgLive from "../../Componentes/ImgLive";
 import ImgLive2 from "../../Componentes/ImgLive2";
@@ -24,6 +25,8 @@ import { LinearGradient } from "react-native-svg";
 import BotonAzul from "../../Componentes/BotonAzul";
 import Publicacion from "../../Componentes/Publicacion";
 import PublicacionSinImg from "../../Componentes/PublicacionSinImg";
+import fotoPerfilPublicacion from "../../../assets/images/Sala/10.png";
+import fotoPubliacacion from "../../../assets/images/Publicacion.png";
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
@@ -34,8 +37,6 @@ interface ImageViewProps {
 }
 
 const ImageView = styled.View<ImageViewProps>`
-  /* 
-  background-color: red; */
   background-image: url(${({ foto }) => foto});
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,6 +44,7 @@ const ImageView = styled.View<ImageViewProps>`
   width: 100%;
   height: 244px;
   z-index: 1;
+  margin:auto;
 `;
 
 interface StyledTextProps {
@@ -74,6 +76,15 @@ const StyledImg = styled.Image<StyledImgProps>`
   position: absolute;
   bottom: -32px;
   right: 20px;
+`;
+
+interface StyledImgIconProps {
+  width: number;
+  height: number;
+}
+const StyledImgIcon = styled.Image<StyledImgIconProps>`
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
 `;
 
 const TituloView = styled.View`
@@ -144,12 +155,14 @@ const NotaView = styled.View`
   row-gap: 10px;
 `;
 
+
+
 export default function EventoDetalle({ navigation }: Props) {
   return (
-    <ContainerPrincipalLive>
+    <ContainerPrincipalEventoLive>
       <BarraIconos
         titulo={""}
-        margin={"0px"}
+        margin={"-15px"}
         colorIcons={Colors.mainCOlorPurpleDark}
         threePoints={true}
         lupa={true}
@@ -210,7 +223,11 @@ export default function EventoDetalle({ navigation }: Props) {
             </StyledText>
           </IconView>
           <IconView>
-            <Icon name="send" color={Colors.SecondaryGray} size={18} />
+            <StyledImgIcon
+              width={15}
+              height={15}
+              source={require("../../../assets/images/send.png")}
+            />
             <StyledText
               size={12}
               weight={400}
@@ -218,7 +235,7 @@ export default function EventoDetalle({ navigation }: Props) {
               lh={18}
               color={Colors.SecondaryGray}
             >
-              (128)
+              (37)
             </StyledText>
           </IconView>
         </TituloRigth>
@@ -319,7 +336,7 @@ export default function EventoDetalle({ navigation }: Props) {
           </StyledText>
         </StyledText>
       </InfoView>
-      <BotonAzul ancho={343} alto={55} texto={"UNIRME AL EVENTO LIVE"} />
+      <BotonAzul ancho={90} alto={55} texto={"UNIRME AL EVENTO LIVE"} />
       <PublicacionView>
         <TituloPublicacionView>
           <StyledText
@@ -376,8 +393,13 @@ export default function EventoDetalle({ navigation }: Props) {
       </DescripcionView>
       <NotaView>
         <PublicacionSinImg />
-        <Publicacion />
+        <Publicacion
+          fotoPerfil={fotoPerfilPublicacion}
+          nombre={["Armando Lopez", "@arlopez21", "2h"]}
+          descripcion={"Group name lorem ipsum dolor amet sim athem"}
+          imagen={fotoPubliacacion}
+        />
       </NotaView>
-    </ContainerPrincipalLive>
+    </ContainerPrincipalEventoLive>
   );
 }

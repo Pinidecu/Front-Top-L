@@ -31,6 +31,7 @@ export const TextView = styled.View`
   justify-content: center;
   width: 90%;
   align-self: center;
+  margin: 5px;
 `;
 
 export const Eventos = styled.View`
@@ -80,7 +81,14 @@ const StyledText = styled.Text<StyledTextProps>`
   color: ${(props) => props.color};
   margin: ${(props) => props.margin}px 0px;
 `;
-
+interface StyledImgIconProps {
+  width: number;
+  height: number;
+}
+const StyledImgIcon = styled.Image<StyledImgIconProps>`
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+`;
 
 
 export default function HorariosTarifas({ navigation }: Props) {
@@ -133,10 +141,10 @@ export default function HorariosTarifas({ navigation }: Props) {
             }
           </StyledText>
           <NotiView>
-            <Icon
-              name="toggle-on"
-              color={Colors.mainCOlorPurpleDark}
-              size={25}
+            <StyledImgIcon
+              width={25}
+              height={17}
+              source={require("../../../assets/images/SF.png")}
             />
             <StyledText
               size={12}

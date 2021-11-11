@@ -55,29 +55,24 @@ export default function AgendaDia({ navigation }: Props) {
             md="AM"
           />
           <Agenda
-            titulo="Yoga para ti, para mí y para todos! 9:00AM - 4:00 PM"
+            titulo="Asesoría Terapia holistica con Carlos Andrés Solano.  5:00PM - 6:00 PM"
             hora="5:00"
             md="PM"
           />
           <Agenda
-            titulo="Yoga para ti, para mí y para todos! 9:00AM - 4:00 PM"
+            titulo="Webinar Emprendedores de éxito con Promigas S.A. "
             hora="9:00"
             md="PM"
           />
           <Agenda
-            titulo="Yoga para ti, para mí y para todos! 9:00AM - 4:00 PM"
+            titulo="Asesoría Terapia de parejas con Carlos y Josefina Marino."
             hora="10:00"
             md="PM"
           />
           <Agenda
-            titulo="Yoga para ti, para mí y para todos! 9:00AM - 4:00 PM"
+            titulo="Asesoría psicología Angie paola Perez Ramirez."
             hora="11:00"
             md="PM"
-          />
-          <Agenda
-            titulo="Yoga para ti, para mí y para todos! 9:00AM - 4:00 PM"
-            hora="9:00"
-            md="AM"
           />
         </Eventos>
         <DiaAgenda
@@ -93,23 +88,18 @@ export default function AgendaDia({ navigation }: Props) {
             md="AM"
           />
           <Agenda
-            titulo="Yoga para ti, para mí y para todos! 9:00AM - 4:00 PM"
+            titulo="Asesoría Terapia holistica con Carlos Andrés Solano.  5:00PM - 6:00 PM"
             hora="11:00"
             md="AM"
           />
           <Agenda
-            titulo="Yoga para ti, para mí y para todos! 9:00AM - 4:00 PM"
+            titulo="Webinar Emprendedores de éxito con Promigas S.A. "
             hora="5:00"
             md="PM"
           />
           <Agenda
-            titulo="Yoga para ti, para mí y para todos! 9:00AM - 4:00 PM"
+            titulo="Asesoría Terapia de parejas con Carlos y Josefina Marino."
             hora="7:00"
-            md="PM"
-          />
-          <Agenda
-            titulo="Yoga para ti, para mí y para todos! 9:00AM - 4:00 PM"
-            hora="9:00"
             md="PM"
           />
         </Eventos>

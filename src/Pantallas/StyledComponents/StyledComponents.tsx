@@ -132,6 +132,13 @@ export const ContainerPrincipalLive = styled.View`
   flex: 1;
   width: 100%;
   background-color: ${Colors.white};
+  overflow: hidden;
+`;
+
+export const ContainerPrincipalEventoLive = styled.View`
+  flex: 1;
+  width: 100%;
+  background-color: ${Colors.white};
 `;
 
 export const ContainerPrincipalSala = styled.View`

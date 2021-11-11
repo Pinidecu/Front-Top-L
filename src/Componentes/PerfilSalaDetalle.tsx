@@ -29,7 +29,6 @@ const Container = styled.View`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-top: 5px;
   padding: 0 20px;
   column-gap: 10;
 `;

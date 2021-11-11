@@ -57,14 +57,14 @@ const StyledText = styled.Text<StyledTextProps>`
 `;
 
 const ViewParticipantes = styled.View`
-  column-gap: 10px;
+  column-gap: 5px;
   align-self: center;
   justify-content: center;
   align-items: center;
   align-self: center;
   flex-wrap: wrap;
   width: 95vw;
-  height: 61vh;
+  height: 55%;
 `;
 
 const BotonesLlamada = styled.View`
@@ -151,11 +151,12 @@ export default function SalaDetalle({ navigation }: Props) {
         margin={"0px"}
         colorIcons={Colors.mainCOlorPurpleDark}
         threePoints={true}
+        add={true}
       />
       <PerfilSalaDetalle />
       <ViewTexts>
         <StyledText
-          size={16}
+          size={14}
           weight={400}
           fs={"normal"}
           lh={16.8}
@@ -164,7 +165,7 @@ export default function SalaDetalle({ navigation }: Props) {
           {datos.descripcion}
         </StyledText>
         <StyledText
-          size={14}
+          size={12}
           weight={400}
           fs={"normal"}
           lh={16}

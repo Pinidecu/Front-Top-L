@@ -9,6 +9,7 @@ import {
   Linea,
   TextoConfiguracion,
   ContainerPrincipalLive,
+  ContainerPrincipalEventoLive,
 } from "../StyledComponents/StyledComponents";
 import ImgLive from "../../Componentes/ImgLive";
 import ImgLive2 from "../../Componentes/ImgLive2";
@@ -22,10 +23,12 @@ import foto from "../../../assets/images/live.png";
 import foto1 from "../../../assets/images/Sala/5.png";
 import foto2 from "../../../assets/images/Sala/3.png";
 import foto3 from "../../../assets/images/Sala/4.png";
+import BarraLiveOpcion2 from "../../Componentes/BarraLiveOpcion2";
+import imagenPerfil from "../../../assets/images/Sala/8.png";
 
-type Props = {
+/* type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
-};
+}; */
 
 interface IndicatorProps {
   color: string;
@@ -77,24 +80,42 @@ const ViewImg2 = styled.View`
 `;
 
 const ViewBarra = styled.View`
-  justify-content: flex-end;
-  height: 20vh;
+justify-content: flex-end;
+align-items: center;
+  position: absolute;
+  bottom: -20vh;
+  width: 100%;
+  height: 7vh;
 `;
 
-export default function EventoLive({ navigation }: Props) {
+
+interface ContainerProps {
+  foto: string;
+}
+const Container = styled.View<ContainerProps>`
+  background-image: url(${(props) => props.foto});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+`;
+
+interface Props {
+  foto: string;
+}
+
+export default function EventoLive() {
   return (
-    <ContainerPrincipalLive>
-      <ImgLiveOpcion2 foto={foto} />
+    <Container foto={foto}>
+      <BarraLiveOpcion2
+        fotoPerfil={imagenPerfil}
+        nombre={"Ricarzo Zambrano Pión"}
+        usuario={"@ricardocoach"}
+        hora={"00:31:21"}
+      />
       <Barra />
-      <ViewBarra>
-        <BarraIconos
-          titulo={""}
-          margin={"0px"}
-          colorIcons={Colors.mainCOlorPurpleLigth}
-          threePoints={false}
-          add={true}
-        />
-      </ViewBarra>
+
       <Indicator color={Colors.mainCOlorPurpleDark} />
       <ViewIconos>
         <IconosLive color={Colors.SecondaryPurpleLight}>
@@ -115,6 +136,56 @@ export default function EventoLive({ navigation }: Props) {
         <ImgLive2 nombre={"@karendagy"} foto={foto2} />
         <ImgLive2 nombre={"@ronalddiaz"} foto={foto3} />
       </ViewImg2>
-    </ContainerPrincipalLive>
+      <ViewBarra>
+        <BarraIconos
+          titulo={""}
+          margin={"0px"}
+          colorIcons={Colors.mainCOlorPurpleLigth}
+          threePoints={false}
+          add={true}
+        />
+      </ViewBarra>
+    </Container>
   );
 }
+
+/* export default function EventoLive({ navigation }: Props) {
+  return (
+      <ImgLiveOpcion2 foto={foto}>
+        <Barra />
+        <ViewBarra>
+          <BarraIconos
+            titulo={""}
+            margin={"0px"}
+            colorIcons={Colors.mainCOlorPurpleLigth}
+            threePoints={false}
+            add={true}
+          />
+        </ViewBarra>
+        <Indicator color={Colors.mainCOlorPurpleDark} />
+        <ViewIconos>
+          <IconosLive color={Colors.SecondaryPurpleLight}>
+            <Icon
+              name="flip-camera-ios"
+              color={Colors.SecondaryGray}
+              size={25}
+            />
+          </IconosLive>
+          <IconosLive color={Colors.SecondaryPurpleLight}>
+            <Icon name="mic-off" color={Colors.SecondaryGray} size={25} />
+          </IconosLive>
+          <IconosLive color={Colors.mainColorRed}>
+            <Icon name="call-end" color={Colors.white} size={25} />
+          </IconosLive>
+          <IconosLive color={Colors.SecondaryPurpleLight}>
+            <Icon name="more-vert" color={Colors.SecondaryGray} size={25} />
+          </IconosLive>
+        </ViewIconos>
+        <ViewImg2>
+          <ImgLive2 nombre={"@rdaniamor"} foto={foto1} />
+          <ImgLive2 nombre={"@karendagy"} foto={foto2} />
+          <ImgLive2 nombre={"@ronalddiaz"} foto={foto3} />
+        </ViewImg2>
+      </ImgLiveOpcion2>
+  );
+} */

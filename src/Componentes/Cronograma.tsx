@@ -90,10 +90,10 @@ export default function Cronograma() {
                 source={require("../../assets/images/SF.png")}
               />
             ) : (
-              <Icon
-                name="toggle-off"
-                color={Colors.mainCOlorPurpleDark}
-                size={50}
+              <StyledImg
+                width={51}
+                height={33}
+                source={require("../../assets/images/SF.png")}
               />
             )}
           </Evento>

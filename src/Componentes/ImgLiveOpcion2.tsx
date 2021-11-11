@@ -15,7 +15,7 @@ const Container = styled.View<ContainerProps>`
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 `;
 
 interface Props {

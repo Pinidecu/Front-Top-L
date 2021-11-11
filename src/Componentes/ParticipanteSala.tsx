@@ -17,8 +17,8 @@ const ContainerImg = styled.View<ContainerImgProps>`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 28vw;
-  height: 28vw;
+  width: 25vw;
+  height: 25vw;
   border-radius: 24px;
   ${({ activo }) =>
     activo &&

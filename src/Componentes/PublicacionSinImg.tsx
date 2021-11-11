@@ -53,6 +53,14 @@ const StyledImg = styled.Image<StyledImgProps>`
   border-radius: ${(props) => props.radio};
   margin: ${(props) => props.margin};
 `;
+interface StyledImgIconProps {
+  width: number;
+  height: number;
+}
+const StyledImgIcon = styled.Image<StyledImgIconProps>`
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+`;
 const Titulo = styled.View`
   width: 80%;
 `;
@@ -92,6 +100,7 @@ const MegustaView = styled.View`
 const ActionsView = styled.View`
   flex-direction: row;
   column-gap: 3px;
+  align-items: center;
 `;
 
 export default function PublicacionSinImg() {
@@ -147,7 +156,11 @@ export default function PublicacionSinImg() {
           </StyledText>
         </ActionsView>
         <ActionsView>
-          <Icon name="chat" color={Colors.SecondaryGray} size={18} />
+          <StyledImgIcon
+            width={15}
+            height={15}
+            source={require("../../assets/images/comentario.png")}
+          />
           <StyledText
             size={12}
             weight={400}
