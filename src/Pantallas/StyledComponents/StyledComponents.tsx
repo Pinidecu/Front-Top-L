@@ -58,7 +58,7 @@ export const TituloText = styled.Text`
 export const Botones = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  width: 344;
+  width: 90%;
   margin: 10px;
 `;
 
@@ -104,6 +104,7 @@ export const ContainerAgenda = styled.View`
   align-items: center;
   justify-content: center;
   margin: 10px;
+  width: 90%;
 `;
 
 export const Linea = styled.View`

@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
+import imagenLive2 from "../../assets/images/live1.png";
 
+interface ContainerProps {
+  foto: string;
+}
 
-let urlImg: string = "https://lorempixel.com/375/718/people";
-
-const Container = styled.View`
-  background-image: url(${urlImg});
+const Container = styled.View<ContainerProps>`
+  background-image: url(${(props) => props.foto});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -15,7 +17,7 @@ const Container = styled.View`
   border-radius: 20px;
   z-index: 1;
   justify-content: flex-end;
-  align-items: center;
+  align-items: center;;
 `;
 
 const StyledText = styled.Text`
@@ -30,10 +32,11 @@ const StyledText = styled.Text`
 
 interface Props {
   nombre: string;
+  foto: string;
 }
 
 
-export default function ImgLive2({ nombre }: Props) {
-  return <Container><StyledText>{nombre}</StyledText></Container>;
+export default function ImgLive2({ nombre,foto }: Props) {
+  return <Container foto={foto}><StyledText>{nombre}</StyledText></Container>;
 }
 

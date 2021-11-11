@@ -49,12 +49,26 @@ const Indicator = styled.View <IndicatorProps>`
   left:10px;
 `;
 
+interface StyledImgProps {
+  width: number;
+  height: number;
+}
+
+const StyledImg = styled.Image<StyledImgProps>`
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+`;
+
 export default function NavLive() {
   return (
     <Container color={Colors.white}>
       <Indicator color={Colors.mainCOlorPurpleDark} />
       <IconosLive color={Colors.SecondaryPurpleLight}>
-        <Icon name="flip-camera-ios" color={Colors.SecondaryGray} size={25} />
+        <StyledImg
+          width={25}
+          height={22}
+          source={require("../../assets/images/camara.png")}
+        />
       </IconosLive>
       <IconosLive color={Colors.SecondaryPurpleLight}>
         <Icon name="mic-off" color={Colors.SecondaryGray} size={25} />

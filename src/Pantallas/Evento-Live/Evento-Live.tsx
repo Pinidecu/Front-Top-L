@@ -18,6 +18,10 @@ import ImgLiveOpcion2 from "../../Componentes/ImgLiveOpcion2";
 import BarraIconos from "../../Componentes/BarraIconos";
 import Colors from "../../../constants/Colors";
 import { Icon } from "react-native-elements";
+import foto from "../../../assets/images/live.png";
+import foto1 from "../../../assets/images/Sala/5.png";
+import foto2 from "../../../assets/images/Sala/3.png";
+import foto3 from "../../../assets/images/Sala/4.png";
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
@@ -80,7 +84,7 @@ const ViewBarra = styled.View`
 export default function EventoLive({ navigation }: Props) {
   return (
     <ContainerPrincipalLive>
-      <ImgLiveOpcion2 />
+      <ImgLiveOpcion2 foto={foto} />
       <Barra />
       <ViewBarra>
         <BarraIconos
@@ -88,6 +92,7 @@ export default function EventoLive({ navigation }: Props) {
           margin={"0px"}
           colorIcons={Colors.mainCOlorPurpleLigth}
           threePoints={false}
+          add={true}
         />
       </ViewBarra>
       <Indicator color={Colors.mainCOlorPurpleDark} />
@@ -106,9 +111,9 @@ export default function EventoLive({ navigation }: Props) {
         </IconosLive>
       </ViewIconos>
       <ViewImg2>
-        <ImgLive2 nombre={"@rdaniamor"} />
-        <ImgLive2 nombre={"@karendagy"} />
-        <ImgLive2 nombre={"@ronalddiaz"} />
+        <ImgLive2 nombre={"@rdaniamor"} foto={foto1} />
+        <ImgLive2 nombre={"@karendagy"} foto={foto2} />
+        <ImgLive2 nombre={"@ronalddiaz"} foto={foto3} />
       </ViewImg2>
     </ContainerPrincipalLive>
   );

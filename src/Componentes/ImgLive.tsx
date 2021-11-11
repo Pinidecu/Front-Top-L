@@ -4,20 +4,27 @@ import Colors from "../../constants/Colors";
 import BarraIconos from "./BarraIconos";
 
 
-let urlImg: string = "https://lorempixel.com/375/718/people/";
 
-const Container = styled.View`
-  background-image: url(${urlImg});
+interface ContainerProps {
+  foto: string;
+}
+
+const Container = styled.View<ContainerProps>`
+  background-image: url(${(props) => props.foto});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 100%;
   height: 100vh;
 `;
 
+interface Props {
+  foto: string;
+}
 
-export default function ImgLive() {  
+export default function ImgLive({ foto }: Props) {
   return (
-    <Container>
+    <Container foto={foto}>
       <BarraIconos
         titulo={""}
         margin={"0px"}

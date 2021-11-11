@@ -3,15 +3,11 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
+import reloj from "../../assets/images/reloj.png";
 
 
 
-interface datosBarraLive2 {
-  fotoPerfil: string;
-  nombre: string;
-  usuario: string;
-  hora: string;
-}
+
 
 interface StyledImgProps {
   width: number;
@@ -69,63 +65,67 @@ const StyledImg = styled.Image<StyledImgProps>`
   margin: ${(props) => props.margin};
 `;
 
-const datos: datosBarraLive2 = {
-  fotoPerfil: "https://lorempixel.com/200/200/people/",
-  nombre: "Ricarzo Zambrano Pión",
-  usuario: "@ricardocoach",
-  hora: "00:31:21",
-};
 
-export default function BarraLiveOpcion2() {
+interface Props {
+  fotoPerfil: string;
+  nombre: string;
+  usuario: string;
+  hora: string;
+}
+
+export default function BarraLiveOpcion2({fotoPerfil,nombre,usuario,hora}:Props) {
   return (
     <Container>
       <LeftContainer>
-      <StyledImg
-        width={40}
-        height={45}
-        radio={"50%"}
-        margin={"0"}
-        source={{
-          uri: `${datos.fotoPerfil}`,
-        }}
-      />
-      <ViewNombres>
+        <StyledImg
+          width={40}
+          height={40}
+          radio={"50%"}
+          margin={"0"}
+          source={{
+            uri: `${fotoPerfil}`,
+          }}
+        />
+        <ViewNombres>
+          <StyledText
+            size={12}
+            weight={700}
+            fs={"normal"}
+            lh={14}
+            color={Colors.mainCOlorPurpleDark}
+          >
+            {nombre}
+          </StyledText>
+          <StyledText
+            size={12}
+            weight={400}
+            fs={"normal"}
+            lh={14}
+            color={Colors.mainCOlorPurpleDark}
+          >
+            {usuario}
+          </StyledText>
+        </ViewNombres>
+      </LeftContainer>
+      <RightContainer>        
+        <StyledImg
+          width={20}
+          height={20}
+          radio={""}
+          margin={"0"}
+          source={{
+            uri: `${reloj}`,
+          }}
+        />
         <StyledText
-          size={12}
-          weight={700}
-          fs={"normal"}
-          lh={14}
-          color={Colors.mainCOlorPurpleDark}
-        >
-          {datos.nombre}
-        </StyledText>
-        <StyledText
-          size={12}
+          size={14}
           weight={400}
           fs={"normal"}
-          lh={14}
-          color={Colors.mainCOlorPurpleDark}
+          lh={16.8}
+          color={Colors.mainColorBlack}
         >
-          {datos.usuario}
+          {hora}
         </StyledText>
-      </ViewNombres>
-      </LeftContainer>
-      <RightContainer>
-      <Icon
-        name="time-outline"
-        type={"ionicon"}
-        color={Colors.mainCOlorPurpleLigth}
-        size={20}
-      />
-      <StyledText
-        size={14}
-        weight={400}
-        fs={"normal"}
-        lh={16.8}
-        color={Colors.mainColorBlack}
-      >
-        {datos.hora}
-      </StyledText>
       </RightContainer>
     </Container>
   );

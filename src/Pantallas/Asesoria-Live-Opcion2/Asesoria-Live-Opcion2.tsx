@@ -15,6 +15,8 @@ import ImgLive2 from "../../Componentes/ImgLive2";
 import NavLive from "../../Componentes/NavLive";
 import NavLiveOpcion2 from "../../Componentes/NavLiveOpcion2";
 import ImgLiveOpcion2 from "../../Componentes/ImgLiveOpcion2";
+import foto from "../../../assets/images/live.png";
+import foto1 from "../../../assets/images/Sala/5.png";
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
@@ -30,9 +32,9 @@ const ViewImg2 = styled.View`
 export default function AsesoriaLiveOpcion2({ navigation }: Props) {
   return (
     <ContainerPrincipalLive>
-      <ImgLiveOpcion2 />
+      <ImgLiveOpcion2 foto={foto} />
       <ViewImg2>
-        <ImgLive2 nombre={"@rdaniamor"} />
+        <ImgLive2 nombre={"@rdaniamor"} foto={foto1} />
       </ViewImg2>
       <NavLiveOpcion2 />
     </ContainerPrincipalLive>

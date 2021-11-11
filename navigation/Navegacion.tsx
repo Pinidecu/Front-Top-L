@@ -50,10 +50,10 @@ export default function Navegacion() {
           tabBarInactiveTintColor: `${Colors.SecondaryGray}`,
         })}
       >
-        <Tab.Screen name="Equipos" component={EquiposTab} />
         <Tab.Screen name="Inicio" component={Inicio} />
+        <Tab.Screen name="Equipos" component={EquiposTab} />
         <Tab.Screen name="Explorar" component={() => <InfoPro />} />
-        <Tab.Screen name="Perfil" component={() => <Publicacion />} />
+        <Tab.Screen name="Perfil" component={() => <InfoPro />} />
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -88,8 +88,14 @@ const MegustaView = styled.View`
   width: 90%;
 `;
 
-export default function Publicacion() {
-  
+interface Props {
+  fotoPerfil: string;
+  nombre: string[];
+  descripcion: string;
+  imagen: string;
+}
+
+export default function Publicacion({ fotoPerfil, nombre, descripcion, imagen }: Props) {
   return (
     <Container>
       <StyledBookmark
@@ -104,7 +110,7 @@ export default function Publicacion() {
           radio={"50%"}
           margin={"0"}
           source={{
-            uri: `${datos.fotoPerfil}`,
+            uri: fotoPerfil,
           }}
         />
         <Titulo>
@@ -115,7 +121,7 @@ export default function Publicacion() {
             lh={14}
             color={Colors.mainColorBlack}
           >
-            {datos.nombre.join("  •  ")}
+            {nombre.join("  •  ")}
           </StyledText>
           <StyledText
             size={14}
@@ -124,13 +130,9 @@ export default function Publicacion() {
             lh={18}
             color={Colors.black}
           >
-            {datos.descripcion}
+            {descripcion}
           </StyledText>
         </Titulo>
-        {/* <View>
-          <Icon name="bookmark" color="#C2C4EE" size={30} />
-          <Icon name="more-horiz" color="#5B74FB" size={30} />
-        </View> */}
       </Info>
       <StyledImg
         width={90}
@@ -138,7 +140,7 @@ export default function Publicacion() {
         radio={""}
         margin={"10px"}
         source={{
-          uri: `${datos.imagen}`,
+          uri: imagen,
         }}
       />
       <MegustaView>

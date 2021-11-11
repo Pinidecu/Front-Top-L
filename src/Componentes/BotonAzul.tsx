@@ -29,7 +29,7 @@ const Container = styled.View<ContainerProps>`
   align-items: center;
   justify-content: center;
   column-gap: 10;
-  width: ${(props) => props.width};
+  width: ${(props) => props.width}%;
   height: ${(props) => props.height};
   border-radius: 8;
   align-self: center;
@@ -41,19 +41,29 @@ const StyledText = styled.Text<StyledTextProps>`
   font-size: ${(props) => props.size};
   font-weight: ${(props) => props.weight};
   line-height: ${(props) => props.lh};
+  text-align: center;
 `;
 
-
+interface StyledImgProps {
+  width: number;
+  height: number;
+  radio: any;
+  margin: string;
+  left: number;
+}
+const Icono = styled.Image<StyledImgProps>`
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+`;
 
 export default function BotonAzul({ ancho, alto, texto, icon }: Props) {
   return (
     <Container width={ancho} height={alto} color={Colors.colorBoton}>
       {icon ? (
-        <Icon
-          name={icon}
-          color="white"
-          size={35}
-          onPress={() => console.log("hello")}
+        <Icono
+          width={33}
+          height={30}
+          source={{uri:icon}}
         />
       ) : null}
       <StyledText weight={400} size={16} lh={24} color={Colors.colorTextBoton}>

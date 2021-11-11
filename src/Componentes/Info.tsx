@@ -30,7 +30,7 @@ const Container = styled.View`
   align-items: center;
   justify-content: space-around;
   height: 185;
-  width: 344;
+  width: 90%;
   border-radius: 8;
   box-shadow: 0px 0px 4px rgba(180, 188, 206, 0.5);
 `;
@@ -65,23 +65,23 @@ const StyledText = styled.Text<StyledTextProps>`
   line-height: ${(props) => props.lh};
   color: ${(props) => props.color};
 `;
+const StyledBookmark = styled.Image<StyledImgProps>`
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+  position: absolute;
+  top: 0px;
+  right: 10px;
+`;
 
+interface Props {
+  nombre: string;
+  profesion: string;
+  foto: string;
+  rubros: string[];
+  tags: string[];
+}
 
-export default function Info() {
-  const datos: datosInfo = {
-    nombre: "Alejandra Martinez Ruiz",
-    profesion: "Instructora de yoga",
-    foto: "https://lorempixel.com/200/200/people/",
-    rubros: ["Yoga", "Meditacion holística"],
-    tags: [
-      "#uxui",
-      "#freelance",
-      "#uxdesign",
-      "#Educación",
-      "#Webdesign",
-      "#culturadigital",
-    ],
-  };
+export default function Info({ nombre, profesion, foto, rubros, tags }: Props) {
   return (
     <Container>
       <StyledImg
@@ -89,15 +89,14 @@ export default function Info() {
         height={80}
         radio={"50%"}
         source={{
-          uri: `${datos.foto}`,
+          uri: foto,
         }}
       />
       <IconView>
-        <Icon
-          name="bookmark"
-          color="#C2C4EE"
-          size={40}
-          onPress={() => console.log("hello")}
+        <StyledBookmark
+          width={25}
+          height={30}
+          source={require("../../assets/images/bookmark.png")}
         />
       </IconView>
       <Datos>
@@ -108,7 +107,7 @@ export default function Info() {
           lh={24}
           color={Colors.mainColorBlack}
         >
-          {datos.nombre}
+          {nombre}
         </StyledText>
         <StyledText
           size={12}
@@ -117,7 +116,7 @@ export default function Info() {
           lh={14}
           color={Colors.mainColorBlack}
         >
-          {datos.profesion}
+          {profesion}
         </StyledText>
         <StyledText
           size={12}
@@ -126,7 +125,7 @@ export default function Info() {
           lh={14}
           color={Colors.mainCOlorPurpleLigth}
         >
-          {datos.rubros.join("  •  ")}
+          {rubros.join("  •  ")}
         </StyledText>
         <LinearGradient
           colors={["#6560F0", "#7F8FFF"]}
@@ -144,7 +143,7 @@ export default function Info() {
           lh={14}
           color={Colors.SecondaryGray}
         >
-          {datos.tags.join(", ")}
+          {tags.join(", ")}
         </StyledText>
       </Datos>
     </Container>

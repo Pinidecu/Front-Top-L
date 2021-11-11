@@ -27,7 +27,7 @@ const Container = styled.View<ContainerProps>`
   align-items: center;
   justify-content: center;
   column-gap: 10;
-  width: ${(props) => props.width};
+  width: ${(props) => props.width}%;
   height: ${(props) => props.height};
   border: 1px solid ${Colors.mainCOlorPurpleDark};
   border-radius: 8;

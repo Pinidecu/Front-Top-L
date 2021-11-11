@@ -5,12 +5,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 
-interface datosInfo {
-  nombre: string;
-  crear: string;
-  foto: string;
-  tags: string[];
-}
+
 interface StyledImgProps {
   width: number;
   height: number;
@@ -29,7 +24,7 @@ const Container = styled.View`
   align-items: center;
   justify-content: space-around;
   height: 185;
-  width: 344;
+  width: 90%;
   border-radius: 8;
   box-shadow: 0px 0px 4px rgba(180, 188, 206, 0.5);
   margin: 10px;
@@ -66,20 +61,15 @@ const StyledText = styled.Text<StyledTextProps>`
   color: ${(props) => props.color};
 `;
 
-export default function InfoMiPerfil() {
-  const datos: datosInfo = {
-    nombre: "Alejandra Martinez Ruiz",
-    crear: "Crear perfil profesional",
-    foto: "https://lorempixel.com/200/200/people/",
-    tags: [
-      "#uxui",
-      "#freelance",
-      "#uxdesign",
-      "#Educación",
-      "#Webdesign",
-      "#culturadigital",
-    ],
-  };
+interface Props {
+  nombre: string;
+  crear: string;
+  foto: string;
+  tags: string[];
+}
+
+export default function InfoMiPerfil({ nombre, crear, foto, tags }: Props) {
+  
   return (
     <Container>
       <StyledImg
@@ -87,17 +77,9 @@ export default function InfoMiPerfil() {
         height={80}
         radio={"50%"}
         source={{
-          uri: `${datos.foto}`,
+          uri: foto,
         }}
       />
-      <IconView>
-        <Icon
-          name="bookmark"
-          color="#C2C4EE"
-          size={40}
-          onPress={() => console.log("hello")}
-        />
-      </IconView>
       <Datos>
         <StyledText
           size={16}
@@ -106,7 +88,7 @@ export default function InfoMiPerfil() {
           lh={24}
           color={Colors.mainColorBlack}
         >
-          {datos.nombre}
+          {nombre}
         </StyledText>
         <StyledText
           size={12}
@@ -115,7 +97,7 @@ export default function InfoMiPerfil() {
           lh={14}
           color={Colors.mainCOlorPurpleLigth}
         >
-          {datos.crear}
+          {crear}
         </StyledText>
         <LinearGradient
           colors={["#6560F0", "#7F8FFF"]}
@@ -133,7 +115,7 @@ export default function InfoMiPerfil() {
           lh={14}
           color={Colors.SecondaryGray}
         >
-          {datos.tags.join(", ")}
+          {tags.join(", ")}
         </StyledText>
       </Datos>
     </Container>

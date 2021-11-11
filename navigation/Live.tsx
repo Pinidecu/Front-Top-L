@@ -23,7 +23,7 @@ export const Live = () => {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName={"HorariosTarifas2"}
+        initialRouteName={"AsesoriaLiveOpcion2"}
       >
         <Stack.Screen name="AsesoriaLive" component={AsesoriaLive} />
         <Stack.Screen

@@ -22,7 +22,7 @@ const Container = styled.View`
   align-items: center;
   justify-content: flex-start;
   background-color: ${Colors.destacado};
-  width: 347;
+  width: 100%;
   height: 51px;
   margin: 2.5px 0;
   padding: 0 20px;
@@ -39,12 +39,24 @@ const StyledText = styled.Text<StyledTextProps>`
   color: ${(props) => props.color};
 `;
 
+interface StyledImgProps {
+  width: number;
+  height: number;
+}
+const StyledImg = styled.Image<StyledImgProps>`
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+`;
+
 export default function Edicion({ titulo, icono }: Props) {
   return (
     <Container>
-      <Icon
-        name={icono}
-        color={Colors.mainCOlorPurpleDark}
+      <StyledImg
+        width={20}
+        height={20}
+        source={{
+          uri: icono,
+        }}
       />
       <StyledText
         size={14}

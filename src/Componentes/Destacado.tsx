@@ -3,12 +3,7 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 
-interface datosDestacado {
-  titulo: string;
-  lugar: string;
-  descripcion: string;
-  foto: string;
-}
+
 
 interface ContainerProps {
   color: string;
@@ -60,14 +55,15 @@ const StyledImg = styled.Image<StyledImgProps>`
   right: 15;
 `;
 
-export default function Destacado() {
-  const datos: datosDestacado = {
-    titulo: "Dra Alejandra website profesional",
-    lugar: "Website",
-    descripcion:
-      "Morbi tincidunt metus quis justo lobortis tristique. Fusce magna lectus, sollicitudin in erat eget, molestie euismod ipsum.",
-    foto: "https://lorempixel.com/200/200/people/",
-  };
+interface Props {
+  titulo: string;
+  lugar: string;
+  descripcion: string;
+  foto: string;
+}
+
+export default function Destacado({ titulo, lugar, descripcion, foto }: Props) {
+ 
   return (
     <Container color={Colors.destacado} borderColor={Colors.bordeDestacado}>
       <StyledText
@@ -77,7 +73,7 @@ export default function Destacado() {
         lh={16.8}
         color={Colors.mainColorBlack}
       >
-        {datos.titulo}
+        {titulo}
       </StyledText>
       <StyledText
         size={12}
@@ -86,7 +82,7 @@ export default function Destacado() {
         lh={14}
         color={Colors.SecondaryGray}
       >
-        {datos.lugar}
+        {lugar}
       </StyledText>
       <StyledText
         size={12}
@@ -95,14 +91,14 @@ export default function Destacado() {
         lh={14}
         color={Colors.mainColorBlack}
       >
-        {datos.descripcion}
+        {descripcion}
       </StyledText>
       <StyledImg
         width={40}
         height={40}
         radio={"50%"}
         source={{
-          uri: `${datos.foto}`,
+          uri: foto,
         }}
       />
     </Container>

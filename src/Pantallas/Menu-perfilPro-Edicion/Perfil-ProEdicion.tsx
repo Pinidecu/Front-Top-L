@@ -12,6 +12,13 @@ import {
   TextoConfiguracion,
 } from "../StyledComponents/StyledComponents";
 import Colors from "../../../constants/Colors";
+import fotoPerfil from "../../../assets/images/fotoPerfil.png";
+import user from "../../../assets/images/user.png";
+import maletin from "../../../assets/images/maletin.png";
+import group from "../../../assets/images/group.png";
+import agenda from "../../../assets/images/agenda.png";
+import billetera from "../../../assets/images/billetera.png";
+
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
@@ -28,13 +35,25 @@ export default function PerfilProEdicion({ navigation }: Props) {
           threePoints={true}
           add={true}
         />
-        <InfoMiPerfil />
+        <InfoMiPerfil
+          nombre={"Alejandra Martinez Ruiz"}
+          crear={"Yoga •  Meditación holística"}
+          foto={fotoPerfil}
+          tags={[
+            "#uxui",
+            "#freelance",
+            "#uxdesign",
+            "#Educación",
+            "#Webdesign",
+            "#culturadigital",
+          ]}
+        />
         <ContainerAgenda>
-          <Edicion titulo={"Ajustes de perfil"} icono={"person-outline"} />
-          <Edicion titulo={"Contenido creado"} icono={"work"} />
-          <Edicion titulo={"Mi equipo"} icono={"group"} />
-          <Edicion titulo={"Mi agenda"} icono={"calendar-today"} />
-          <Edicion titulo={"Mi billeterea"} icono={"account-balance-wallet"} />
+          <Edicion titulo={"Ajustes de perfil"} icono={user} />
+          <Edicion titulo={"Contenido creado"} icono={maletin} />
+          <Edicion titulo={"Mi equipo"} icono={group} />
+          <Edicion titulo={"Mi agenda"} icono={agenda} />
+          <Edicion titulo={"Mi billeterea"} icono={billetera} />
         </ContainerAgenda>
         <Linea />
         <TextoConfiguracion>Configuración y privacidad</TextoConfiguracion>

@@ -9,6 +9,7 @@ import PerfilProEdicion from "../src/Pantallas/Menu-perfilPro-Edicion/Perfil-Pro
 import Equipos from "../src/Pantallas/Equipos/Equipos";
 import EquipoDetalle1 from "../src/Pantallas/Equipo-Detalle-1/Equipo-Detalle1";
 import EquipoDetalle2 from "../src/Pantallas/Equipo-Detalle-2/Equipo-Detalle2";
+import Salas from "../src/Pantallas/Salas/Salas";
 
 const Stack = createStackNavigator();
 export const EquiposTab = () => {
@@ -18,6 +19,7 @@ export const EquiposTab = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="Salas" component={Salas} />
       <Stack.Screen name="EquipoDetalle2" component={EquipoDetalle2} />
       <Stack.Screen name="EquipoDetalle1" component={EquipoDetalle1} />
       <Stack.Screen name="Equipos" component={Equipos} />

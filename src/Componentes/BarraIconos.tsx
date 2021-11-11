@@ -7,16 +7,16 @@ import Colors from "../../constants/Colors";
 interface Props {
   titulo: string;
   margin: string;
-  colorIcons:string;
-  add?:boolean;
-  threePoints?:boolean;
-  lupa?:boolean;
+  colorIcons: string;
+  add?: boolean;
+  threePoints?: boolean;
+  lupa?: boolean;
+  lupaBlue?: boolean;
 }
 
 interface StyledContainerProps {
   margin: string;
 }
-
 
 const Container = styled.View<StyledContainerProps>`
   flex-direction: row;
@@ -46,6 +46,7 @@ export default function BarraIconos({
   colorIcons,
   threePoints,
   lupa,
+  lupaBlue,
   add,
 }: Props) {
   return (
@@ -54,6 +55,7 @@ export default function BarraIconos({
       <StyledText>{titulo}</StyledText>
       <RigthContainer>
         {lupa ? <Icon name="search" color={Colors.black} size={25} /> : null}
+        {lupaBlue ? <Icon name="search" color={colorIcons} size={25} /> : null}
         {add ? <Icon name="add" color={colorIcons} size={25} /> : null}
         {threePoints ? (
           <Icon name="more-horiz" color={colorIcons} size={25} />
@@ -62,5 +64,3 @@ export default function BarraIconos({
     </Container>
   );
 }
-
-

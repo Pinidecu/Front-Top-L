@@ -27,7 +27,7 @@ import Cronograma2 from "../../Componentes/Cronograma2";
 import Publicacion from "../../Componentes/Publicacion";
 import EquipoPublicacion from "../../Componentes/EquipoPublicacion";
 import Equipo1 from "../../../assets/images/Equipo1.png";
-import Equipo2 from "../../../assets/images/Equipo1.png";
+import Equipo2 from "../../../assets/images/Equipo2.png";
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;

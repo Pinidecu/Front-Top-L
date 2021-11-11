@@ -20,6 +20,8 @@ import {
   Parentesis,
   Puntaje,
 } from "../StyledComponents/StyledComponents";
+import foto from "../../../assets/images/Sala/7.png";
+
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
@@ -68,10 +70,23 @@ export default function PerfilProPublico({ navigation }: Props) {
               <Parentesis>(128)</Parentesis>
             </Titulo>
           </Navegacion>
-          <Info />
+          <Info
+            nombre={"Alejandra Martinez Ruiz"}
+            profesion={"Instructora de yoga"}
+            foto={foto}
+            rubros={["Yoga", "Meditacion holística"]}
+            tags={[
+              "#uxui",
+              "#freelance",
+              "#uxdesign",
+              "#Educación",
+              "#Webdesign",
+              "#culturadigital",
+            ]}
+          />
           <Botones>
             <BotonAzul
-              ancho={344}
+              ancho={100}
               alto={55.08}
               texto={"AGENDAR ASESORÍA"}
               icon={""}
