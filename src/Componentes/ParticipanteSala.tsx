@@ -5,6 +5,7 @@ import Colors from "../../constants/Colors";
 
 const Container = styled.View`
   align-items: center;
+  margin: 5px;
 `;
 
 interface ContainerImgProps {

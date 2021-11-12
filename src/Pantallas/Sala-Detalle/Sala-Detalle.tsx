@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView } from "react-native";
+import { FlatList, ScrollView, TouchableOpacity } from "react-native";
 import InfoMiPerfil from "../../Componentes/InfoMiPerfil";
 import BarraIconos from "../../Componentes/BarraIconos";
 import Edicion from "../../Componentes/Edicion";
@@ -146,13 +146,20 @@ let participantes: participante[] = [
 export default function SalaDetalle({ navigation }: Props) {
   return (
     <ContainerPrincipalSala>
-      <BarraIconos
-        titulo={""}
-        margin={"0px"}
-        colorIcons={Colors.mainCOlorPurpleDark}
-        threePoints={true}
-        add={true}
-      />
+      <TouchableOpacity
+        style={{ width: "100%" }}
+        onPress={() => {
+          navigation.navigate("AgendaDia");
+        }}
+      >
+        <BarraIconos
+          titulo={""}
+          margin={"0px"}
+          colorIcons={Colors.mainCOlorPurpleLigth}
+          threePoints={true}
+          add={true}
+        />
+      </TouchableOpacity>
       <PerfilSalaDetalle />
       <ViewTexts>
         <StyledText
@@ -174,11 +181,29 @@ export default function SalaDetalle({ navigation }: Props) {
           {datos.tags}
         </StyledText>
       </ViewTexts>
-      <ViewParticipantes>
+      {/* <ViewParticipantes>
         {participantes.map((p) => {
-          return <ParticipanteSala nombre={p.nombre} activo={p.activo} foto={p.foto}/>;
+          return (
+            <ParticipanteSala
+              nombre={p.nombre}
+              activo={p.activo}
+              foto={p.foto}
+            />
+          );
         })}
-      </ViewParticipantes>
+      </ViewParticipantes> */}
+      <FlatList
+        data={participantes}
+        numColumns={3}
+        
+        renderItem={({ item }) => (
+          <ParticipanteSala
+            nombre={item.nombre}
+            activo={item.activo}
+            foto={item.foto}
+          />
+        )}
+      />
       <BotonesLlamada>
         <IconosLlamada>
           <IconosLive color={Colors.SecondaryPurpleLight}>

@@ -35,13 +35,20 @@ export default function AgendaDia({ navigation }: Props) {
   return (
     <ScrollView>
       <ContainerPrincipalAgenda>
-        <BarraIconos
-          titulo={"Mi agenda live"}
-          margin={"0px"}
-          colorIcons={Colors.mainCOlorPurpleDark}
-          threePoints={true}
-          add={true}
-        />
+        <TouchableOpacity
+          style={{ width: "100%" }}
+          onPress={() => {
+            navigation.navigate("HorariosTarifas");
+          }}
+        >
+          <BarraIconos
+            titulo={"Mi agenda live"}
+            margin={"0px"}
+            colorIcons={Colors.mainCOlorPurpleLigth}
+            threePoints={true}
+            add={true}
+          />
+        </TouchableOpacity>
         <DiaAgenda
           ancho={90}
           alto={54}

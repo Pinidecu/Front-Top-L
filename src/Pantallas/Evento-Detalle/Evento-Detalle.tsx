@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { ScrollView, TouchableOpacity, View } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { loginStackParamList } from "../../../types";
 import styled from "styled-components/native";
@@ -159,247 +159,256 @@ const NotaView = styled.View`
 
 export default function EventoDetalle({ navigation }: Props) {
   return (
-    <ContainerPrincipalEventoLive>
-      <BarraIconos
-        titulo={""}
-        margin={"-15px"}
-        colorIcons={Colors.mainCOlorPurpleDark}
-        threePoints={true}
-        lupa={true}
-        add={true}
-      />
-      <ImageView foto={fotoEvento}>
-        <StyledImg
-          width={38}
-          height={45}
-          source={require("../../../assets/images/bookmark.png")}
-        />
-      </ImageView>
-      <TituloView>
-        <TituloLeft>
+    <ScrollView>
+      <ContainerPrincipalEventoLive>
+        <TouchableOpacity
+          style={{ width: "100%" }}
+          onPress={() => {
+            navigation.navigate("HorariosTarifas2");
+          }}
+        >
+          <BarraIconos
+            titulo={""}
+            margin={"-15px"}
+            colorIcons={Colors.mainCOlorPurpleLigth}
+            threePoints={true}
+            lupa={true}
+            add={true}
+          />
+        </TouchableOpacity>
+        <ImageView foto={fotoEvento}>
+          <StyledImg
+            width={38}
+            height={45}
+            source={require("../../../assets/images/bookmark.png")}
+          />
+        </ImageView>
+        <TituloView>
+          <TituloLeft>
+            <StyledText
+              size={24}
+              weight={700}
+              fs={"normal"}
+              lh={24}
+              color={Colors.mainColorBlack}
+            >
+              Aprendamos más sobre el self coaching
+            </StyledText>
+            <StyledText
+              size={12}
+              weight={400}
+              fs={"normal"}
+              lh={14}
+              color={Colors.mainCOlorPurpleLigth}
+            >
+              Category • Nombre del creador
+            </StyledText>
+            <LinearGradient
+              colors={["#6560F0", "#7F8FFF"]}
+              style={{
+                backgroundColor: "#6560F0",
+                width: 21,
+                height: 3,
+                borderRadius: 10,
+              }}
+            />
+          </TituloLeft>
+          <TituloRigth>
+            <IconView>
+              <Icon
+                name="favorite-border"
+                color={Colors.SecondaryGray}
+                size={18}
+              />
+              <StyledText
+                size={12}
+                weight={400}
+                fs={"normal"}
+                lh={18}
+                color={Colors.SecondaryGray}
+              >
+                (128)
+              </StyledText>
+            </IconView>
+            <IconView>
+              <StyledImgIcon
+                width={15}
+                height={15}
+                source={require("../../../assets/images/send.png")}
+              />
+              <StyledText
+                size={12}
+                weight={400}
+                fs={"normal"}
+                lh={18}
+                color={Colors.SecondaryGray}
+              >
+                (37)
+              </StyledText>
+            </IconView>
+          </TituloRigth>
+        </TituloView>
+        <InfoView>
           <StyledText
-            size={24}
+            size={14}
             weight={700}
             fs={"normal"}
-            lh={24}
-            color={Colors.mainColorBlack}
+            lh={18}
+            color={Colors.black}
           >
-            Aprendamos más sobre el self coaching
+            Fecha:
+            <StyledText
+              size={14}
+              weight={400}
+              fs={"normal"}
+              lh={16.8}
+              color={Colors.black}
+            >
+              {" Jueves 24 Jun, 2021"}
+            </StyledText>
           </StyledText>
+          <Linea />
+          <StyledText
+            size={14}
+            weight={700}
+            fs={"normal"}
+            lh={18}
+            color={Colors.black}
+          >
+            Hora de inicio:
+            <StyledText
+              size={14}
+              weight={400}
+              fs={"normal"}
+              lh={16.8}
+              color={Colors.black}
+            >
+              {" 1:00 PM"}
+            </StyledText>
+          </StyledText>
+          <Linea />
+          <StyledText
+            size={14}
+            weight={700}
+            fs={"normal"}
+            lh={18}
+            color={Colors.black}
+          >
+            Hora de fin :
+            <StyledText
+              size={14}
+              weight={400}
+              fs={"normal"}
+              lh={16.8}
+              color={Colors.black}
+            >
+              {" 3:00 PM"}
+            </StyledText>
+          </StyledText>
+          <Linea />
+          <StyledText
+            size={14}
+            weight={700}
+            fs={"normal"}
+            lh={18}
+            color={Colors.black}
+          >
+            Entrada:
+            <StyledText
+              size={14}
+              weight={400}
+              fs={"normal"}
+              lh={16.8}
+              color={Colors.black}
+            >
+              {" Gratis"}
+            </StyledText>
+          </StyledText>
+          <Linea />
+          <StyledText
+            size={14}
+            weight={700}
+            fs={"normal"}
+            lh={18}
+            color={Colors.black}
+          >
+            Tipo:
+            <StyledText
+              size={14}
+              weight={400}
+              fs={"normal"}
+              lh={16.8}
+              color={Colors.black}
+            >
+              {" Abierto al público"}
+            </StyledText>
+          </StyledText>
+        </InfoView>
+        <BotonAzul ancho={90} alto={55} texto={"UNIRME AL EVENTO LIVE"} />
+        <PublicacionView>
+          <TituloPublicacionView>
+            <StyledText
+              size={16}
+              weight={700}
+              fs={"normal"}
+              lh={24}
+              color={Colors.black}
+            >
+              Publicaciones sobre el evento
+            </StyledText>
+            <Icon
+              name="more-horiz"
+              color={Colors.mainCOlorPurpleLigth}
+              size={25}
+            />
+          </TituloPublicacionView>
           <StyledText
             size={12}
             weight={400}
             fs={"normal"}
             lh={14}
-            color={Colors.mainCOlorPurpleLigth}
+            color={Colors.textoGris}
           >
-            Category • Nombre del creador
+            Aquí encontrarás toda la información y publicaciones sobre éste
+            evento live.
           </StyledText>
-          <LinearGradient
-            colors={["#6560F0", "#7F8FFF"]}
-            style={{
-              backgroundColor: "#6560F0",
-              width: 21,
-              height: 3,
-              borderRadius: 10,
-            }}
-          />
-        </TituloLeft>
-        <TituloRigth>
-          <IconView>
-            <Icon
-              name="favorite-border"
-              color={Colors.SecondaryGray}
-              size={18}
-            />
-            <StyledText
-              size={12}
-              weight={400}
-              fs={"normal"}
-              lh={18}
-              color={Colors.SecondaryGray}
-            >
-              (128)
-            </StyledText>
-          </IconView>
-          <IconView>
-            <StyledImgIcon
-              width={15}
-              height={15}
-              source={require("../../../assets/images/send.png")}
-            />
-            <StyledText
-              size={12}
-              weight={400}
-              fs={"normal"}
-              lh={18}
-              color={Colors.SecondaryGray}
-            >
-              (37)
-            </StyledText>
-          </IconView>
-        </TituloRigth>
-      </TituloView>
-      <InfoView>
-        <StyledText
-          size={14}
-          weight={700}
-          fs={"normal"}
-          lh={18}
-          color={Colors.black}
-        >
-          Fecha:
+        </PublicacionView>
+
+        <DescripcionView>
           <StyledText
             size={14}
-            weight={400}
-            fs={"normal"}
-            lh={16.8}
-            color={Colors.black}
-          >
-            {" Jueves 24 Jun, 2021"}
-          </StyledText>
-        </StyledText>
-        <Linea />
-        <StyledText
-          size={14}
-          weight={700}
-          fs={"normal"}
-          lh={18}
-          color={Colors.black}
-        >
-          Hora de inicio:
-          <StyledText
-            size={14}
-            weight={400}
-            fs={"normal"}
-            lh={16.8}
-            color={Colors.black}
-          >
-            {" 1:00 PM"}
-          </StyledText>
-        </StyledText>
-        <Linea />
-        <StyledText
-          size={14}
-          weight={700}
-          fs={"normal"}
-          lh={18}
-          color={Colors.black}
-        >
-          Hora de fin :
-          <StyledText
-            size={14}
-            weight={400}
-            fs={"normal"}
-            lh={16.8}
-            color={Colors.black}
-          >
-            {" 3:00 PM"}
-          </StyledText>
-        </StyledText>
-        <Linea />
-        <StyledText
-          size={14}
-          weight={700}
-          fs={"normal"}
-          lh={18}
-          color={Colors.black}
-        >
-          Entrada:
-          <StyledText
-            size={14}
-            weight={400}
-            fs={"normal"}
-            lh={16.8}
-            color={Colors.black}
-          >
-            {" Gratis"}
-          </StyledText>
-        </StyledText>
-        <Linea />
-        <StyledText
-          size={14}
-          weight={700}
-          fs={"normal"}
-          lh={18}
-          color={Colors.black}
-        >
-          Tipo:
-          <StyledText
-            size={14}
-            weight={400}
-            fs={"normal"}
-            lh={16.8}
-            color={Colors.black}
-          >
-            {" Abierto al público"}
-          </StyledText>
-        </StyledText>
-      </InfoView>
-      <BotonAzul ancho={90} alto={55} texto={"UNIRME AL EVENTO LIVE"} />
-      <PublicacionView>
-        <TituloPublicacionView>
-          <StyledText
-            size={16}
             weight={700}
             fs={"normal"}
-            lh={24}
-            color={Colors.black}
+            lh={18}
+            color={Colors.mainColorBlack}
           >
-            Publicaciones sobre el evento
+            Descripción del evento
           </StyledText>
-          <Icon
-            name="more-horiz"
-            color={Colors.mainCOlorPurpleLigth}
-            size={25}
+          <StyledText
+            size={14}
+            weight={400}
+            fs={"normal"}
+            lh={16.8}
+            color={Colors.mainColorBlack}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+            malesuada fringilla metus at tincidunt. Proin nec massa nec arcu
+            efficitur fermentum. Fusce imperdiet feugiat felis, in ullamcorper
+            quam accumsan ac. Maecenas quis neque sed velit hendrerit facilisis.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a
+            consequat dui, non consectetur justo.
+          </StyledText>
+        </DescripcionView>
+        <NotaView>
+          <PublicacionSinImg />
+          <Publicacion
+            fotoPerfil={fotoPerfilPublicacion}
+            nombre={"Armando Lopez • @arlopez21 • 2h"}
+            descripcion={"Group name lorem ipsum dolor amet sim athem"}
+            imagen={fotoPubliacacion}
           />
-        </TituloPublicacionView>
-        <StyledText
-          size={12}
-          weight={400}
-          fs={"normal"}
-          lh={14}
-          color={Colors.textoGris}
-        >
-          Aquí encontrarás toda la información y publicaciones sobre éste evento
-          live.
-        </StyledText>
-      </PublicacionView>
-
-      <DescripcionView>
-        <StyledText
-          size={14}
-          weight={700}
-          fs={"normal"}
-          lh={18}
-          color={Colors.mainColorBlack}
-        >
-          Descripción del evento
-        </StyledText>
-        <StyledText
-          size={14}
-          weight={400}
-          fs={"normal"}
-          lh={16.8}
-          color={Colors.mainColorBlack}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-          malesuada fringilla metus at tincidunt. Proin nec massa nec arcu
-          efficitur fermentum. Fusce imperdiet feugiat felis, in ullamcorper
-          quam accumsan ac. Maecenas quis neque sed velit hendrerit facilisis.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a
-          consequat dui, non consectetur justo.
-        </StyledText>
-      </DescripcionView>
-      <NotaView>
-        <PublicacionSinImg />
-        <Publicacion
-          fotoPerfil={fotoPerfilPublicacion}
-          nombre={["Armando Lopez", "@arlopez21", "2h"]}
-          descripcion={"Group name lorem ipsum dolor amet sim athem"}
-          imagen={fotoPubliacacion}
-        />
-      </NotaView>
-    </ContainerPrincipalEventoLive>
+        </NotaView>
+      </ContainerPrincipalEventoLive>
+    </ScrollView>
   );
 }

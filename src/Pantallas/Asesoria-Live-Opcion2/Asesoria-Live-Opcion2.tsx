@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { TouchableOpacity, View } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { loginStackParamList } from "../../../types";
 import {
@@ -34,7 +34,14 @@ export default function AsesoriaLiveOpcion2({ navigation }: Props) {
     <ContainerPrincipalLive>
       <ImgLiveOpcion2 foto={foto} />
       <ViewImg2>
-        <ImgLive2 nombre={"@rdaniamor"} foto={foto1} />
+        <TouchableOpacity
+          style={{ width: "100%" }}
+          onPress={() => {
+            navigation.navigate("EventoLive");
+          }}
+        >
+          <ImgLive2 nombre={"@rdaniamor"} foto={foto1} />
+        </TouchableOpacity>
       </ViewImg2>
       <NavLiveOpcion2 />
     </ContainerPrincipalLive>

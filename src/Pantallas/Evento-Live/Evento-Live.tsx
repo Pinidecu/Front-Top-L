@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { ScrollView, TouchableOpacity, View } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { loginStackParamList } from "../../../types";
 import styled from "styled-components/native";
@@ -80,14 +80,14 @@ const ViewImg2 = styled.View`
 `;
 
 const ViewBarra = styled.View`
-justify-content: flex-end;
-align-items: center;
+  justify-content: flex-end;
+  align-items: center;
   position: absolute;
   bottom: -20vh;
   width: 100%;
   height: 7vh;
+  background-color: white;
 `;
-
 
 interface ContainerProps {
   foto: string;
@@ -98,25 +98,38 @@ const Container = styled.View<ContainerProps>`
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100%;
+  height: 89vh;
 `;
 
-interface Props {
-  foto: string;
-}
+type Props = {
+  navigation: StackNavigationProp<loginStackParamList, "List">;
+};
 
-export default function EventoLive() {
+export default function EventoLive({ navigation }: Props) {
   return (
-    <Container foto={foto}>
-      <BarraLiveOpcion2
-        fotoPerfil={imagenPerfil}
-        nombre={"Ricarzo Zambrano Pión"}
-        usuario={"@ricardocoach"}
-        hora={"00:31:21"}
-      />
-      <Barra />
+    <ScrollView
+      style={{
+        backgroundColor: 'white',
+      }}
+    >
+      <Container foto={foto}>
+        <TouchableOpacity
+          style={{ width: "100%" }}
+          onPress={() => {
+            navigation.navigate("SalaDetalle");
+          }}
+        >
+          <BarraLiveOpcion2
+            fotoPerfil={imagenPerfil}
+            nombre={"Ricarzo Zambrano Pión"}
+            usuario={"@ricardocoach"}
+            hora={"00:31:21"}
+          />
+        </TouchableOpacity>
+        <Barra />
 
-      <Indicator color={Colors.mainCOlorPurpleDark} />
+        <Indicator color={Colors.mainCOlorPurpleDark} />
+      </Container>
       <ViewIconos>
         <IconosLive color={Colors.SecondaryPurpleLight}>
           <Icon name="flip-camera-ios" color={Colors.SecondaryGray} size={25} />
@@ -145,7 +158,7 @@ export default function EventoLive() {
           add={true}
         />
       </ViewBarra>
-    </Container>
+    </ScrollView>
   );
 }
 

@@ -39,7 +39,7 @@ export default function PerfilVistaPersonal({ navigation }: Props) {
           <BarraIconos
             titulo={"Mi perfil"}
             margin={"30px"}
-            colorIcons={Colors.mainCOlorPurpleDark}
+            colorIcons={Colors.mainCOlorPurpleLigth}
             threePoints={true}
             add={true}
           />

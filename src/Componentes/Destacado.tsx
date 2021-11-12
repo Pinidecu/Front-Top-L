@@ -36,6 +36,10 @@ const Container = styled.View<ContainerProps>`
   padding: 10px;
 `;
 
+const NombreView = styled.View`
+  width: 75%;
+`;
+
 const StyledText = styled.Text<StyledTextProps>`
   font-family: Proxima Nova;
   color: ${(props) => props.color};
@@ -66,24 +70,27 @@ export default function Destacado({ titulo, lugar, descripcion, foto }: Props) {
  
   return (
     <Container color={Colors.destacado} borderColor={Colors.bordeDestacado}>
-      <StyledText
-        size={14}
-        weight={400}
-        fs={"normal"}
-        lh={16.8}
-        color={Colors.mainColorBlack}
-      >
-        {titulo}
-      </StyledText>
-      <StyledText
-        size={12}
-        weight={400}
-        fs={"normal"}
-        lh={14}
-        color={Colors.SecondaryGray}
-      >
-        {lugar}
-      </StyledText>
+      <NombreView>
+        <StyledText
+          size={14}
+          weight={400}
+          fs={"normal"}
+          lh={16.8}
+          color={Colors.mainColorBlack}
+        >
+          {titulo}
+        </StyledText>
+
+        <StyledText
+          size={12}
+          weight={400}
+          fs={"normal"}
+          lh={14}
+          color={Colors.SecondaryGray}
+        >
+          {lugar}
+        </StyledText>
+      </NombreView>
       <StyledText
         size={12}
         weight={400}

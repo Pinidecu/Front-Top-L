@@ -30,7 +30,7 @@ const Container = styled.View`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 40vh;
+  height: 48vh;
   border-radius: 8px;
   margin: 10px;
   box-shadow: 0px 0px 4px rgba(180, 188, 206, 0.5);

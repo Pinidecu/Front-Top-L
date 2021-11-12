@@ -98,7 +98,7 @@ export default function HorariosTarifas2({ navigation }: Props) {
         <BarraIconos
           titulo={"Horarios y asesorías"}
           margin={"0px"}
-          colorIcons={Colors.mainCOlorPurpleDark}
+          colorIcons={Colors.mainCOlorPurpleLigth}
           threePoints={true}
         />
         <TextView>

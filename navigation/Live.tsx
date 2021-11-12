@@ -16,27 +16,26 @@ import EventoDetalle from "../src/Pantallas/Evento-Detalle/Evento-Detalle";
 import HorariosTarifas2 from "../src/Pantallas/Horarios&Tarifas-2/Horarios&Tarifas2";
 
 const Stack = createStackNavigator();
+
 export const Live = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-        initialRouteName={"HorariosTarifas2"}
-      >
-        <Stack.Screen name="AsesoriaLive" component={AsesoriaLive} />
-        <Stack.Screen
-          name="AsesoriaLiveOpcion2"
-          component={AsesoriaLiveOpcion2}
-        />
-        <Stack.Screen name="EventoLive" component={EventoLive} />
-        <Stack.Screen name="SalaDetalle" component={SalaDetalle} />
-        <Stack.Screen name="AgendaDia" component={AgendaDia} />
-        <Stack.Screen name="HorariosTarifas" component={HorariosTarifas} />
-        <Stack.Screen name="EventoDetalle" component={EventoDetalle} />
-        <Stack.Screen name="HorariosTarifas2" component={HorariosTarifas2} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+      initialRouteName={"AsesoriaLive"}
+    >
+      <Stack.Screen name="AsesoriaLive" component={AsesoriaLive} />
+      <Stack.Screen
+        name="AsesoriaLiveOpcion2"
+        component={AsesoriaLiveOpcion2}
+      />
+      <Stack.Screen name="EventoLive" component={EventoLive} />
+      <Stack.Screen name="SalaDetalle" component={SalaDetalle} />
+      <Stack.Screen name="AgendaDia" component={AgendaDia} />
+      <Stack.Screen name="HorariosTarifas" component={HorariosTarifas} />
+      <Stack.Screen name="EventoDetalle" component={EventoDetalle} />
+      <Stack.Screen name="HorariosTarifas2" component={HorariosTarifas2} />
+    </Stack.Navigator>
   );
 };

@@ -14,6 +14,7 @@ import { Inicio } from "./Inico";
 import { EquiposTab } from "./EquiposTab";
 import InfoPro from "../src/Componentes/InfoPro";
 import Colors from "../constants/Colors";
+import { Live } from "./Live";
 
 const Tab = createBottomTabNavigator();
 
@@ -30,7 +31,7 @@ export default function Navegacion() {
               case "Inicio":
                 iconName = "home";
                 break;
-              case "Equipos":
+              case "Salas":
                 iconName = "videocam";
                 break;
               case "Explorar":
@@ -50,9 +51,12 @@ export default function Navegacion() {
           tabBarInactiveTintColor: `${Colors.SecondaryGray}`,
         })}
       >
-        <Tab.Screen name="Equipos" component={EquiposTab} />
         <Tab.Screen name="Inicio" component={Inicio} />
-        <Tab.Screen name="Explorar" component={() => <InfoPro />} />
+        <Tab.Screen name="Salas" component={EquiposTab} />
+        <Tab.Screen
+          name="Explorar"
+          component={Live}
+        />
         <Tab.Screen name="Perfil" component={() => <InfoPro />} />
       </Tab.Navigator>
     </NavigationContainer>

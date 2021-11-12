@@ -1,5 +1,5 @@
 import React from "react";
-import { View, ScrollView } from "react-native";
+import { View, ScrollView, TouchableOpacity } from "react-native";
 import Info from "../../Componentes/info";
 import BotonAzul from "../../Componentes/BotonAzul";
 import { Icon } from "react-native-elements";
@@ -42,7 +42,7 @@ export default function PerfilPublico({ navigation }: Props) {
           <BarraIconos
             titulo={""}
             margin={"0px"}
-            colorIcons={Colors.mainCOlorPurpleDark}
+            colorIcons={Colors.mainCOlorPurpleLigth}
             threePoints={true}
             add={true}
           />

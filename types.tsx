@@ -48,4 +48,11 @@ export type loginStackParamList = {
   EquipoDetalle1: undefined;
   EquipoDetalle2: undefined;
   Salas: undefined;
+  AsesoriaLiveOpcion2: undefined;
+  EventoLive: undefined;
+  SalaDetalle: undefined;
+  AgendaDia: undefined;
+  HorariosTarifas: undefined;
+  EventoDetalle: undefined;
+  HorariosTarifas2: undefined;
 };

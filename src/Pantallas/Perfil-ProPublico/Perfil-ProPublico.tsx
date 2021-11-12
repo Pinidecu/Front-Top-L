@@ -38,7 +38,7 @@ export default function PerfilProPublico({ navigation }: Props) {
           <BarraIconos
             titulo={""}
             margin={"0px"}
-            colorIcons={Colors.mainCOlorPurpleDark}
+            colorIcons={Colors.mainCOlorPurpleLigth}
             threePoints={true}
             add={true}
           />

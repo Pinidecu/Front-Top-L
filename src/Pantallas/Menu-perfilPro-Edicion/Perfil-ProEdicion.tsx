@@ -31,7 +31,7 @@ export default function PerfilProEdicion({ navigation }: Props) {
         <BarraIconos
           titulo={"Mi espacio"}
           margin={"30px"}
-          colorIcons={Colors.mainCOlorPurpleDark}
+          colorIcons={Colors.mainCOlorPurpleLigth}
           threePoints={true}
           add={true}
         />

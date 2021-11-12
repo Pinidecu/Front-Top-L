@@ -9,6 +9,7 @@ import PerfilProEdicion from "../src/Pantallas/Menu-perfilPro-Edicion/Perfil-Pro
 
 
 
+
 const Stack = createStackNavigator();
 export const Inicio = () => {
   return (
@@ -23,7 +24,7 @@ export const Inicio = () => {
         name="PerfilVistaPersonal"
         component={PerfilVistaPersonal}
       />
-      <Stack.Screen name="PerfilProEdicion" component={PerfilProEdicion} />
+      <Stack.Screen name="PerfilProEdicion" component={PerfilProEdicion} />      
     </Stack.Navigator>
   );
 };

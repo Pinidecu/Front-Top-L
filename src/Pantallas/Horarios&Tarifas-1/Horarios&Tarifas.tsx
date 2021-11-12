@@ -95,13 +95,20 @@ export default function HorariosTarifas({ navigation }: Props) {
   return (
     <ScrollView>
       <ContainerPrincipalAgenda>
-        <BarraIconos
-          titulo={"Horarios y asesorías"}
-          margin={"0px"}
-          colorIcons={Colors.mainCOlorPurpleDark}
-          threePoints={true}
-          add={true}
-        />
+        <TouchableOpacity
+          style={{ width: "100%" }}
+          onPress={() => {
+            navigation.navigate("EventoDetalle");
+          }}
+        >
+          <BarraIconos
+            titulo={"Horarios y asesorías"}
+            margin={"0px"}
+            colorIcons={Colors.mainCOlorPurpleLigth}
+            threePoints={true}
+            add={true}
+          />
+        </TouchableOpacity>
         <TextView>
           <StyledText
             size={16}
