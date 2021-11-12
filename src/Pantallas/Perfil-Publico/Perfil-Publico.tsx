@@ -125,7 +125,7 @@ export default function PerfilPublico({ navigation }: Props) {
           <PublicacionView>
             <Publicacion
               fotoPerfil={fotoPerfilPublicacion}
-              nombre={["Armando Lopez", "@arlopez21", "2h"]}
+              nombre={"Armando Lopez • @arlopez21 • 2h"}
               descripcion={"Group name lorem ipsum dolor amet sim athem"}
               imagen={fotoPubliacacion}
             />

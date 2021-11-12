@@ -30,7 +30,7 @@ const Container = styled.View`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 33vh;
+  height: 40vh;
   border-radius: 8px;
   margin: 10px;
   box-shadow: 0px 0px 4px rgba(180, 188, 206, 0.5);
@@ -125,7 +125,7 @@ export default function EquipoPublicacion({
           radio={""}
           margin={"10px"}
           source={{
-            uri: `${datos.imagen}`,
+            uri: imagen,
           }}
         />
         <StyledBookmark

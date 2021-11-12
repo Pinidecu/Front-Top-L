@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView, TouchableOpacity, View } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { loginStackParamList } from "../../../types";
 import styled from "styled-components/native";
@@ -9,6 +9,7 @@ import {
   Linea,
   TextoConfiguracion,
   ContainerPrincipalLive,
+  ContainerPrincipalEquipoDetalle,
 } from "../StyledComponents/StyledComponents";
 import ImgLive from "../../Componentes/ImgLive";
 import ImgLive2 from "../../Componentes/ImgLive2";
@@ -152,14 +153,20 @@ const NotaView = styled.View`
 export default function EquipoDetalle2({ navigation }: Props) {
   return (
     <ScrollView style={{ backgroundColor: Colors.white }}>
-      <ContainerPrincipalLive>
-        <BarraIconos
-          titulo={"Mi equipo"}
-          margin={"0px"}
-          colorIcons={Colors.mainCOlorPurpleDark}
-          threePoints={true}
-          add={true}
-        />
+      <ContainerPrincipalEquipoDetalle>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Salas");
+          }}
+        >
+          <BarraIconos
+            titulo={"Mi equipo"}
+            margin={"0px"}
+            colorIcons={Colors.mainCOlorPurpleLigth}
+            threePoints={true}
+            add={true}
+          />
+        </TouchableOpacity>
         <ImageView foto={fotoEquipo}>
           <StyledImg
             width={38}
@@ -302,7 +309,7 @@ export default function EquipoDetalle2({ navigation }: Props) {
             moneda={"COP"}
           />
         </NotaView>
-      </ContainerPrincipalLive>
+      </ContainerPrincipalEquipoDetalle>
     </ScrollView>
   );
 }

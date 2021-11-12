@@ -18,11 +18,12 @@ export const EquiposTab = () => {
       screenOptions={{
         headerShown: false,
       }}
+      initialRouteName={"Equipos"}
     >
-      <Stack.Screen name="Salas" component={Salas} />
-      <Stack.Screen name="EquipoDetalle2" component={EquipoDetalle2} />
-      <Stack.Screen name="EquipoDetalle1" component={EquipoDetalle1} />
       <Stack.Screen name="Equipos" component={Equipos} />
+      <Stack.Screen name="EquipoDetalle1" component={EquipoDetalle1} />
+      <Stack.Screen name="EquipoDetalle2" component={EquipoDetalle2} />
+      <Stack.Screen name="Salas" component={Salas} />
       <Stack.Screen
         name="PerfilVistaPersonal"
         component={PerfilVistaPersonal}

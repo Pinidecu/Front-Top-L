@@ -37,7 +37,8 @@ const StyledText = styled.Text<StyledTextProps>`
 `;
 const LeftView = styled.View`
   flex-direction: row;
-column-gap: 10px;
+  column-gap: 10px;
+  width: 80%;
 `;
 const LiveView = styled.View`
   flex-direction: row;
@@ -45,12 +46,13 @@ const LiveView = styled.View`
   align-items: center;
 `;
 const Info = styled.View`
-  width: 50%;
+  width: 70%;
   justify-content: space-evenly;
 `;
 const UnirseView = styled.View`
   flex-direction: row;
   align-items: center;
+  width: 20%;
 `;
 
 const StyledImg = styled.Image<StyledImgProps>`

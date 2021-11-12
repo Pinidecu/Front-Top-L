@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView, TouchableOpacity, View } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { loginStackParamList } from "../../../types";
 import styled from "styled-components/native";
@@ -9,6 +9,7 @@ import {
   Linea,
   TextoConfiguracion,
   ContainerPrincipalLive,
+  ContainerPrincipalEquipoDetalle,
 } from "../StyledComponents/StyledComponents";
 import ImgLive from "../../Componentes/ImgLive";
 import ImgLive2 from "../../Componentes/ImgLive2";
@@ -24,6 +25,8 @@ import { LinearGradient } from "react-native-svg";
 import BotonAzul from "../../Componentes/BotonAzul";
 import Publicacion from "../../Componentes/Publicacion";
 import PublicacionSinImg from "../../Componentes/PublicacionSinImg";
+import fotoPerfilPublicacion from "../../../assets/images/Sala/10.png";
+import fotoPubliacacion from "../../../assets/images/Publicacion.png";
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
@@ -34,8 +37,6 @@ interface ImageViewProps {
 }
 
 const ImageView = styled.View<ImageViewProps>`
-  /* 
-  background-color: red; */
   background-image: url(${({ foto }) => foto});
   background-repeat: no-repeat;
   background-size: cover;
@@ -147,20 +148,26 @@ const NotaView = styled.View`
   align-self: center;
   margin: 10px;
   padding-bottom: 20px;
-  row-gap: 10px;
+  row-gap: 20px;
 `;
 
 export default function EquipoDetalle1({ navigation }: Props) {
   return (
-    <ScrollView style={{backgroundColor:Colors.white}}>
-      <ContainerPrincipalLive>
-        <BarraIconos
-          titulo={"Mi equipo"}
-          margin={"0px"}
-          colorIcons={Colors.mainCOlorPurpleDark}
-          threePoints={true}
-          add={true}
-        />
+    <ScrollView style={{ backgroundColor: Colors.white }}>
+      <ContainerPrincipalEquipoDetalle>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("EquipoDetalle2");
+          }}
+        >
+          <BarraIconos
+            titulo={"Mi equipo"}
+            margin={"0px"}
+            colorIcons={Colors.mainCOlorPurpleLigth}
+            threePoints={true}
+            add={true}
+          />
+        </TouchableOpacity>
         <ImageView foto={fotoEquipo}>
           <StyledImg
             width={38}
@@ -286,12 +293,16 @@ export default function EquipoDetalle1({ navigation }: Props) {
             />
           </TituloPublicacionView>
         </PublicacionView>
-
         <NotaView>
           <PublicacionSinImg />
-          <Publicacion />
+          <Publicacion
+            fotoPerfil={fotoPerfilPublicacion}
+            nombre={"Armando Lopez • @arlopez21 • 2h"}
+            descripcion={"Group name lorem ipsum dolor amet sim athem"}
+            imagen={fotoPubliacacion}
+          />
         </NotaView>
-      </ContainerPrincipalLive>
+      </ContainerPrincipalEquipoDetalle>
     </ScrollView>
   );
 }

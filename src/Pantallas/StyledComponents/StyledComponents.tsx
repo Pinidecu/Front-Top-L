@@ -150,6 +150,11 @@ export const ContainerPrincipalSala = styled.View`
   align-self: center;
   font-family: Cambria;
 `;
+export const ContainerPrincipalEquipoDetalle = styled.View`
+  flex: 1;
+  width: 100%;
+  background-color: ${Colors.white};
+`;
 
 interface LineaColorProps {
   color: string;

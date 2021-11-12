@@ -90,7 +90,7 @@ const MegustaView = styled.View`
 
 interface Props {
   fotoPerfil: string;
-  nombre: string[];
+  nombre: string;
   descripcion: string;
   imagen: string;
 }
@@ -121,7 +121,7 @@ export default function Publicacion({ fotoPerfil, nombre, descripcion, imagen }:
             lh={14}
             color={Colors.mainColorBlack}
           >
-            {nombre.join("  •  ")}
+            {nombre}
           </StyledText>
           <StyledText
             size={14}

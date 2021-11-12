@@ -45,4 +45,7 @@ export type loginStackParamList = {
   PerfilProPublico: undefined;
   PerfilVistaPersonal: undefined;
   PerfilProEdicion: undefined;
+  EquipoDetalle1: undefined;
+  EquipoDetalle2: undefined;
+  Salas: undefined;
 };

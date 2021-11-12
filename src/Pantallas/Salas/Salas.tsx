@@ -88,9 +88,12 @@ export const EquiposView = styled.View`
   width: 90%;
   justify-content: space-between;
   align-self: center;
+  margin: 15px;
 `;
 
-export const SalasView = styled.View``;
+export const SalasView = styled.View`
+width:90%;
+`;
 
 interface StyledTextProps {
   size: number;
@@ -130,7 +133,7 @@ export default function Salas({ navigation }: Props) {
         <BarraIconos
           titulo={"Salas"}
           margin={"0px"}
-          colorIcons={Colors.mainCOlorPurpleDark}
+          colorIcons={Colors.mainCOlorPurpleLigth}
           add={true}
           lupaBlue={true}
         />
@@ -151,6 +154,7 @@ export default function Salas({ navigation }: Props) {
             fs={"normal"}
             lh={29}
             color={Colors.mainCOlorPurpleLigth}
+            sub={true}
           >
             Ver todo
           </StyledText>
@@ -178,6 +182,7 @@ export default function Salas({ navigation }: Props) {
             fs={"normal"}
             lh={29}
             color={Colors.mainCOlorPurpleLigth}
+            sub={true}
           >
             Ver todo
           </StyledText>

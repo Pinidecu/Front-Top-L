@@ -98,12 +98,19 @@ export default function Equipos({ navigation }: Props) {
   return (
     <ScrollView style={{ backgroundColor: "white" }}>
       <ContainerPrincipalEquipos>
-        <BarraIconos
-          titulo={"Mis equipos"}
-          margin={"0px"}
-          colorIcons={Colors.mainCOlorPurpleDark}
-          threePoints={true}
-        />
+        <TouchableOpacity
+        style={{width:'100%'}}
+          onPress={() => {
+            navigation.navigate("EquipoDetalle1");
+          }}
+        >
+          <BarraIconos
+            titulo={"Mis equipos"}
+            margin={"0px"}
+            colorIcons={Colors.mainCOlorPurpleLigth}
+            threePoints={true}
+          />
+        </TouchableOpacity>
         <EquiposView>
           <EquipoPublicacion
             titulo="Yoga para ti, para mí y para todos! Aeroyogabaq"
