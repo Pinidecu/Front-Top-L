@@ -17,6 +17,7 @@ export default {
   textoGris: "#909090",
   SecondaryPurpleLight: "#F9F7FE",
   fondoBarraLive2: "#C4C4C4",
+  verde:"#7FF0B0",
   light: {
     text: "#000",
     background: "#fff",

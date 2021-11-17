@@ -8,6 +8,7 @@ interface Props {
   titulo: string;
   margin: string;
   colorIcons: string;
+  colorText?: string;
   add?: boolean;
   threePoints?: boolean;
   lupa?: boolean;
@@ -26,8 +27,12 @@ const Container = styled.View<StyledContainerProps>`
   justify-content: space-between;
   align-items: center;
 `;
-const StyledText = styled.Text`
-  color: ${Colors.mainCOlorPurpleLigth};
+
+interface StyledTextProps {
+  color: string;
+}
+const StyledText = styled.Text<StyledTextProps>`
+  color: ${(props) => props.color};
   font-family: Proxima Nova;
   font-style: normal;
   font-size: 14;
@@ -44,6 +49,7 @@ export default function BarraIconos({
   titulo,
   margin,
   colorIcons,
+  colorText,
   threePoints,
   lupa,
   lupaBlue,
@@ -52,7 +58,7 @@ export default function BarraIconos({
   return (
     <Container margin={margin}>
       <Icon name="chevron-left" color={colorIcons} size={25} />
-      <StyledText>{titulo}</StyledText>
+      <StyledText color={colorText?colorText:Colors.mainCOlorPurpleLigth}>{titulo}</StyledText>
       <RigthContainer>
         {lupa ? <Icon name="search" color={Colors.black} size={25} /> : null}
         {lupaBlue ? <Icon name="search" color={colorIcons} size={25} /> : null}

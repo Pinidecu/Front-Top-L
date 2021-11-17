@@ -109,8 +109,7 @@ export const ContainerAgenda = styled.View`
 
 export const Linea = styled.View`
   width: 100%;
-  height: 1px;/* 
-  margin: 10px; */
+  height: 1px;
   background-color: ${Colors.bordeDestacado};
 `;
 
