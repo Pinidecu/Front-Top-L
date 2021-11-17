@@ -7,6 +7,7 @@ import PerfilProPublico from "../src/Pantallas/Perfil-ProPublico/Perfil-ProPubli
 import PerfilVistaPersonal from "../src/Pantallas/Perfil-VistaPersonal/Perfil-VistaPersonal";
 import PerfilProEdicion from "../src/Pantallas/Menu-perfilPro-Edicion/Perfil-ProEdicion";
 import Payment from "../src/Pantallas2/Payment/Payment";
+import AgendaHistorial from "../src/Pantallas2/AgendaHistorial/AgendaHistorial";
 
 
 
@@ -19,13 +20,13 @@ export const Inicio2 = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="AgendaHistorial" component={AgendaHistorial} />
       <Stack.Screen name="Payment" component={Payment} />
-      <Stack.Screen name="PerfilProPublico" component={PerfilProPublico} />
       <Stack.Screen
         name="PerfilVistaPersonal"
         component={PerfilVistaPersonal}
       />
-      <Stack.Screen name="PerfilProEdicion" component={PerfilProEdicion} />      
+      <Stack.Screen name="PerfilProEdicion" component={PerfilProEdicion} />
     </Stack.Navigator>
   );
 };
