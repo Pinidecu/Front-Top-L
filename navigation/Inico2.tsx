@@ -8,6 +8,7 @@ import PerfilVistaPersonal from "../src/Pantallas/Perfil-VistaPersonal/Perfil-Vi
 import PerfilProEdicion from "../src/Pantallas/Menu-perfilPro-Edicion/Perfil-ProEdicion";
 import Payment from "../src/Pantallas2/Payment/Payment";
 import AgendaHistorial from "../src/Pantallas2/AgendaHistorial/AgendaHistorial";
+import ListaClientes from "../src/Pantallas2/ListaClientes/ListaClientes";
 
 
 
@@ -20,12 +21,9 @@ export const Inicio2 = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="ListaClientes" component={ListaClientes} />
       <Stack.Screen name="AgendaHistorial" component={AgendaHistorial} />
       <Stack.Screen name="Payment" component={Payment} />
-      <Stack.Screen
-        name="PerfilVistaPersonal"
-        component={PerfilVistaPersonal}
-      />
       <Stack.Screen name="PerfilProEdicion" component={PerfilProEdicion} />
     </Stack.Navigator>
   );
