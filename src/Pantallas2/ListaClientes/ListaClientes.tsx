@@ -30,6 +30,13 @@ import {
   Cell,
 } from "react-native-table-component";
 import Historial from "../../Componentes/Historial";
+import Cliente from "../../Componentes/Cliente";
+import fotoPerfil1 from "../../../assets/images/Sala/9.png";
+import fotoPerfil2 from "../../../assets/images/Sala/7.png";
+import fotoPerfil3 from "../../../assets/images/Sala/3.png";
+import fotoPerfil4 from "../../../assets/images/Sala/4.png";
+import fotoPerfil5 from "../../../assets/images/Sala/8.png";
+
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
@@ -138,7 +145,12 @@ export const TituloView = styled.View`
   flex-direction: row;
   width: 90%;
   justify-content: space-between;
+  margin-top:15px;
 `;
+export const ClientesView = styled.View`
+  width: 90%;
+`;
+
 
 export default function ListaClientes({ navigation }: Props) {
   return (
@@ -176,9 +188,32 @@ export default function ListaClientes({ navigation }: Props) {
           <StyledImg
             width={20}
             height={20}
-            source={require("../../../assets/images/editar.png")}
+            source={require("../../../assets/images/editarazul.png")}
           />
         </TituloView>
+        <ClientesView>
+        <Cliente
+              nombre={"Antony Ruiz"}
+              id={"@anruizp"}
+              foto={fotoPerfil1}
+            /><Cliente
+            nombre={"Alejandra Martinez"}
+            id={" @alemartinez"}
+            foto={fotoPerfil2}
+          /><Cliente
+          nombre={"karen Puyol"}
+          id={" @kkpuyol02"}
+          foto={fotoPerfil3}
+        /><Cliente
+        nombre={"Juan Ortiz M"}
+        id={"@kkpuyol02"}
+        foto={fotoPerfil4}
+      /><Cliente
+      nombre={"Ricardo A. Mor"}
+      id={"@rdaniamor"}
+      foto={fotoPerfil5}
+    />
+        </ClientesView>
         <TituloView>
           <StyledText
             size={16}
@@ -190,7 +225,25 @@ export default function ListaClientes({ navigation }: Props) {
             Todos mis clientes
           </StyledText>
           <Icon name="more-horiz" color={Colors.mainCOlorPurpleLigth} size={25} />
-        </TituloView>
+        </TituloView><ClientesView>
+        <Cliente
+              nombre={"Antony Ruiz"}
+              id={"@anruizp"}
+              foto={fotoPerfil1}
+            /><Cliente
+            nombre={"Alejandra Martinez"}
+            id={" @alemartinez"}
+            foto={fotoPerfil2}
+          /><Cliente
+          nombre={"karen Puyol"}
+          id={" @kkpuyol02"}
+          foto={fotoPerfil3}
+        /><Cliente
+        nombre={"Juan Ortiz M"}
+        id={"@kkpuyol02"}
+        foto={fotoPerfil4}
+      />
+        </ClientesView>
       </Container>
     </ContainerScroll>
   );
