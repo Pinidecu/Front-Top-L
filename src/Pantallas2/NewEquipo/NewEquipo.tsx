@@ -15,7 +15,6 @@ import {
   ActividadView,
   ContainerPrincipalAgenda,
 } from "../StyledComponents/StyledComponents";
-import Boton from "../../Componentes/Boton";
 import Colors from "../../../constants/Colors";
 import DiaAgenda from "../../Componentes/DiaAgenda";
 import styled from "styled-components/native";
@@ -36,6 +35,7 @@ import fotoPerfil2 from "../../../assets/images/Sala/7.png";
 import fotoPerfil3 from "../../../assets/images/Sala/3.png";
 import fotoPerfil4 from "../../../assets/images/Sala/4.png";
 import fotoPerfil5 from "../../../assets/images/Sala/8.png";
+import NewEquipoComp from "../../Componentes/NewEquipo";
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
@@ -110,17 +110,8 @@ export const ImgView = styled.View`
   margin-left: 30px;
 `;
 
-const TituloTabla = styled.Text`
-  font-family: Proxima Nova;
-  font-size: 14;
-  font-weight: 700;
-  font-style: "normal";
-  line-height: 10;
-  color: ${Colors.mainColorBlack};
-`;
-
 const ContainerScroll = styled.ScrollView`
-  background-color: ${Colors.white};
+  background-color: ${Colors.destacado};
 `;
 
 export const BusquedaView = styled.View`
@@ -144,35 +135,34 @@ export const TituloView = styled.View`
   flex-direction: row;
   width: 90%;
   justify-content: space-between;
-  margin-top: 15px;
+  margin: 10px;
 `;
 export const ClientesView = styled.View`
   width: 90%;
 `;
+export const EquiposView = styled.View`
+  width: 90%;
+`;
+export const Boton = styled.View`
+  width: 90%;
+  background-color: ${Colors.mainCOlorPurpleDark};
+  border-radius: 8px;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+`;
 
-export default function ListaClientes({ navigation }: Props) {
+export default function NewEquipo({ navigation }: Props) {
   return (
     <ContainerScroll>
       <Container>
         <BarraIconos
-          titulo={"Mis clientes"}
+          titulo={""}
           margin={"0px"}
           colorIcons={Colors.mainCOlorPurpleLigth}
-          add={true}
-          lupaBlue={true}
+          threePoints={true}
         />
-        <BusquedaView>
-          <Icon name="search" color={Colors.black} size={25} />
-          <StyledText
-            size={14}
-            weight={700}
-            fs={"normal"}
-            lh={18}
-            color={Colors.SecondaryGray}
-          >
-            Busca un cliente, fecha o área
-          </StyledText>
-        </BusquedaView>
         <TituloView>
           <StyledText
             size={16}
@@ -181,71 +171,56 @@ export default function ListaClientes({ navigation }: Props) {
             lh={24}
             color={Colors.black}
           >
-            Clientes recientes
+            Nuevo equipo profesional
           </StyledText>
-          <StyledImg
-            width={20}
-            height={20}
-            source={require("../../../assets/images/editarazul.png")}
-          />
         </TituloView>
-        <ClientesView>
-          <Cliente nombre={"Antony Ruiz"} id={"@anruizp"} foto={fotoPerfil1} />
-          <Cliente
-            nombre={"Alejandra Martinez"}
-            id={" @alemartinez"}
-            foto={fotoPerfil2}
+        <EquiposView>
+          <NewEquipoComp
+            titulo={"Nombre del equipo"}
+            descripcion={"VideoMarketing"}
           />
-          <Cliente
-            nombre={"karen Puyol"}
-            id={" @kkpuyol02"}
-            foto={fotoPerfil3}
+          <NewEquipoComp
+            titulo={"Categoria"}
+            descripcion={"Marketing"}
+            icon={"chevron-right"}
           />
-          <Cliente
-            nombre={"Juan Ortiz M"}
-            id={"@kkpuyol02"}
-            foto={fotoPerfil4}
+          <NewEquipoComp
+            titulo={"Miembros de équipo"}
+            descripcion={"@avalle"}
+            icon={"chevron-right"}
           />
-          <Cliente
-            nombre={"Ricardo A. Mor"}
-            id={"@rdaniamor"}
-            foto={fotoPerfil5}
+          <NewEquipoComp
+            titulo={"Privacidad"}
+            descripcion={"Privado"}
+            icon={"chevron-right"}
           />
-        </ClientesView>
-        <TituloView>
+          <NewEquipoComp
+            titulo={"Tarifas"}
+            descripcion={"Individuales"}
+            icon={"chevron-right"}
+          />
+          <NewEquipoComp
+            titulo={"Imagen"}
+            descripcion={"grupoaxa-odontologos.jpg"}
+            icon={"chevron-right"}
+          />
+          <NewEquipoComp
+            titulo={"Imagen"}
+            descripcion={"Elegir imagen del equipo"}
+            icon={"add"}
+          />
+        </EquiposView>
+        <Boton>
           <StyledText
             size={16}
-            weight={700}
+            weight={400}
             fs={"normal"}
             lh={24}
-            color={Colors.black}
+            color={Colors.white}
           >
-            Todos mis clientes
+            CREAR NUEVO ÉQUIPO
           </StyledText>
-          <Icon
-            name="more-horiz"
-            color={Colors.mainCOlorPurpleLigth}
-            size={25}
-          />
-        </TituloView>
-        <ClientesView>
-          <Cliente nombre={"Antony Ruiz"} id={"@anruizp"} foto={fotoPerfil1} />
-          <Cliente
-            nombre={"Alejandra Martinez"}
-            id={" @alemartinez"}
-            foto={fotoPerfil2}
-          />
-          <Cliente
-            nombre={"karen Puyol"}
-            id={" @kkpuyol02"}
-            foto={fotoPerfil3}
-          />
-          <Cliente
-            nombre={"Juan Ortiz M"}
-            id={"@kkpuyol02"}
-            foto={fotoPerfil4}
-          />
-        </ClientesView>
+        </Boton>
       </Container>
     </ContainerScroll>
   );
