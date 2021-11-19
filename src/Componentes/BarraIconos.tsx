@@ -14,6 +14,7 @@ interface Props {
   lupa?: boolean;
   lupaBlue?: boolean;
   campana?: boolean;
+  right?: boolean;
 }
 
 interface StyledContainerProps {
@@ -83,6 +84,7 @@ export default function BarraIconos({
   lupaBlue,
   add,
   campana,
+  right,
 }: Props) {
   return (
     <Container margin={margin}>
@@ -106,6 +108,9 @@ export default function BarraIconos({
               source={require("../../assets/images/campana.png")}
             />
           </Campana>
+        ) : null}
+        {right ? (
+          <Icon name="chevron-right" color={colorIcons} size={25} />
         ) : null}
       </RigthContainer>
     </Container>
