@@ -15,6 +15,9 @@ import CertificadoPro from "../src/Pantallas2/CertificadoPro/CertificadoPro";
 import CertificadoPro2 from "../src/Pantallas2/CertificadoPro2/CertificadoPro2";
 import CertificadoPro3 from "../src/Pantallas2/CertificadoPro3/CertificadoPro3";
 import CertificadoPro4 from "../src/Pantallas2/CertificadoPro4/CertificadoPro4";
+import Agenda from "../src/Pantallas2/Agenda/Agenda";
+import ReviewAsesoria from "../src/Pantallas2/ReviewAsesoria/ReviewAsesoria";
+import ReviewApp from "../src/Pantallas2/ReviewApp/ReviewApp";
 
 
 
@@ -27,6 +30,9 @@ export const Inicio2 = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="ReviewApp" component={ReviewApp} />
+      <Stack.Screen name="ReviewAsesoria" component={ReviewAsesoria} />
+      <Stack.Screen name="Agenda" component={Agenda} />
       <Stack.Screen name="CertificadoPro4" component={CertificadoPro4} />
       <Stack.Screen name="CertificadoPro3" component={CertificadoPro3} />
       <Stack.Screen name="CertificadoPro2" component={CertificadoPro2} />

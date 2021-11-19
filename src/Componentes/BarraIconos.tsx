@@ -94,8 +94,8 @@ export default function BarraIconos({
       </StyledText>
       <RigthContainer>
         {lupa ? <Icon name="search" color={Colors.black} size={25} /> : null}
-        {lupaBlue ? <Icon name="search" color={colorIcons} size={25} /> : null}
         {add ? <Icon name="add" color={colorIcons} size={25} /> : null}
+        {lupaBlue ? <Icon name="search" color={colorIcons} size={25} /> : null}
         {threePoints ? (
           <Icon name="more-horiz" color={colorIcons} size={25} />
         ) : null}
