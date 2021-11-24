@@ -18,6 +18,9 @@ import CertificadoPro4 from "../src/Pantallas2/CertificadoPro4/CertificadoPro4";
 import Agenda from "../src/Pantallas2/Agenda/Agenda";
 import ReviewAsesoria from "../src/Pantallas2/ReviewAsesoria/ReviewAsesoria";
 import ReviewApp from "../src/Pantallas2/ReviewApp/ReviewApp";
+import ReviewApp2 from "../src/Pantallas2/ReviewApp2/ReviewApp2";
+import PerfilAjuste from "../src/Pantallas2/PerfilAjuste/PerfilAjuste";
+import Notificaciones from "../src/Pantallas2/Notificaciones/Notificaciones";
 
 
 
@@ -30,6 +33,9 @@ export const Inicio2 = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="Notificaciones" component={Notificaciones} />
+      <Stack.Screen name="PerfilAjuste" component={PerfilAjuste} />
+      <Stack.Screen name="ReviewApp2" component={ReviewApp2} />
       <Stack.Screen name="ReviewApp" component={ReviewApp} />
       <Stack.Screen name="ReviewAsesoria" component={ReviewAsesoria} />
       <Stack.Screen name="Agenda" component={Agenda} />

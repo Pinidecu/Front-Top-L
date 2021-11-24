@@ -103,7 +103,13 @@ const ActionsView = styled.View`
   align-items: center;
 `;
 
-export default function PublicacionSinImg() {
+interface Props {
+  fotoPerfil: string;
+  nombre: string;
+  descripcion: string;
+}
+
+export default function PublicacionSinImg({ fotoPerfil, nombre, descripcion }: Props) {
   return (
     <Container>
       <StyledBookmark
@@ -118,7 +124,7 @@ export default function PublicacionSinImg() {
           radio={"50%"}
           margin={"0"}
           source={{
-            uri: `${datos.fotoPerfil}`,
+            uri: fotoPerfil,
           }}
         />
         <Titulo>
@@ -129,7 +135,7 @@ export default function PublicacionSinImg() {
             lh={14}
             color={Colors.mainColorBlack}
           >
-            {datos.nombre.join("  •  ")}
+            {nombre}
           </StyledText>
           <StyledText
             size={14}
@@ -138,7 +144,7 @@ export default function PublicacionSinImg() {
             lh={18}
             color={Colors.black}
           >
-            {datos.descripcion}
+            {descripcion}
           </StyledText>
         </Titulo>
       </Info>

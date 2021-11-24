@@ -7,6 +7,7 @@ import { Linea } from "../Pantallas/StyledComponents/StyledComponents";
 
 interface Props {
   nombre: string;
+  linea?: boolean;
 }
 
 interface StyledTextProps {
@@ -22,7 +23,7 @@ const Container = styled.View`
   justify-content: space-between;
   align-self: center;
   row-gap: 10px;
-  margin-top:10px;
+  margin-top: 10px;
 `;
 const TextView = styled.View`
   width: 100%;
@@ -41,19 +42,13 @@ const StyledText = styled.Text<StyledTextProps>`
   align-self: center;
 `;
 
-
-
 const LineaView = styled.View`
   width: 100%;
   height: 1px;
   background-color: ${Colors.bordeDestacado};
 `;
 
-
-
-export default function Historial({
-  nombre
-}: Props) {
+export default function Historial({ nombre, linea }: Props) {
   return (
     <Container>
       <TextView>
@@ -66,9 +61,13 @@ export default function Historial({
         >
           {nombre}
         </StyledText>
-        <Icon name='chevron-right' color={Colors.mainCOlorPurpleLigth} size={30} />
+        <Icon
+          name="chevron-right"
+          color={Colors.mainCOlorPurpleLigth}
+          size={30}
+        />
       </TextView>
-      <LineaView />
+      {linea ? <LineaView /> : null}
     </Container>
   );
 }

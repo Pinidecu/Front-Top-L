@@ -294,7 +294,11 @@ export default function EquipoDetalle1({ navigation }: Props) {
           </TituloPublicacionView>
         </PublicacionView>
         <NotaView>
-          <PublicacionSinImg />
+          <PublicacionSinImg
+            fotoPerfil={fotoPerfilPublicacion}
+            nombre={"Armando Lopez • @arlopez21 • 2h"}
+            descripcion={"Group name lorem ipsum dolor amet sim athem"}
+          />
           <Publicacion
             fotoPerfil={fotoPerfilPublicacion}
             nombre={"Armando Lopez • @arlopez21 • 2h"}

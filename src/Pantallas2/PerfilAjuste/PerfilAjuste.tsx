@@ -4,7 +4,6 @@ import InfoMiPerfil from "../../Componentes/InfoMiPerfil";
 import BarraIconos from "../../Componentes/BarraIconos";
 import Explorar from "../../Componentes/Explorar";
 import Actividad from "../../Componentes/Actividad";
-import Agenda from "../../Componentes/Agenda";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { loginStackParamList } from "../../../types";
 import {
@@ -30,6 +29,13 @@ import {
   Cell,
 } from "react-native-table-component";
 import Historial from "../../Componentes/Historial";
+import Cliente from "../../Componentes/Cliente";
+import fotoPerfil1 from "../../../assets/images/Sala/9.png";
+import fotoPerfil2 from "../../../assets/images/Sala/7.png";
+import fotoPerfil3 from "../../../assets/images/Sala/3.png";
+import fotoPerfil4 from "../../../assets/images/Sala/4.png";
+import fotoPerfil5 from "../../../assets/images/Sala/8.png";
+import AgendaAsesoria from "../../Componentes/AgendaAsesoria";
 
 type Props = {
   navigation: StackNavigationProp<loginStackParamList, "List">;
@@ -74,111 +80,98 @@ export const Container = styled.View`
   justify-content: space-between;
 `;
 
-export const Superior = styled.View`
-  align-items: center;
-  width: 100%;
-  background-color: ${Colors.white};
-`;
-
-export const MisGananciasView = styled.View`
-  flex-direction: row;
-  width: 90%;
-  justify-content: space-between;
-`;
-export const Monto = styled.View`
-  background-color: ${Colors.mainCOlorPurpleDark};
-  width: 90%;
-  align-items: center;
-  row-gap: 10px;
-  padding: 5vh;
-  margin: 10px;
-  border-radius: 8px;
-`;
-
-export const TablaView = styled.View`
-  width: 90%;
-  margin: 20px;
-`;
-
-export const ImgView = styled.View`
-  margin-left: 30px;
-`;
-
-const TituloTabla = styled.Text`
-  font-family: Proxima Nova;
-  font-size: 14;
-  font-weight: 700;
-  font-style: "normal";
-  line-height: 10;
-  color: ${Colors.mainColorBlack};
-`;
 
 const ContainerScroll = styled.ScrollView`
   background-color: ${Colors.white};
 `;
 
-export const BusquedaView = styled.View`
-  background-color: ${Colors.SecondaryPurpleLight};
-  border-radius: 8px;
-  width: 90%;
-  padding: 1vh;
+export const AjustesView = styled.View`
+  background-color: ${Colors.destacado};
+  width: 100%;
+  align-items: center;
+  padding: 15px;
 `;
 
-export const ViewHistorial = styled.View`
-  width: 90%;
-  margin: 10px;
-  align-items: left;
+export const TituloView = styled.View`
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
 `;
 
-export default function AgendaHistorial({ navigation }: Props) {
+export const ListaView = styled.View`
+  width: 100%;
+  padding: 0px 10px 10px 10px;
+  background-color: ${Colors.destacado};
+`;
+
+
+export const ClientesView = styled.View`
+  width: 90%;
+`;
+
+export const AsesoriasView = styled.View`
+  width: 90%;
+`;
+
+export default function PerfilAjuste({ navigation }: Props) {
   return (
     <ContainerScroll>
       <Container>
         <BarraIconos
-          titulo={"Mi Historial Live"}
+          titulo={"Mi espacio"}
           margin={"0px"}
           colorIcons={Colors.mainCOlorPurpleLigth}
           add={true}
-          campana={true}
+          threePoints={true}
         />
-        <BusquedaView>
-          <ImgView>
-            <StyledImg
-              width={100}
-              height={100}
-              source={require("../../../assets/images/historial.png")}
-            />
-          </ImgView>
-        </BusquedaView>
-        <ViewHistorial>
+        <AjustesView>
+          <StyledImg
+            width={30}
+            height={30}
+            source={require("../../../assets/images/userGris.png")}
+          />
           <StyledText
-            size={14}
+            size={16}
             weight={700}
             fs={"normal"}
-            lh={18}
+            lh={24}
             color={Colors.SecondaryGray}
           >
-            Profesional
+            Ajustes del perfil
           </StyledText>
-          <Historial nombre="Asesorías creadas" linea={true} />
-          <Historial nombre="Lista de clientes" linea={true} />
-          <Historial nombre="Eventos creados" linea={true} />
-        </ViewHistorial>
-        <ViewHistorial>
+        </AjustesView>
+        <TituloView>
           <StyledText
-            size={14}
+            size={16}
             weight={700}
             fs={"normal"}
-            lh={18}
+            lh={24}
             color={Colors.SecondaryGray}
           >
-            Social
+            Atención al público
           </StyledText>
-          <Historial nombre="Asesorías recibidas" linea={true} />
-          <Historial nombre="Eventos asistidos" linea={true} />
-          <Historial nombre="Reviews" linea={true} />
-          <Historial nombre="Denuncias" linea={true} />
-        </ViewHistorial>
+        </TituloView>
+        <ListaView>
+          <Historial nombre="Presentación" linea={true} />
+          <Historial nombre="Horario de atención" linea={true} />
+          <Historial nombre="Asesorías & Tarifas" />
+        </ListaView>
+        <TituloView>
+          <StyledText
+            size={16}
+            weight={700}
+            fs={"normal"}
+            lh={24}
+            color={Colors.SecondaryGray}
+          >
+            Información profesional
+          </StyledText>
+        </TituloView>
+        <ListaView>
+          <Historial nombre="Certificados profesionales" linea={true} />
+          <Historial nombre="Experiencias laborales" linea={true} />
+          <Historial nombre="Idiomas" />
+        </ListaView>
       </Container>
     </ContainerScroll>
   );

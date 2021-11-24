@@ -15,6 +15,7 @@ interface Props {
   lupaBlue?: boolean;
   campana?: boolean;
   right?: boolean;
+  closeBlack?: boolean;
 }
 
 interface StyledContainerProps {
@@ -83,6 +84,7 @@ export default function BarraIconos({
   lupa,
   lupaBlue,
   add,
+  closeBlack,
   campana,
   right,
 }: Props) {
@@ -111,6 +113,9 @@ export default function BarraIconos({
         ) : null}
         {right ? (
           <Icon name="chevron-right" color={colorIcons} size={25} />
+        ) : null}
+        {closeBlack ? (
+          <Icon name="close" color={Colors.black} size={25} />
         ) : null}
       </RigthContainer>
     </Container>
