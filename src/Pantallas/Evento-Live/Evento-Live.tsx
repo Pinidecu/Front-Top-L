@@ -51,7 +51,7 @@ const Barra = styled.View`
   align-items: center;
   justify-content: space-around;
   padding: 10px;
-  column-gap: 10px;
+  :10px ;
   height: 15vh;
   width: 100%;
   position: absolute;
@@ -61,7 +61,7 @@ const ViewIconos = styled.View`
   flex-direction: row;
   align-items: center;
   height: 10vh;
-  column-gap: 10px;
+  :10px ;
   position: absolute;
   bottom: 10vh;
   left: 4%;
@@ -109,7 +109,7 @@ export default function EventoLive({ navigation }: Props) {
   return (
     <ScrollView
       style={{
-        backgroundColor: 'white',
+        backgroundColor: "white",
       }}
     >
       <Container foto={foto}>

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, addons } from "react-native";
+import { Text, View, Image, addons } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
@@ -30,32 +30,31 @@ const Container = styled.View`
   justify-content: space-between;
   width: 100%;
   padding: 0 20px;
-  column-gap: 10;
 `;
 
 const LeftContainer = styled.View`
   flex-direction: row;
-  column-gap: 10px;
+
   align-items: center;
 `;
 
 const Mas = styled.View`
-width: 16px;
-height: 16px;
-margin: 0px;
-background-color: ${Colors.SecondaryPurpleLight};
-border-radius: 50%;
-position: absolute;
-bottom: -4px;
-left: 12px;
+  width: 16px;
+  height: 16px;
+  margin: 0px;
+  background-color: ${Colors.SecondaryPurpleLight};
+  border-radius: 50%;
+  position: absolute;
+  bottom: -4px;
+  left: 12px;
 `;
 const Info = styled.View`
-justify-content: center;
+  justify-content: center;
 `;
 
 const UsersContainer = styled.View`
   flex-direction: row;
-  column-gap: 5px;
+
   align-items: center;
 `;
 
@@ -68,13 +67,11 @@ const StyledText = styled.Text<StyledTextProps>`
   color: ${(props) => props.color};
 `;
 
-
 const StyledImg = styled.Image<StyledImgProps>`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   border-radius: ${(props) => props.radio};
 `;
-
 
 export default function PerfilSalaDetalle() {
   const datos: datosPerfilSalaDetalle = {
@@ -86,22 +83,22 @@ export default function PerfilSalaDetalle() {
   return (
     <Container>
       <LeftContainer>
+        <StyledImg
+          width={40}
+          height={40}
+          radio={"50%"}
+          source={{
+            uri: `${datos.foto}`,
+          }}
+        />
+        <Mas>
           <StyledImg
-            width={40}
-            height={40}
+            width={16}
+            height={16}
             radio={"50%"}
-            source={{
-              uri: `${datos.foto}`,
-            }}
+            source={require("../../assets/images/mas.svg")}
           />
-          <Mas>
-            <StyledImg
-              width={16}
-              height={16}
-              radio={"50%"}
-              source={require("../../assets/images/mas.svg")}
-            />
-          </Mas>
+        </Mas>
         <Info>
           <StyledText
             size={16}

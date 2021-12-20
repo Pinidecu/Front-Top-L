@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, addons } from "react-native";
+import { Text, View, Image, addons } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 
@@ -20,7 +20,7 @@ interface StyledTextProps {
 const Container = styled.View`
   flex-direction: row;
   width: 100%;
-  column-gap: 1%;
+
   margin: 5px 0;
 `;
 
@@ -52,10 +52,7 @@ const Hora = styled.View`
   border-radius: 8px;
 `;
 
-
-
 export default function Agenda(props: datosAgenda) {
-  
   return (
     <Container>
       <Hora>

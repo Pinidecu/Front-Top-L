@@ -37,7 +37,6 @@ const ViewTexts = styled.View`
   width: 100%;
   margin: 20px;
   padding: 0 20px;
-  row-gap: 10px;
 `;
 
 interface StyledTextProps {
@@ -57,7 +56,7 @@ const StyledText = styled.Text<StyledTextProps>`
 `;
 
 const ViewParticipantes = styled.View`
-  column-gap: 5px;
+  :5px ;
   align-self: center;
   justify-content: center;
   align-items: center;
@@ -70,12 +69,12 @@ const ViewParticipantes = styled.View`
 const BotonesLlamada = styled.View`
   align-items: center;
   justify-content: space-between;
-  row-gap: 20px;
+
   padding: 10px;
 `;
 const IconosLlamada = styled.View`
   flex-direction: row;
-  column-gap: 10px;
+  :10px ;
 `;
 
 interface datosPerfilSalaDetalle {
@@ -92,7 +91,7 @@ const datos: datosPerfilSalaDetalle = {
 interface participante {
   nombre: string;
   activo: boolean;
-  foto:string;
+  foto: string;
 }
 
 let participantes: participante[] = [
@@ -195,7 +194,6 @@ export default function SalaDetalle({ navigation }: Props) {
       <FlatList
         data={participantes}
         numColumns={3}
-        
         renderItem={({ item }) => (
           <ParticipanteSala
             nombre={item.nombre}

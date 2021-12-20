@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, addons } from "react-native";
+import { Text, View, Image, addons } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 
@@ -21,8 +21,7 @@ const Container = styled.View`
   align-items: "flex-start";
   justify-content: "flex-start";
   width: 100%;
-  margin: 10px 0;
-  column-gap: 10;
+  margin: 10px 0px;
 `;
 
 const StyledText = styled.Text<StyledTextProps>`

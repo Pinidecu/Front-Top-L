@@ -82,7 +82,6 @@ const TituloView = styled.View`
   width: 100%;
   background-color: ${Colors.SecondaryPurpleLight};
   padding: 15px;
-  row-gap: 10px;
 `;
 
 interface StyledImgPerfilProps {
@@ -105,7 +104,7 @@ const MegustaView = styled.View`
   flex-direction: row;
   width: 90%;
   height: 40px;
-  column-gap: 10px;
+  :10px ;
 `;
 const ImagenesViews = styled.View`
   width: 30%;
@@ -131,7 +130,6 @@ const PublicacionView = styled.View`
   justify-content: space-between;
   align-self: center;
   margin-top: 10px;
-  row-gap: 5px;
 `;
 
 const TituloPublicacionView = styled.View`
@@ -142,13 +140,11 @@ const TituloPublicacionView = styled.View`
   margin-top: 5px;
 `;
 
-
 const NotaView = styled.View`
   width: 90%;
   align-self: center;
   margin: 10px;
   padding-bottom: 20px;
-  row-gap: 20px;
 `;
 
 export default function EquipoDetalle1({ navigation }: Props) {

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
@@ -29,15 +29,13 @@ const Container = styled.View`
   justify-content: center;
   width: 100%;
   border-radius: 8;
-  border-color: ${Colors.bordeDestacado};
-  border-style: "solid";
-  border-width: 1;
+  border: 1px solid ${Colors.bordeDestacado};
 `;
 const Info = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  column-gap: 10;
+
   margin: 10px;
   width: 90%;
 `;
@@ -48,15 +46,14 @@ const StyledImgIcono = styled.Image<StyledImgProps>`
   margin: ${(props) => props.margin};
 `;
 const LeftView = styled.View`
-flex-direction:row;
-align-items: center;
-column-gap: 10px;
+  flex-direction: row;
+  align-items: center;
 `;
 const Titulo = styled.View``;
 const Monto = styled.View`
-flex-direction:row;
-column-gap: 5px;
-align-items: center;
+  flex-direction: row;
+
+  align-items: center;
 `;
 
 const StyledText = styled.Text<StyledTextProps>`
@@ -74,8 +71,6 @@ const datos: datosPublicacion = {
   descripcion: "Group name lorem ipsum dolor amet sim athem",
   imagen: "https://lorempixel.com/200/200/people/",
 };
-
-
 
 interface Props {
   titulo: string;

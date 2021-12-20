@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, addons } from "react-native";
+import { Text, View, Image, addons } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 import { ListItem, Avatar } from "react-native-elements";
@@ -25,8 +25,7 @@ interface StyledTextProps {
 
 const Container = styled.View`
   width: 100%;
-  margin-top: 10;
-  column-gap: 10;
+  margin-top: 10px;
 `;
 
 let lista: areas[] = [
@@ -57,13 +56,13 @@ export default function InfoPro() {
     <Container>
       {lista.map((l, i) => (
         <ListItem key={i} bottomDivider={i < lista.length - 1 ? true : false}>
-          {l.logo === "" ? null:
+          {l.logo === "" ? null : (
             <Avatar
-              source={
-                l.logo === "" ? null : require(`../../assets/images/${l.logo}`)
-              }
-            />            
-          }
+              source={{
+                uri: "https://cdn.discordapp.com/attachments/872196782623449179/913190922408312853/unknown.png",
+              }}
+            />
+          )}
           <ListItem.Content>
             <ListItem.Title>{l.titulo}</ListItem.Title>
           </ListItem.Content>

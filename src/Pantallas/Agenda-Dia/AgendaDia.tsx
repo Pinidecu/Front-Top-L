@@ -1,21 +1,12 @@
 import React from "react";
 import { ScrollView, TouchableOpacity } from "react-native";
-import InfoMiPerfil from "../../Componentes/InfoMiPerfil";
 import BarraIconos from "../../Componentes/BarraIconos";
-import Explorar from "../../Componentes/Explorar";
-import Actividad from "../../Componentes/Actividad";
 import Agenda from "../../Componentes/Agenda";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { loginStackParamList } from "../../../types";
 import {
-  ContainerPrincipal,
-  ContainerSuperior,
-  ContainerInferior,
-  Botones,
-  ActividadView,
   ContainerPrincipalAgenda,
 } from "../StyledComponents/StyledComponents";
-import Boton from "../../Componentes/Boton";
 import Colors from "../../../constants/Colors";
 import DiaAgenda from "../../Componentes/DiaAgenda";
 import styled from "styled-components/native";

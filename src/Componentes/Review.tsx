@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, addons } from "react-native";
+import { Text, View, Image, addons } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 
@@ -21,8 +21,7 @@ const Container = styled.View`
   align-items: "flex-start";
   justify-content: space-between;
   width: 100%;
-  margin: 10px 0;
-  column-gap: 10;
+  margin: 10px 0px;
 `;
 
 const StyledText = styled.Text<StyledTextProps>`
@@ -35,24 +34,23 @@ const StyledText = styled.Text<StyledTextProps>`
 `;
 
 const RigthContainer = styled.View`
-  flex-direction:row;
-  column-gap:10px;
+  flex-direction: row;
+
   align-items: center;
 `;
-const LeftContainer = styled.View`  
-justify-content:center;
+const LeftContainer = styled.View`
+  justify-content: center;
 `;
 
 const Info = styled.View`
   height: "50%";
   justify-content: center;
-  row-gap: 5px;
 `;
 
 const StyledImg = styled.Image<StyledImgProps>`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  border-radius:60%;
+  border-radius: 60%;
 `;
 
 interface Props {

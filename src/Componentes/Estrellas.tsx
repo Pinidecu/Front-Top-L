@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
@@ -19,7 +19,6 @@ interface StyledTextProps {
 
 const EstrellasView = styled.View`
   flex-direction: row;
-  column-gap: 5px;
 `;
 const StyledText = styled.Text<StyledTextProps>`
   font-family: Proxima Nova;
@@ -42,7 +41,7 @@ const StyledImg = styled.Image<StyledImgProps>`
 export default function Estrellas({ estrellas }: Props) {
   return (
     <EstrellasView>
-      {estrellas >=1 ? (
+      {estrellas >= 1 ? (
         <StyledImg
           width={20}
           height={20}
@@ -55,7 +54,7 @@ export default function Estrellas({ estrellas }: Props) {
           source={require("../../assets/images/estrella.png")}
         />
       )}
-      {estrellas >=2? (
+      {estrellas >= 2 ? (
         <StyledImg
           width={20}
           height={20}
@@ -68,7 +67,7 @@ export default function Estrellas({ estrellas }: Props) {
           source={require("../../assets/images/estrella.png")}
         />
       )}
-      {estrellas >=3 ? (
+      {estrellas >= 3 ? (
         <StyledImg
           width={20}
           height={20}

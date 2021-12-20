@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, addons } from "react-native";
+import { Text, View, Image, addons } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 
@@ -33,7 +33,7 @@ const Container = styled.View`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  column-gap: 1%;
+
   margin: 5px 0;
   padding: 15px;
   background-color: ${Colors.destacado};
@@ -50,16 +50,14 @@ const StyledText = styled.Text<StyledTextProps>`
   text-align: left;
 `;
 
-const Info = styled.View`
-  row-gap: 5px;
-`;
+const Info = styled.View``;
 const IndicadorView = styled.View`
   background-color: ${Colors.ligthGray};
   border-radius: 4px;
   flex-direction: row;
   height: 52px;
   width: 110px;
-  column-gap: 10px;
+
   padding: 5px;
 `;
 

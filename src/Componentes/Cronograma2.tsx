@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { Icon } from "react-native-elements";
 import { color } from "react-native-elements/dist/helpers";
 import styled from "styled-components/native";
@@ -39,7 +39,7 @@ const DiaView = styled.View`
 
 const Evento = styled.View`
   flex-direction: row;
-  column-gap: 10px;
+
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -47,14 +47,13 @@ const Evento = styled.View`
 `;
 const Horario = styled.View`
   flex-direction: row;
-  column-gap: 10px;
 `;
 
 const Perfiles = styled.View`
-width: 95%;
-align-items: center;
-row-gap: 10px;
-margin:20px;
+  width: 95%;
+  align-items: center;
+
+  margin: 20px;
 `;
 
 const StyledText = styled.Text<StyledTextProps>`

@@ -56,8 +56,8 @@ const StyledImg = styled.Image<StyledImgProps>`
   z-index: 1;
 `;
 export const NotiView = styled.View`
-flex-direction: row;
-column-gap: 10px;
+  flex-direction: row;
+  :10px ;
   align-items: center;
   justify-content: space-space-between;
   align-self: center;
@@ -89,7 +89,6 @@ const StyledImgIcon = styled.Image<StyledImgIconProps>`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
 `;
-
 
 export default function HorariosTarifas({ navigation }: Props) {
   return (

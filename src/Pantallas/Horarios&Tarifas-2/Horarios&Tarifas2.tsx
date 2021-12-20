@@ -42,7 +42,7 @@ export const Eventos = styled.View`
 `;
 export const NotiView = styled.View`
   flex-direction: row;
-  column-gap: 10px;
+  :10px ;
   align-items: center;
   justify-content: space-between;
   align-self: center;
@@ -89,7 +89,6 @@ const StyledImg = styled.Image<StyledImgProps>`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
 `;
-
 
 export default function HorariosTarifas2({ navigation }: Props) {
   return (

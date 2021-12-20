@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { Icon } from "react-native-elements";
 import { color } from "react-native-elements/dist/helpers";
 import styled from "styled-components/native";
@@ -26,11 +26,11 @@ const Container = styled.View<ContainerProps>`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  column-gap: 10;
+
   width: ${(props) => props.width}%;
   height: ${(props) => props.height};
   border: 1px solid ${Colors.mainCOlorPurpleDark};
-  border-radius: 8;
+  border-radius: 8px;
 `;
 
 const StyledText = styled.Text<StyledTextProps>`
@@ -41,11 +41,9 @@ const StyledText = styled.Text<StyledTextProps>`
   line-height: ${(props) => props.lh};
 `;
 
-
-
 export default function Boton({ ancho, alto, texto, icon }: Props) {
   return (
-    <Container width={ancho} height={alto} >
+    <Container width={ancho} height={alto}>
       {icon ? (
         <Icon
           name={icon}
@@ -54,7 +52,12 @@ export default function Boton({ ancho, alto, texto, icon }: Props) {
           onPress={() => console.log("hello")}
         />
       ) : null}
-      <StyledText weight={400} size={16} lh={24} color={Colors.mainCOlorPurpleDark}>
+      <StyledText
+        weight={400}
+        size={16}
+        lh={24}
+        color={Colors.mainCOlorPurpleDark}
+      >
         {texto}
       </StyledText>
     </Container>

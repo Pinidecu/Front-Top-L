@@ -89,7 +89,7 @@ export const Monto = styled.View`
   background-color: ${Colors.mainCOlorPurpleDark};
   width: 90%;
   align-items: center;
-  row-gap: 10px;
+
   padding: 5vh;
   margin: 10px;
   border-radius: 8px;
@@ -126,7 +126,7 @@ export const TotalView = styled.View`
   width: 90%;
   align-items: center;
   padding: 10px;
-  column-gap: 45%;
+   45%;
 `;
 
 export const DetallesView = styled.View`
@@ -136,8 +136,7 @@ export const DetallesView = styled.View`
 
 export default function Payment({ navigation }: Props) {
   return (
-    <Container
-    >
+    <Container>
       <Superior>
         <TouchableOpacity
           style={{ width: "100%" }}
@@ -215,8 +214,8 @@ export default function Payment({ navigation }: Props) {
           <ScrollView
             style={{
               width: "100%",
-              height: '30vh',
-              marginTop:10,
+              height: "30vh",
+              marginTop: 10,
             }}
           >
             <Ganancias>

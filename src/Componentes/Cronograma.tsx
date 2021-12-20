@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { Icon } from "react-native-elements";
 import { color } from "react-native-elements/dist/helpers";
 import styled from "styled-components/native";
@@ -31,7 +31,6 @@ const Container = styled.View`
 
 const Evento = styled.View`
   flex-direction: row;
-  column-gap: 10px;
 `;
 
 const StyledText = styled.Text<StyledTextProps>`

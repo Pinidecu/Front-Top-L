@@ -1,12 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../../constants/Colors";
 
 // PERFIL
 
 export const ContainerPrincipal = styled.View`
-  background-color: ${Colors.white};/* 
+  background-color: ${Colors.white}; /* 
   flex:1; */
   align-items: center;
   justify-content: center;
@@ -40,7 +40,7 @@ export const Navegacion = styled.View`
 `;
 export const Titulo = styled.TouchableOpacity`
   flex-direction: row;
-  column-gap: 5px;
+
   margin: 10px;
   padding: 0 10px;
   z-index: 1;
@@ -64,7 +64,7 @@ export const Botones = styled.View`
 
 export const DestacadoView = styled.View`
   flex-direction: row;
-  column-gap: 10px;
+
   align-items: flex-start;
   width: 100%;
   padding: 10px;
@@ -167,7 +167,6 @@ export const LineaColor = styled.View<LineaColorProps>`
   border-radius: 100px;
 `;
 
-
 export const ContainerPrincipalAgenda = styled.View`
   background-color: ${Colors.white};
   align-items: center;
@@ -176,7 +175,6 @@ export const ContainerPrincipalAgenda = styled.View`
   align-self: center;
   font-family: Cambria;
 `;
-
 
 export const ContainerPrincipalEquipos = styled.View`
   background-color: ${Colors.white};

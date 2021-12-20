@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, addons } from "react-native";
+import { Text, View, Image, addons } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 
@@ -22,7 +22,6 @@ const Container = styled.View`
   justify-content: space-between;
   width: 100%;
   margin: 10px 0;
-  column-gap: 10;
 `;
 
 const StyledText = styled.Text<StyledTextProps>`
@@ -35,11 +34,10 @@ const StyledText = styled.Text<StyledTextProps>`
 `;
 
 const RigthContainer = styled.View`
-  flex-direction:row;
-  column-gap:10px;
+  flex-direction: row;
 `;
-const LeftContainer = styled.View`  
-justify-content:center;
+const LeftContainer = styled.View`
+  justify-content: center;
 `;
 const VerHistorial = styled.View`
   background-color=${Colors.SecondaryPurpleLight};
@@ -58,7 +56,7 @@ const Info = styled.View`
 const StyledImg = styled.Image<StyledImgProps>`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  border-radius:60%;
+  border-radius: 60%;
 `;
 
 interface Props {
@@ -71,45 +69,47 @@ export default function Cliente({ nombre, id, foto }: Props) {
   return (
     <Container>
       <RigthContainer>
-      <StyledImg
-        width={40}
-        height={40}
-        source={{
-          uri: foto,
-        }}
-      />
-      <Info>
-        <StyledText
-          size={16}
-          weight={700}
-          fs={"normal"}
-          lh={24}
-          color={Colors.mainColorBlack}
-        >
-          {nombre}
-        </StyledText>
-        <StyledText
-          size={12}
-          weight={700}
-          fs={"normal"}
-          lh={14}
-          color={Colors.SecondaryGray}
-        >
-          {id}
-        </StyledText>
-      </Info>
+        <StyledImg
+          width={40}
+          height={40}
+          source={{
+            uri: foto,
+          }}
+        />
+        <Info>
+          <StyledText
+            size={16}
+            weight={700}
+            fs={"normal"}
+            lh={24}
+            color={Colors.mainColorBlack}
+          >
+            {nombre}
+          </StyledText>
+          <StyledText
+            size={12}
+            weight={700}
+            fs={"normal"}
+            lh={14}
+            color={Colors.SecondaryGray}
+          >
+            {id}
+          </StyledText>
+        </Info>
       </RigthContainer>
-      <LeftContainer><VerHistorial>
-      <StyledText
-          size={14}
-          weight={400}
-          fs={"normal"}
-          lh={16.8}
-          color={Colors.mainCOlorPurpleDark}
-        >
-          Ver historial
-        </StyledText>
-      </VerHistorial></LeftContainer>
+      <LeftContainer>
+        <VerHistorial>
+          <StyledText
+            size={14}
+            weight={400}
+            fs={"normal"}
+            lh={16.8}
+            color={Colors.mainCOlorPurpleDark}
+          >
+            Ver historial
+          </StyledText>
+        </VerHistorial>
+      </LeftContainer>
     </Container>
   );
 }

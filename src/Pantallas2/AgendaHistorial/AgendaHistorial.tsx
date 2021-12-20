@@ -89,7 +89,7 @@ export const Monto = styled.View`
   background-color: ${Colors.mainCOlorPurpleDark};
   width: 90%;
   align-items: center;
-  row-gap: 10px;
+
   padding: 5vh;
   margin: 10px;
   border-radius: 8px;

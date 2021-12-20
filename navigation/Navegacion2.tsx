@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import BarraIconos from "../src/Componentes/BarraIconos";
 import Destacado from "../src/Componentes/Destacado";
 import Explorar from "../src/Componentes/Explorar";

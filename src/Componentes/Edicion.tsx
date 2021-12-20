@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, addons } from "react-native";
+import { Text, View, Image, addons } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 import { Icon } from "react-native-elements";
@@ -27,7 +27,6 @@ const Container = styled.View`
   margin: 2.5px 0;
   padding: 0 20px;
   border-radius: 8px;
-  column-gap: 20px;
 `;
 
 const StyledText = styled.Text<StyledTextProps>`

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
@@ -23,7 +23,6 @@ interface StyledTextProps {
 const Container = styled.View`
   margin: 5px 0px;
   width: 100%;
-  row-gap: 10px;
 `;
 const Container2 = styled.View`
   flex-direction: row;
@@ -31,8 +30,8 @@ const Container2 = styled.View`
   justify-content: space-between;
 `;
 const EstrellasView = styled.View`
-flex-direction: row;
-column-gap: 5px;
+  flex-direction: row;
+  :5px ;
 `;
 const StyledText = styled.Text<StyledTextProps>`
   font-family: Proxima Nova;
@@ -52,7 +51,12 @@ const StyledImg = styled.Image<StyledImgProps>`
   height: ${(props) => props.height};
 `;
 
-export default function Calificacion({ titulo, estrellas, comentario, linea }: Props) {
+export default function Calificacion({
+  titulo,
+  estrellas,
+  comentario,
+  linea,
+}: Props) {
   return (
     <Container>
       <StyledText
@@ -144,7 +148,7 @@ export default function Calificacion({ titulo, estrellas, comentario, linea }: P
           </StyledText>
         ) : null}
       </Container2>
-      {linea?<Linea />:null}
+      {linea ? <Linea /> : null}
     </Container>
   );
 }

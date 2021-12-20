@@ -1,13 +1,9 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 import reloj from "../../assets/images/reloj.png";
-
-
-
-
 
 interface StyledImgProps {
   width: number;
@@ -44,16 +40,16 @@ const StyledText = styled.Text<StyledTextProps>`
 `;
 
 const ViewNombres = styled.View`
-justify-content: center;
+  justify-content: center;
 `;
 const LeftContainer = styled.View`
   flex-direction: row;
-  column-gap: 10px;
+
   align-items: center;
 `;
 const RightContainer = styled.View`
   flex-direction: row;
-  column-gap: 10px;
+
   align-items: center;
   margin: 10px;
 `;
@@ -65,7 +61,6 @@ const StyledImg = styled.Image<StyledImgProps>`
   margin: ${(props) => props.margin};
 `;
 
-
 interface Props {
   fotoPerfil: string;
   nombre: string;
@@ -73,7 +68,12 @@ interface Props {
   hora: string;
 }
 
-export default function BarraLiveOpcion2({fotoPerfil,nombre,usuario,hora}:Props) {
+export default function BarraLiveOpcion2({
+  fotoPerfil,
+  nombre,
+  usuario,
+  hora,
+}: Props) {
   return (
     <Container>
       <LeftContainer>
@@ -107,7 +107,7 @@ export default function BarraLiveOpcion2({fotoPerfil,nombre,usuario,hora}:Props)
           </StyledText>
         </ViewNombres>
       </LeftContainer>
-      <RightContainer>        
+      <RightContainer>
         <StyledImg
           width={20}
           height={20}
@@ -130,4 +130,3 @@ export default function BarraLiveOpcion2({fotoPerfil,nombre,usuario,hora}:Props)
     </Container>
   );
 }
-

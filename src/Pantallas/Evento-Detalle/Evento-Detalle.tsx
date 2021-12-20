@@ -44,7 +44,7 @@ const ImageView = styled.View<ImageViewProps>`
   width: 100%;
   height: 244px;
   z-index: 1;
-  margin:auto;
+  margin: auto;
 `;
 
 interface StyledTextProps {
@@ -92,16 +92,14 @@ const TituloView = styled.View`
   align-self: center;
   margin: 10px;
   width: 90%;
-  row-gap: 10px;
 `;
 
 const TituloLeft = styled.View`
   width: 80%;
-  row-gap: 18px;
 `;
 const TituloRigth = styled.View`
   width: 20%;
-  row-gap: 10px;
+
   align-self: flex-end;
   align-items: center;
 `;
@@ -119,7 +117,7 @@ const IconView = styled.View`
 const InfoView = styled.View`
   width: 90%;
   align-self: center;
-  row-gap: 10px;
+
   margin-top: 10px;
   margin-bottom: 20px;
 `;
@@ -129,7 +127,6 @@ const PublicacionView = styled.View`
   justify-content: space-between;
   align-self: center;
   margin-top: 10px;
-  row-gap: 5px;
 `;
 
 const TituloPublicacionView = styled.View`
@@ -144,7 +141,6 @@ const DescripcionView = styled.View`
   width: 90%;
   align-self: center;
   margin: 10px;
-  row-gap: 10px;
 `;
 
 const NotaView = styled.View`
@@ -152,10 +148,7 @@ const NotaView = styled.View`
   align-self: center;
   margin: 10px;
   padding-bottom: 20px;
-  row-gap: 10px;
 `;
-
-
 
 export default function EventoDetalle({ navigation }: Props) {
   return (
@@ -400,7 +393,11 @@ export default function EventoDetalle({ navigation }: Props) {
           </StyledText>
         </DescripcionView>
         <NotaView>
-          <PublicacionSinImg />
+          <PublicacionSinImg
+            fotoPerfil={fotoPerfilPublicacion}
+            nombre={"Armando Lopez • @arlopez21 • 2h"}
+            descripcion={"Group name lorem ipsum dolor amet sim athem"}
+          />
           <Publicacion
             fotoPerfil={fotoPerfilPublicacion}
             nombre={"Armando Lopez • @arlopez21 • 2h"}

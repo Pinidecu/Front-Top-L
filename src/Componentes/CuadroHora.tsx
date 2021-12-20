@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { Icon } from "react-native-elements";
 import { color } from "react-native-elements/dist/helpers";
 import styled from "styled-components/native";

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
@@ -45,7 +45,6 @@ const ImgView = styled.View`
 const Info = styled.View`
   margin: 10px;
   width: 90%;
-  row-gap: 5px;
 `;
 
 const StyledImgPerfil = styled.Image<StyledImgProps>`
@@ -87,7 +86,6 @@ const datos: datosEquipoPublicacion = {
   meGusta: "tú y 6770 personas más asistirán a ésta sala",
 };
 
-
 interface Props {
   titulo: string;
   dia: string;
@@ -96,13 +94,7 @@ interface Props {
   imagen: string;
 }
 
-export default function SalaParaTi({
-  titulo,
-  tags,
-  dia,
-  hora,
-  imagen
-}: Props) {
+export default function SalaParaTi({ titulo, tags, dia, hora, imagen }: Props) {
   return (
     <Container>
       <ImgView>
@@ -112,7 +104,7 @@ export default function SalaParaTi({
           radio={""}
           margin={"10px"}
           source={{
-            uri:imagen
+            uri: imagen,
           }}
         />
       </ImgView>

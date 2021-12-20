@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
@@ -22,7 +22,7 @@ const Container = styled.View`
   width: 100%;
   justify-content: space-between;
   align-self: center;
-  row-gap: 10px;
+
   margin-top: 10px;
 `;
 const TextView = styled.View`

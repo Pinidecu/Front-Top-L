@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
@@ -45,7 +45,6 @@ const ImgView = styled.View`
 const Info = styled.View`
   margin: 10px;
   width: 90%;
-  row-gap: 5px;
 `;
 
 const StyledImgPerfil = styled.Image<StyledImgProps>`
@@ -91,7 +90,6 @@ const MegustaView = styled.View`
   flex-direction: row;
   width: 90%;
   height: 40px;
-  column-gap: 10px;
 `;
 
 const ImagenesViews = styled.View`

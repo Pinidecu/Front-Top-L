@@ -53,7 +53,7 @@ export const Eventos = styled.View`
 `;
 export const NotiView = styled.View`
   flex-direction: row;
-  column-gap: 10px;
+
   align-items: center;
   justify-content: space-between;
   align-self: center;
@@ -71,7 +71,7 @@ export const TemasView = styled.View`
 export const HashtagView = styled.View`
   flex-direction: row;
   width: 90%;
-  column-gap: 10px;
+
   margin: 10px;
 `;
 
@@ -92,7 +92,7 @@ export const EquiposView = styled.View`
 `;
 
 export const SalasView = styled.View`
-width:90%;
+  width: 90%;
 `;
 
 interface StyledTextProps {

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
@@ -29,15 +29,13 @@ const Container = styled.View`
   justify-content: center;
   width: 100%;
   border-radius: 8;
-  border-color: ${Colors.bordeDestacado};
-  border-style: "solid";
-  border-width: 1;
+  border: 1px solid ${Colors.bordeDestacado};
 `;
 const Info = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  column-gap: 10;
+
   margin: 10px;
   width: 90%;
 `;
@@ -84,7 +82,7 @@ const MegustaView = styled.View`
   flex-direction: row;
   align-items: center;
   margin-bottom: 5px;
-  column-gap: 5px;
+
   width: 90%;
 `;
 
@@ -95,7 +93,12 @@ interface Props {
   imagen: string;
 }
 
-export default function Publicacion({ fotoPerfil, nombre, descripcion, imagen }: Props) {
+export default function Publicacion({
+  fotoPerfil,
+  nombre,
+  descripcion,
+  imagen,
+}: Props) {
   return (
     <Container>
       <StyledBookmark
@@ -158,4 +161,3 @@ export default function Publicacion({ fotoPerfil, nombre, descripcion, imagen }:
     </Container>
   );
 }
-

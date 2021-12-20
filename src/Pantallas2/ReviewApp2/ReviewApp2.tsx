@@ -96,7 +96,7 @@ export const Monto = styled.View`
   background-color: ${Colors.mainCOlorPurpleDark};
   width: 90%;
   align-items: center;
-  row-gap: 10px;
+
   padding: 5vh;
   margin: 10px;
   border-radius: 8px;
@@ -118,7 +118,7 @@ const ContainerScroll = styled.ScrollView`
 export const BusquedaView = styled.View`
   background-color: ${Colors.white};
   flex-direction: row;
-  column-gap: 10px;
+
   border-radius: 8px;
   align-items: center;
   width: 90%;
@@ -136,7 +136,6 @@ export const TituloView = styled.View`
   width: 90%;
   justify-content: space-between;
   margin: 10px;
-  row-gap: 10px;
 `;
 export const AgregarView = styled.View`
   width: 100%;
@@ -178,9 +177,7 @@ export const CalificacionView = styled.View`
   justify-content: space-between;
   align-items: center;
 `;
-export const CalificacionLeft = styled.View`
-row-gap: 5px;
-`;
+export const CalificacionLeft = styled.View``;
 export const Calificacionright = styled.View`
   flex-direction: row;
   background-color: ${Colors.destacado};
@@ -189,7 +186,6 @@ export const Calificacionright = styled.View`
   height: 52px;
   align-items: center;
   justify-content: center;
-  column-gap: 10px;
 `;
 
 const ContainerMegusta = styled.View`
@@ -199,7 +195,7 @@ const MegustaView = styled.View`
   flex-direction: row;
   width: 60%;
   height: 40px;
-  column-gap: 10px;
+
   margin: 10px 0px;
   justify-content: left;
   align-self: flex-start;
@@ -237,7 +233,6 @@ const PublicacionView = styled.View`
   justify-content: space-between;
   align-self: center;
   margin-top: 10px;
-  row-gap: 20px;
 `;
 
 export default function ReviewApp2({ navigation }: Props) {

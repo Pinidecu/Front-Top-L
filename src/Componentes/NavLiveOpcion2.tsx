@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 import { Icon } from "react-native-elements";
@@ -19,7 +19,7 @@ const Container = styled.View<ContainerProps>`
   align-items: center;
   justify-content: space-around;
   padding: 10px;
-  column-gap: 10px;
+
   height: 15vh;
   width: 100%;
   position: absolute;
@@ -32,7 +32,6 @@ interface StyledTextProps {
 export const IconosLive = styled.View`
   align-items: center;
   justify-content: center;
-  row-gap: 5px;
 `;
 const StyledText = styled.Text<StyledTextProps>`
   color: ${(props) => props.color};

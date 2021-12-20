@@ -47,7 +47,7 @@ export const Eventos = styled.View`
 `;
 export const NotiView = styled.View`
   flex-direction: row;
-  column-gap: 10px;
+  :10px ;
   align-items: center;
   justify-content: space-between;
   align-self: center;
@@ -99,7 +99,7 @@ export default function Equipos({ navigation }: Props) {
     <ScrollView style={{ backgroundColor: "white" }}>
       <ContainerPrincipalEquipos>
         <TouchableOpacity
-        style={{width:'100%'}}
+          style={{ width: "100%" }}
           onPress={() => {
             navigation.navigate("EquipoDetalle1");
           }}

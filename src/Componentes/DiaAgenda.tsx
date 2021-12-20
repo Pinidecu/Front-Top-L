@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { Icon } from "react-native-elements";
 import { color } from "react-native-elements/dist/helpers";
 import styled from "styled-components/native";
@@ -28,10 +28,10 @@ const Container = styled.View<ContainerProps>`
   background-color: ${(props) => props.color};
   align-items: center;
   justify-content: space-between;
-  column-gap: 10;
+
   width: ${(props) => props.width}%;
   height: ${(props) => props.height};
-  border-radius: 8;
+  border-radius: 8px;
   padding: 0px 10px;
   margin: 5px;
 `;
@@ -43,8 +43,6 @@ const StyledText = styled.Text<StyledTextProps>`
   font-weight: ${(props) => props.weight};
   line-height: ${(props) => props.lh};
 `;
-
-
 
 export default function DiaAgenda({ ancho, alto, texto, icon }: Props) {
   return (

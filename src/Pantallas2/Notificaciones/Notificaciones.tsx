@@ -94,7 +94,7 @@ export const Monto = styled.View`
   background-color: ${Colors.mainCOlorPurpleDark};
   width: 90%;
   align-items: center;
-  row-gap: 10px;
+
   padding: 5vh;
   margin: 10px;
   border-radius: 8px;
@@ -122,9 +122,7 @@ const ContainerScroll = styled.ScrollView`
   background-color: ${Colors.white};
 `;
 
-
 export const CardsView = styled.View`
-  row-gap: 10px;
   width: 90%;
 `;
 export const CardView = styled.View`
@@ -134,7 +132,6 @@ export const CardView = styled.View`
   width: 100%;
   align-items: center;
   padding: 10px 0px;
-  row-gap: 10px;
 `;
 
 export const TituloView = styled.View`
@@ -145,7 +142,6 @@ export const TituloView = styled.View`
 
 export const DescripcionView = styled.View`
   width: 60%;
-  row-gap: 5px;
 `;
 export const FechaView = styled.View`
   flex-direction: row;
@@ -182,7 +178,7 @@ const IndicadorView = styled.View`
   flex-direction: row;
   height: 52px;
   width: 110px;
-  column-gap: 10px;
+
   padding: 5px;
 `;
 
@@ -196,13 +192,9 @@ const DatosView = styled.View`
   width: 90%;
   justify-content: space-between;
 `;
-const Info = styled.View`
-  row-gap: 5px;
-`;
+const Info = styled.View``;
 
-const ValorView = styled.View`
-  row-gap: 5px;
-`;
+const ValorView = styled.View``;
 
 export default function Notificaciones({ navigation }: Props) {
   return (
@@ -215,29 +207,75 @@ export default function Notificaciones({ navigation }: Props) {
           closeBlack={true}
         />
         <CardsView>
-        <CardView>
-          <TituloView>
-            <DescripcionView>
-              <StyledText
-                size={12}
-                weight={400}
-                fs={"normal"}
-                lh={18}
-                color={Colors.mainColorBlack}
-              >
-                Su evento
+          <CardView>
+            <TituloView>
+              <DescripcionView>
                 <StyledText
                   size={12}
-                  weight={700}
+                  weight={400}
                   fs={"normal"}
                   lh={18}
                   color={Colors.mainColorBlack}
                 >
-                  {" Aprendamos más sobre el self coaching "}
+                  Su evento
+                  <StyledText
+                    size={12}
+                    weight={700}
+                    fs={"normal"}
+                    lh={18}
+                    color={Colors.mainColorBlack}
+                  >
+                    {" Aprendamos más sobre el self coaching "}
+                  </StyledText>
+                  está a punto de comenzar!
                 </StyledText>
-                está a punto de comenzar!
-              </StyledText>
-              <FechaView>
+                <FechaView>
+                  <StyledText
+                    size={12}
+                    weight={700}
+                    fs={"normal"}
+                    lh={14}
+                    color={Colors.mainColorBlack}
+                  >
+                    Jueves 24 Jun, 2021
+                  </StyledText>
+                </FechaView>
+              </DescripcionView>
+              <Icon
+                name="more-horiz"
+                color={Colors.mainCOlorPurpleLigth}
+                size={25}
+              />
+            </TituloView>
+
+            <Botones>
+              <BotonGris>
+                <StyledText
+                  size={14}
+                  weight={400}
+                  fs={"normal"}
+                  lh={16.8}
+                  color={Colors.SecondaryGray}
+                >
+                  Recordar en 5mins
+                </StyledText>
+              </BotonGris>
+              <BotonAzul>
+                <StyledText
+                  size={14}
+                  weight={400}
+                  fs={"normal"}
+                  lh={16.8}
+                  color={Colors.mainCOlorPurpleDark}
+                >
+                  Unirme
+                </StyledText>
+              </BotonAzul>
+            </Botones>
+          </CardView>
+          <CardView>
+            <TituloView>
+              <DescripcionView>
                 <StyledText
                   size={12}
                   weight={700}
@@ -245,162 +283,43 @@ export default function Notificaciones({ navigation }: Props) {
                   lh={14}
                   color={Colors.mainColorBlack}
                 >
-                  Jueves 24 Jun, 2021
+                  El evento Seminario live sobre el fitness en el caribe fue re
+                  agendado, deseas conservar tu pase Live para el evento?
                 </StyledText>
-              </FechaView>
-            </DescripcionView>
-            <Icon
-              name="more-horiz"
-              color={Colors.mainCOlorPurpleLigth}
-              size={25}
-            />
-          </TituloView>
+                <FechaView>
+                  <StyledText
+                    size={12}
+                    weight={400}
+                    fs={"normal"}
+                    lh={18}
+                    color={Colors.SecondaryGray}
+                  >
+                    Bienestar físico
+                  </StyledText>
+                </FechaView>
+              </DescripcionView>
+              <IndicadorView>
+                <LeftView>
+                  <StyledText
+                    size={12}
+                    weight={400}
+                    fs={"normal"}
+                    lh={10}
+                    color={Colors.mainColorRed}
+                  >
+                    Asesoría finalizada
+                  </StyledText>
+                </LeftView>
+                <StyledImg
+                  width={20}
+                  height={20}
+                  source={require("../../../assets/images/BulletRed.png")}
+                />
+              </IndicadorView>
+            </TituloView>
 
-          <Botones>
-            <BotonGris>
-              <StyledText
-                size={14}
-                weight={400}
-                fs={"normal"}
-                lh={16.8}
-                color={Colors.SecondaryGray}
-              >
-                Recordar en 5mins
-              </StyledText>
-            </BotonGris>
-            <BotonAzul>
-              <StyledText
-                size={14}
-                weight={400}
-                fs={"normal"}
-                lh={16.8}
-                color={Colors.mainCOlorPurpleDark}
-              >
-                Unirme
-              </StyledText>
-            </BotonAzul>
-          </Botones>
-        </CardView>
-        <CardView>
-          <TituloView>
-            <DescripcionView>
-              <StyledText
-                size={12}
-                weight={700}
-                fs={"normal"}
-                lh={14}
-                color={Colors.mainColorBlack}
-              >
-                El evento Seminario live sobre el fitness en el caribe fue re
-                agendado, deseas conservar tu pase Live para el evento?
-              </StyledText>
-              <FechaView>
-                <StyledText
-                  size={12}
-                  weight={400}
-                  fs={"normal"}
-                  lh={18}
-                  color={Colors.SecondaryGray}
-                >
-                  Bienestar físico
-                </StyledText>
-              </FechaView>
-            </DescripcionView>
-            <IndicadorView>
-              <LeftView>
-                <StyledText
-                  size={12}
-                  weight={400}
-                  fs={"normal"}
-                  lh={10}
-                  color={Colors.mainColorRed}
-                >
-                  Asesoría finalizada
-                </StyledText>
-              </LeftView>
-              <StyledImg
-                width={20}
-                height={20}
-                source={require("../../../assets/images/BulletRed.png")}
-              />
-            </IndicadorView>
-          </TituloView>
-
-          <DatosView>
-            <Info>
-              <StyledText
-                size={12}
-                weight={700}
-                fs={"normal"}
-                lh={14}
-                color={Colors.black}
-              >
-                {"Fecha de evento: "}
-                <StyledText
-                  size={12}
-                  weight={400}
-                  fs={"normal"}
-                  lh={14}
-                  color={Colors.black}
-                >
-                  18/11/2021
-                </StyledText>
-              </StyledText>
-              <StyledText
-                size={12}
-                weight={700}
-                fs={"normal"}
-                lh={14}
-                color={Colors.black}
-              >
-                {"Hora: "}
-                <StyledText
-                  size={12}
-                  weight={400}
-                  fs={"normal"}
-                  lh={14}
-                  color={Colors.black}
-                >
-                  4:00PM
-                </StyledText>
-              </StyledText>
-              <StyledText
-                size={12}
-                weight={700}
-                fs={"normal"}
-                lh={14}
-                color={Colors.black}
-              >
-                {"Tiempo: "}
-                <StyledText
-                  size={12}
-                  weight={400}
-                  fs={"normal"}
-                  lh={14}
-                  color={Colors.black}
-                >
-                  3 horas
-                </StyledText>
-              </StyledText>
-            </Info>
-            <ValorView>
-              <StyledText
-                size={12}
-                weight={400}
-                fs={"normal"}
-                lh={14}
-                color={Colors.black}
-              >
-                Valor:
-              </StyledText>
-              <StyledText
-                size={12}
-                weight={400}
-                fs={"normal"}
-                lh={14}
-                color={Colors.black}
-              >
-                $120.000{" "}
+            <DatosView>
+              <Info>
                 <StyledText
                   size={12}
                   weight={700}
@@ -408,139 +327,214 @@ export default function Notificaciones({ navigation }: Props) {
                   lh={14}
                   color={Colors.black}
                 >
-                  COP
+                  {"Fecha de evento: "}
+                  <StyledText
+                    size={12}
+                    weight={400}
+                    fs={"normal"}
+                    lh={14}
+                    color={Colors.black}
+                  >
+                    18/11/2021
+                  </StyledText>
                 </StyledText>
-              </StyledText>
-            </ValorView>
-          </DatosView>
-          <Botones>
-            <BotonGris>
-              <StyledText
-                size={14}
-                weight={400}
-                fs={"normal"}
-                lh={16.8}
-                color={Colors.SecondaryGray}
-              >
-                Cancelar
-              </StyledText>
-            </BotonGris>
-            <BotonAzul>
-              <StyledText
-                size={14}
-                weight={400}
-                fs={"normal"}
-                lh={16.8}
-                color={Colors.mainCOlorPurpleDark}
-              >
-                Agendar nuevamente
-              </StyledText>
-            </BotonAzul>
-          </Botones>
-        </CardView>
-        <CardView>
-          <TituloView>
-            <DescripcionView>
-              <StyledText
-                size={12}
-                weight={700}
-                fs={"normal"}
-                lh={14}
-                color={Colors.mainColorBlack}
-              >
-                Nueva asesoría en tutor de ingles para jovenes +13 años agendada
-              </StyledText>
-              <FechaView>
+                <StyledText
+                  size={12}
+                  weight={700}
+                  fs={"normal"}
+                  lh={14}
+                  color={Colors.black}
+                >
+                  {"Hora: "}
+                  <StyledText
+                    size={12}
+                    weight={400}
+                    fs={"normal"}
+                    lh={14}
+                    color={Colors.black}
+                  >
+                    4:00PM
+                  </StyledText>
+                </StyledText>
+                <StyledText
+                  size={12}
+                  weight={700}
+                  fs={"normal"}
+                  lh={14}
+                  color={Colors.black}
+                >
+                  {"Tiempo: "}
+                  <StyledText
+                    size={12}
+                    weight={400}
+                    fs={"normal"}
+                    lh={14}
+                    color={Colors.black}
+                  >
+                    3 horas
+                  </StyledText>
+                </StyledText>
+              </Info>
+              <ValorView>
                 <StyledText
                   size={12}
                   weight={400}
                   fs={"normal"}
-                  lh={18}
+                  lh={14}
+                  color={Colors.black}
+                >
+                  Valor:
+                </StyledText>
+                <StyledText
+                  size={12}
+                  weight={400}
+                  fs={"normal"}
+                  lh={14}
+                  color={Colors.black}
+                >
+                  $120.000{" "}
+                  <StyledText
+                    size={12}
+                    weight={700}
+                    fs={"normal"}
+                    lh={14}
+                    color={Colors.black}
+                  >
+                    COP
+                  </StyledText>
+                </StyledText>
+              </ValorView>
+            </DatosView>
+            <Botones>
+              <BotonGris>
+                <StyledText
+                  size={14}
+                  weight={400}
+                  fs={"normal"}
+                  lh={16.8}
                   color={Colors.SecondaryGray}
                 >
-                  Educación • Tutoría idiomas
+                  Cancelar
                 </StyledText>
-              </FechaView>
-            </DescripcionView>
-            <IndicadorView>
-              <LeftView>
+              </BotonGris>
+              <BotonAzul>
                 <StyledText
-                  size={12}
+                  size={14}
                   weight={400}
                   fs={"normal"}
-                  lh={10}
-                  color={Colors.mainCOlorPurpleLigth}
+                  lh={16.8}
+                  color={Colors.mainCOlorPurpleDark}
                 >
-                  Asesoría confirmada
+                  Agendar nuevamente
                 </StyledText>
-              </LeftView>
-              <StyledImg
-                width={20}
-                height={20}
-                source={require("../../../assets/images/BulletBlue.png")}
-              />
-            </IndicadorView>
-          </TituloView>
+              </BotonAzul>
+            </Botones>
+          </CardView>
+          <CardView>
+            <TituloView>
+              <DescripcionView>
+                <StyledText
+                  size={12}
+                  weight={700}
+                  fs={"normal"}
+                  lh={14}
+                  color={Colors.mainColorBlack}
+                >
+                  Nueva asesoría en tutor de ingles para jovenes +13 años
+                  agendada
+                </StyledText>
+                <FechaView>
+                  <StyledText
+                    size={12}
+                    weight={400}
+                    fs={"normal"}
+                    lh={18}
+                    color={Colors.SecondaryGray}
+                  >
+                    Educación • Tutoría idiomas
+                  </StyledText>
+                </FechaView>
+              </DescripcionView>
+              <IndicadorView>
+                <LeftView>
+                  <StyledText
+                    size={12}
+                    weight={400}
+                    fs={"normal"}
+                    lh={10}
+                    color={Colors.mainCOlorPurpleLigth}
+                  >
+                    Asesoría confirmada
+                  </StyledText>
+                </LeftView>
+                <StyledImg
+                  width={20}
+                  height={20}
+                  source={require("../../../assets/images/BulletBlue.png")}
+                />
+              </IndicadorView>
+            </TituloView>
 
-          <DatosView>
-            <Info>
-              <StyledText
-                size={12}
-                weight={700}
-                fs={"normal"}
-                lh={14}
-                color={Colors.black}
-              >
-                {"Fecha de asesoría: "}
+            <DatosView>
+              <Info>
                 <StyledText
                   size={12}
-                  weight={400}
+                  weight={700}
                   fs={"normal"}
                   lh={14}
                   color={Colors.black}
                 >
-                  18/11/2021
+                  {"Fecha de asesoría: "}
+                  <StyledText
+                    size={12}
+                    weight={400}
+                    fs={"normal"}
+                    lh={14}
+                    color={Colors.black}
+                  >
+                    18/11/2021
+                  </StyledText>
                 </StyledText>
-              </StyledText>
-              <StyledText
-                size={12}
-                weight={700}
-                fs={"normal"}
-                lh={14}
-                color={Colors.black}
-              >
-                {"Hora: "}
                 <StyledText
                   size={12}
-                  weight={400}
+                  weight={700}
                   fs={"normal"}
                   lh={14}
                   color={Colors.black}
                 >
-                  4:00PM
+                  {"Hora: "}
+                  <StyledText
+                    size={12}
+                    weight={400}
+                    fs={"normal"}
+                    lh={14}
+                    color={Colors.black}
+                  >
+                    4:00PM
+                  </StyledText>
                 </StyledText>
-              </StyledText>
-              <StyledText
-                size={12}
-                weight={700}
-                fs={"normal"}
-                lh={14}
-                color={Colors.black}
-              >
-                {"Tiempo: "}
                 <StyledText
                   size={12}
-                  weight={400}
+                  weight={700}
                   fs={"normal"}
                   lh={14}
                   color={Colors.black}
                 >
-                  45 minutos
+                  {"Tiempo: "}
+                  <StyledText
+                    size={12}
+                    weight={400}
+                    fs={"normal"}
+                    lh={14}
+                    color={Colors.black}
+                  >
+                    45 minutos
+                  </StyledText>
                 </StyledText>
-              </StyledText>
-            </Info>
-          </DatosView>
-        </CardView></CardsView>
+              </Info>
+            </DatosView>
+          </CardView>
+        </CardsView>
       </Container>
     </ContainerScroll>
   );

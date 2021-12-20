@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
@@ -34,7 +34,7 @@ const StyledText = styled.Text<StyledTextProps>`
 `;
 const Rigth = styled.View`
   flex-direction: row;
-  column-gap: 5;
+
   align-self: center;
 `;
 
@@ -65,5 +65,3 @@ export default function Explorar({ titulo }: Props) {
     </ExplorarView>
   );
 }
-
-

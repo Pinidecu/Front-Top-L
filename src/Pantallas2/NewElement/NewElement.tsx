@@ -95,7 +95,7 @@ export const Monto = styled.View`
   background-color: ${Colors.mainCOlorPurpleDark};
   width: 90%;
   align-items: center;
-  row-gap: 10px;
+
   padding: 5vh;
   margin: 10px;
   border-radius: 8px;
@@ -117,7 +117,7 @@ const ContainerScroll = styled.ScrollView`
 export const BusquedaView = styled.View`
   background-color: ${Colors.white};
   flex-direction: row;
-  column-gap: 10px;
+
   border-radius: 8px;
   align-items: center;
   width: 90%;

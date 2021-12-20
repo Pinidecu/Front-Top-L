@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import {  Text, View, Image } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 
@@ -30,9 +30,7 @@ const Container = styled.View<ContainerProps>`
   height: 130;
   width: 270;
   border-radius: 8;
-  border-color: ${(props) => props.borderColor};
-  border-style: "solid";
-  border-width: 1;
+  border: 1px solid ${(props) => props.borderColor};
   padding: 10px;
 `;
 

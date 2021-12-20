@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
@@ -25,7 +25,6 @@ const Container = styled.View`
   width: 100%;
   justify-content: space-between;
   align-self: center;
-  row-gap: 8px;
 `;
 const TextView = styled.View`
   width: 100%;
@@ -48,7 +47,6 @@ const Estado = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  column-gap: 5px;
 `;
 
 const LineaView = styled.View`

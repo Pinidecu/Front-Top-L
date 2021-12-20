@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 import { Icon } from "react-native-elements";
@@ -15,7 +15,7 @@ const Container = styled.View<ContainerProps>`
   align-items: center;
   justify-content: flex-start;
   padding: 10px;
-  column-gap: 10px;
+
   height: 15vh;
   width: 100%;
   position: absolute;
@@ -35,18 +35,17 @@ export const IconosLive = styled.View<StyledILProps>`
   box-shadow: 0px 0px 4px rgba(180, 188, 206, 0.5);
 `;
 
-
 interface IndicatorProps {
   color: string;
 }
-const Indicator = styled.View <IndicatorProps>`
+const Indicator = styled.View<IndicatorProps>`
   background-color: ${(props) => props.color};
   border-radius: 10px;
   height: 5px;
   width: 137px;
   position: absolute;
-  top:-2.5px;
-  left:10px;
+  top: -2.5px;
+  left: 10px;
 `;
 
 interface StyledImgProps {

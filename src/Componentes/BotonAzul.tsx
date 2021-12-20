@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import { Icon } from "react-native-elements";
 import { color } from "react-native-elements/dist/helpers";
 import styled from "styled-components/native";
@@ -28,10 +28,10 @@ const Container = styled.View<ContainerProps>`
   background-color: ${(props) => props.color};
   align-items: center;
   justify-content: center;
-  column-gap: 10;
+
   width: ${(props) => props.width}%;
   height: ${(props) => props.height};
-  border-radius: 8;
+  border-radius: 8px;
   align-self: center;
 `;
 
@@ -59,13 +59,7 @@ const Icono = styled.Image<StyledImgProps>`
 export default function BotonAzul({ ancho, alto, texto, icon }: Props) {
   return (
     <Container width={ancho} height={alto} color={Colors.colorBoton}>
-      {icon ? (
-        <Icono
-          width={33}
-          height={30}
-          source={{uri:icon}}
-        />
-      ) : null}
+      {icon ? <Icono width={33} height={30} source={{ uri: icon }} /> : null}
       <StyledText weight={400} size={16} lh={24} color={Colors.colorTextBoton}>
         {texto}
       </StyledText>

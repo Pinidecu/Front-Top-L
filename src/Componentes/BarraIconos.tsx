@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
@@ -45,8 +45,8 @@ const StyledText = styled.Text<StyledTextProps>`
 `;
 const RigthContainer = styled.View`
   flex-direction: row;
-  column-gap: 5;
-  align-items:center;
+
+  align-items: center;
 `;
 
 interface StyledImgProps {
@@ -71,7 +71,7 @@ const Punto = styled.View<PuntoProps>`
   border-radius: 50%;
   position: relative;
   left: 10px;
-  top:5px;
+  top: 5px;
   z-index: 1;
 `;
 

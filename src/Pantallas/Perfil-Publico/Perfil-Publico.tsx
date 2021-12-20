@@ -1,6 +1,6 @@
 import React from "react";
 import { View, ScrollView, TouchableOpacity } from "react-native";
-import Info from "../../Componentes/info";
+import Info from "../../Componentes/Info";
 import BotonAzul from "../../Componentes/BotonAzul";
 import { Icon } from "react-native-elements";
 import BarraIconos from "../../Componentes/BarraIconos";
