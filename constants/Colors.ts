@@ -19,6 +19,7 @@ export default {
   fondoBarraLive2: "#C4C4C4",
   verde:"#7FF0B0",
   ligthGray:'#F8F8F9',
+  backP3: '#E5E5E5',
   light: {
     text: "#000",
     background: "#fff",

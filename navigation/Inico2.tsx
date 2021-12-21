@@ -33,6 +33,7 @@ export const Inicio2 = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="NewEquipo" component={NewEquipo} />
       <Stack.Screen name="Notificaciones" component={Notificaciones} />
       <Stack.Screen name="PerfilAjuste" component={PerfilAjuste} />
       <Stack.Screen name="ReviewApp2" component={ReviewApp2} />
@@ -44,7 +45,6 @@ export const Inicio2 = () => {
       <Stack.Screen name="CertificadoPro2" component={CertificadoPro2} />
       <Stack.Screen name="CertificadoPro" component={CertificadoPro} />
       <Stack.Screen name="NewElement" component={NewElement} />
-      <Stack.Screen name="NewEquipo" component={NewEquipo} />
       <Stack.Screen name="ListaClientes" component={ListaClientes} />
       <Stack.Screen name="AgendaHistorial" component={AgendaHistorial} />
       <Stack.Screen name="Payment" component={Payment} />
