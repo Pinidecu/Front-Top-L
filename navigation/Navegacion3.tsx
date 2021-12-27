@@ -19,7 +19,7 @@ import { Inicio3 } from "./Inicio3";
 
 const Tab = createBottomTabNavigator();
 
-export default function Navegacion2() {
+export default function Navegacion3() {
   return (
     <NavigationContainer>
       <Tab.Navigator

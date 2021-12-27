@@ -33,9 +33,9 @@ const Container = styled.View`
 `;
 const Info = styled.View`
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  column-gap:10px;
+
   margin: 10px;
   width: 90%;
 `;
@@ -61,9 +61,6 @@ const StyledImgIcon = styled.Image<StyledImgIconProps>`
 `;
 const Titulo = styled.View`
   width: 80%;
-  row-gap:5px;
-  justify-content: flex-start;
-  align-items: flex-start;
 `;
 const StyledText = styled.Text<StyledTextProps>`
   font-family: Proxima Nova;
@@ -82,15 +79,25 @@ const StyledBookmark = styled.Image<StyledImgProps>`
   right: 10px;
 `;
 
+const datos: datosPublicacion = {
+  fotoPerfil: "https://lorempixel.com/200/200/people/",
+  nombre: ["Armando Lopez", "@arlopez21", "2h"],
+  descripcion: "Group name lorem ipsum dolor amet sim athem",
+  imagen: "https://lorempixel.com/200/200/people/",
+};
 
 const MegustaView = styled.View`
   flex-direction: row;
   align-items: center;
-  column-gap:5px;
+  margin-left: 35%;
+  margin-bottom: 5px;
+
+  width: 90%;
 `;
 
 const ActionsView = styled.View`
   flex-direction: row;
+
   align-items: center;
 `;
 
@@ -98,18 +105,12 @@ interface Props {
   fotoPerfil: string;
   nombre: string;
   descripcion: string;
-  puntuacion: string;
-  reviews: string;
-  titulo: string;
 }
 
 export default function PublicacionSinImg({
   fotoPerfil,
-  titulo,
   nombre,
   descripcion,
-  puntuacion,
-  reviews,
 }: Props) {
   return (
     <Container>
@@ -130,59 +131,55 @@ export default function PublicacionSinImg({
         />
         <Titulo>
           <StyledText
-            size={16}
-            weight={700}
-            fs={"normal"}
-            lh={24}
-            color={Colors.mainColorBlack}
-          >
-            {titulo}
-          </StyledText>
-          <StyledText
             size={12}
             weight={400}
             fs={"normal"}
             lh={14}
+            color={Colors.mainColorBlack}
+          >
+            {nombre}
+          </StyledText>
+          <StyledText
+            size={14}
+            weight={400}
+            fs={"normal"}
+            lh={18}
             color={Colors.black}
           >
             {descripcion}
-            <StyledText
-              size={12}
-              weight={700}
-              fs={"normal"}
-              lh={14}
-              color={Colors.mainCOlorPurpleLigth}
-            >
-              {` ${nombre}`}
-            </StyledText>
           </StyledText>
-          <MegustaView>
-            <StyledImgIcon
-              width={15}
-              height={15}
-              source={require("../../assets/images/estrella.png")}
-            />
-            <StyledText
-              size={14}
-              weight={700}
-              fs={"normal"}
-              lh={18}
-              color={Colors.mainCOlorPurpleDark}
-            >
-              {puntuacion}
-            </StyledText>
-            <StyledText
-              size={12}
-              weight={400}
-              fs={"normal"}
-              lh={18}
-              color={Colors.SecondaryGray}
-            >
-              {reviews}
-            </StyledText>
-          </MegustaView>
         </Titulo>
       </Info>
+      <MegustaView>
+        <ActionsView>
+          <Icon name="favorite-border" color={Colors.SecondaryGray} size={18} />
+          <StyledText
+            size={12}
+            weight={400}
+            fs={"normal"}
+            lh={18}
+            color={Colors.SecondaryGray}
+          >
+            (128)
+          </StyledText>
+        </ActionsView>
+        <ActionsView>
+          <StyledImgIcon
+            width={15}
+            height={15}
+            source={require("../../assets/images/comentario.png")}
+          />
+          <StyledText
+            size={12}
+            weight={400}
+            fs={"normal"}
+            lh={18}
+            color={Colors.SecondaryGray}
+          >
+            Responder
+          </StyledText>
+        </ActionsView>
+      </MegustaView>
     </Container>
   );
 }

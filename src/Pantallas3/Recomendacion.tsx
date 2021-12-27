@@ -7,7 +7,7 @@ export const Container = styled.View`
   flex: 1;
   align-items: center;
   width: 100%;
-  background-color: ${Colors.backP3};
+  background-color: ${Colors.SecondaryPurpleLight};
   justify-content: space-between;
 `;
 
@@ -15,7 +15,6 @@ export default function Recomendacion() {
   return (
     <Container>
       <BarraP3 />
-      
     </Container>
   );
 }
