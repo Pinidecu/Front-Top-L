@@ -14,6 +14,7 @@ import fotoPubliacacion3 from "../../assets/images/Sala/14.png";
 import Publicacion2 from "../Componentes/PublicacionGenteTop/Publicacion2";
 import Publicacion3 from "../Componentes/PublicacionGenteTop/Publicacion3";
 import Publicacion4 from "../Componentes/PublicacionGenteTop/Publicacion4";
+import Titulo3Puntos from "../Componentes/PublicacionGenteTop/Titulo3puntos";
 
 export const ScrollContainer = styled.ScrollView`
   background-color: ${Colors.SecondaryPurpleLight};
@@ -105,22 +106,7 @@ export default function GenteTop() {
           />
         </RecomendacionView>
         <DescripcionView>
-          <TituloView>
-            <StyledText
-              size={16}
-              weight={700}
-              fs={"normal"}
-              lh={24}
-              color={Colors.black}
-            >
-              Publicaciones recientes
-            </StyledText>
-            <Icon
-              name="more-horiz"
-              color={Colors.mainCOlorPurpleLigth}
-              size={25}
-            />
-          </TituloView>
+          <Titulo3Puntos titulo={"Publicaciones recientes"} width={100} />
           <StyledText
             size={14}
             weight={400}
