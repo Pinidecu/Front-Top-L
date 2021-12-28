@@ -6,9 +6,13 @@ import Colors from "../../constants/Colors";
 import BarraP3 from "../Componentes/BarraP3";
 import Publicacion1 from "../Componentes/PublicacionGenteTop/Publicacion1";
 import fotoPerfilPublicacion from "../../assets/images/Sala/11.png";
+import fotoPerfilPublicacion2 from "../../assets/images/Sala/10.png";
 import fotoPubliacacion from "../../assets/images/Publicacion.png";
+import fotoPubliacacion2 from "../../assets/images/Sala/13.png";
+import fotoPubliacacion3 from "../../assets/images/Sala/14.png";
 import Publicacion2 from "../Componentes/PublicacionGenteTop/Publicacion2";
 import Publicacion3 from "../Componentes/PublicacionGenteTop/Publicacion3";
+import Publicacion4 from "../Componentes/PublicacionGenteTop/Publicacion4";
 
 export const ScrollContainer = styled.ScrollView`
   background-color: ${Colors.SecondaryPurpleLight};
@@ -145,10 +149,18 @@ export default function GenteTop() {
             imagen={fotoPubliacacion}
           />
           <Publicacion3
-            fotoPerfil={fotoPerfilPublicacion}
+            fotoPerfil={fotoPerfilPublicacion2}
             nombre={"Armando Lopez • @arlopez21 • 2h"}
-            descripcion={"Group name lorem ipsum dolor amet sim athem"}
+            descripcion={"Lorem ipsum dolor amet sim athem"}
             imagen={fotoPubliacacion}
+          />
+          <Publicacion4
+            fotoPerfil={fotoPerfilPublicacion2}
+            nombre={"Armando Lopez • @arlopez21 • 2h"}
+            descripcion={"Lorem ipsum dolor amet sim athem"}
+            imagen={fotoPubliacacion}
+            fotoPerfil2={fotoPubliacacion2}
+            fotoPerfil3={fotoPubliacacion3}
           />
         </PublicacionView>
       </Container>

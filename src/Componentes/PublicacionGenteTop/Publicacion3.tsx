@@ -61,7 +61,7 @@ const StyledImgIcons = styled.Image<StyledImgProps>`
 `;
 const Titulo = styled.View`
   width: 80%;
-  row-gap: 10px;
+  row-gap: 5px;
 `;
 const StyledText = styled.Text<StyledTextProps>`
   font-family: Proxima Nova;
@@ -111,7 +111,7 @@ interface Props {
   imagen: string;
 }
 
-export default function Publicacion({
+export default function Publicacion3({
   fotoPerfil,
   nombre,
   descripcion,
