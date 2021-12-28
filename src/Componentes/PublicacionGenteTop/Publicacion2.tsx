@@ -112,6 +112,16 @@ const Funciones = styled.View`
   column-gap: 5px;
 `;
 
+const MasView = styled.View`
+  border-radius: 50%;
+  background-color: ${Colors.SecondaryPurpleLight};
+  opacity: 0.9;
+  position: absolute;
+  top: 38.5px;
+  left: 15px;
+  z-index: 1;
+`;
+
 interface Props {
   fotoPerfil: string;
   nombre: string;
@@ -143,13 +153,20 @@ export default function Publicacion2({
             lh={18}
             color={Colors.mainCOlorPurpleLigth}
           >
-            {"arlopez21 "}
+            {" arlopez21 "}
           </StyledText>
           ha añadido una nueva recomendación top
         </StyledText>
         <Icon name="more-horiz" color={Colors.mainCOlorPurpleLigth} size={25} />
       </TituloView>
       <Info>
+        <MasView>
+          <Icon
+            name="add"
+            color={Colors.mainCOlorPurpleLigth}
+            size={15}
+          />
+        </MasView>
         <StyledImgPerfil
           width={45}
           height={45}

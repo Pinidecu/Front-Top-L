@@ -131,6 +131,15 @@ const Linea = styled.View`
   top: 0px;
   z-indez:-1;
 `;
+const MasView = styled.View`
+  border-radius: 50%;
+  background-color: ${Colors.SecondaryPurpleLight};
+  opacity: 0.9;
+  position: absolute;
+  top: 38.5px;
+  left: 15px;
+  z-index: 1;
+`;
 
 export default function Publicacion4({
   fotoPerfil,
@@ -156,6 +165,9 @@ export default function Publicacion4({
       <Publicaciones>
         <Linea />
         <Info>
+          <MasView>
+            <Icon name="add" color={Colors.mainCOlorPurpleLigth} size={15} />
+          </MasView>
           <StyledImgPerfil
             width={45}
             height={45}

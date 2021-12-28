@@ -7,6 +7,7 @@ import BarraP3 from "../Componentes/BarraP3";
 import Publicacion1 from "../Componentes/PublicacionGenteTop/Publicacion1";
 import fotoPerfilPublicacion from "../../assets/images/Sala/11.png";
 import fotoPerfilPublicacion2 from "../../assets/images/Sala/10.png";
+import fotoPerfilPublicacion3 from "../../assets/images/Sala/15.png";
 import fotoPubliacacion from "../../assets/images/Publicacion.png";
 import fotoPubliacacion2 from "../../assets/images/Sala/13.png";
 import fotoPubliacacion3 from "../../assets/images/Sala/14.png";
@@ -141,7 +142,7 @@ export default function GenteTop() {
             imagen={fotoPubliacacion}
           />
           <Publicacion2
-            fotoPerfil={fotoPerfilPublicacion}
+            fotoPerfil={fotoPerfilPublicacion3}
             nombre={"Armando Lopez • @arlopez21 • Hace 2h"}
             descripcion={
               "Necesito una recomendación top para un profesor de guitarra a domicilio en Bogotá, Colombia."

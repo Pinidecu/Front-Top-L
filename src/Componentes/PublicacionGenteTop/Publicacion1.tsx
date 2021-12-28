@@ -89,13 +89,11 @@ const datos: datosPublicacion = {
 };
 const TagsView = styled.View`
   background-color: ${Colors.SecondaryPurpleLight};
-  align-items: center;
   justify-content: center;
-  text-align: center;
   row-gap: 5px;
   border-radius: 8px;
   width: 100%;
-  padding: 10px;
+  padding: 15px;
 `;
 const MegustaView = styled.View`
   flex-direction: row;
@@ -141,7 +139,7 @@ export default function Publicacion1({
             lh={18}
             color={Colors.mainCOlorPurpleLigth}
           >
-            {"mapaucadena "}
+            {" mapaucadena "}
           </StyledText>
           está buscando una recomendación top
         </StyledText>

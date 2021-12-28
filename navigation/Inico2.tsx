@@ -33,22 +33,22 @@ export const Inicio2 = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="NewEquipo" component={NewEquipo} />
-      <Stack.Screen name="Notificaciones" component={Notificaciones} />
-      <Stack.Screen name="PerfilAjuste" component={PerfilAjuste} />
-      <Stack.Screen name="ReviewApp2" component={ReviewApp2} />
-      <Stack.Screen name="ReviewApp" component={ReviewApp} />
-      <Stack.Screen name="ReviewAsesoria" component={ReviewAsesoria} />
-      <Stack.Screen name="Agenda" component={Agenda} />
-      <Stack.Screen name="CertificadoPro4" component={CertificadoPro4} />
-      <Stack.Screen name="CertificadoPro3" component={CertificadoPro3} />
-      <Stack.Screen name="CertificadoPro2" component={CertificadoPro2} />
-      <Stack.Screen name="CertificadoPro" component={CertificadoPro} />
-      <Stack.Screen name="NewElement" component={NewElement} />
-      <Stack.Screen name="ListaClientes" component={ListaClientes} />
-      <Stack.Screen name="AgendaHistorial" component={AgendaHistorial} />
-      <Stack.Screen name="Payment" component={Payment} />
       <Stack.Screen name="PerfilProEdicion" component={PerfilProEdicion} />
+      <Stack.Screen name="Payment" component={Payment} />
+      <Stack.Screen name="AgendaHistorial" component={AgendaHistorial} />
+      <Stack.Screen name="ListaClientes" component={ListaClientes} />
+      <Stack.Screen name="NewElement" component={NewElement} />
+      <Stack.Screen name="CertificadoPro" component={CertificadoPro} />
+      <Stack.Screen name="CertificadoPro2" component={CertificadoPro2} />
+      <Stack.Screen name="CertificadoPro3" component={CertificadoPro3} />
+      <Stack.Screen name="CertificadoPro4" component={CertificadoPro4} />
+      <Stack.Screen name="Agenda" component={Agenda} />
+      <Stack.Screen name="ReviewAsesoria" component={ReviewAsesoria} />
+      <Stack.Screen name="ReviewApp" component={ReviewApp} />
+      <Stack.Screen name="ReviewApp2" component={ReviewApp2} />
+      <Stack.Screen name="PerfilAjuste" component={PerfilAjuste} />
+      <Stack.Screen name="Notificaciones" component={Notificaciones} />
+      <Stack.Screen name="NewEquipo" component={NewEquipo} />
     </Stack.Navigator>
   );
 };
