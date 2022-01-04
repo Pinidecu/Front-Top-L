@@ -3,7 +3,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Recomendacion from "../src/Pantallas3/Recomendacion";
 import GenteTop from "../src/Pantallas3/GenteTop";
+<<<<<<< HEAD
 import NewRespuesta from "../src/Pantallas3/NewRespuesta";
+=======
+import SalaDetalle3 from "../src/Pantallas3/Sala-Detalle3";
+>>>>>>> 25918d7fa65c70145e0f6cfbdacba7dca7e9737a
 
 const Stack = createStackNavigator();
 export const Inicio3 = () => {
@@ -13,7 +17,12 @@ export const Inicio3 = () => {
         headerShown: false,
       }}
     >
+<<<<<<< HEAD
       <Stack.Screen name="NewRespuesta" component={NewRespuesta} />
+=======
+      <Stack.Screen name="SalaDetalle3" component={SalaDetalle3} />
+      <Stack.Screen name="GenteTop" component={GenteTop} />
+>>>>>>> 25918d7fa65c70145e0f6cfbdacba7dca7e9737a
       <Stack.Screen name="Recomendacion" component={Recomendacion} />
       <Stack.Screen name="GenteTop" component={GenteTop} />
     </Stack.Navigator>
