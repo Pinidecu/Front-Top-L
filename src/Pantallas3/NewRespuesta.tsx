@@ -12,8 +12,7 @@ export const Container = styled.View`
   align-items: center;
   row-gap: 14px;
   width: 100%;
-  background-color: ${Colors.SecondaryPurpleLight};
-  
+  background-color: ${Colors.SecondaryPurpleLight}; 
 `;
 interface StyledTextProps {
   size: number;
@@ -24,7 +23,7 @@ interface StyledTextProps {
   sub?: boolean;
 }
 export const StyledText = styled.Text<StyledTextProps>`
-  font-family: Proxima Nova;
+  font-family: Proxima nova;
   font-size: ${(props) => props.size};
   font-weight: ${(props) => props.weight};
   font-style: ${(props) => props.fs};
@@ -45,7 +44,7 @@ export const RecomendacionView = styled.View`
   justify-content: space-between;
 `;
 
-export default function Recomendacion() {
+export default function NewRespuesta() {
   return (
     <Container>
       <BarraP3 />
@@ -57,29 +56,22 @@ export default function Recomendacion() {
             lh={24}
             color={Colors.black}
           >
-            Camila, que tipo de recomendación top necesitas?
+            Julio, que quieres recomendar a la gente top hoy?
           </StyledText>
       </RecomendacionView>
       <CajaBlanca
               ancho={90}
               alto={60}
-              texto1={"Tema de interés"}
-              texto2={"Seleccionar"}
+              texto1={"Perfil recomendado"}
+              texto2={"@julioguitarrabaq"}
               icon={true}
       />
       <CajaBlanca
               ancho={90}
               alto={60}
-              texto1={"Título de la publicación"}
+              texto1={"Título de la recomendación"}
               texto2={"    "}
               icon={""}
-      />
-      <CajaBlanca
-              ancho={90}
-              alto={60}
-              texto1={"Privacidad"}
-              texto2={"Mi comunidad (candado.png)"}
-              icon={true}
       />
       <CajaBlanca
               ancho={90}
@@ -91,7 +83,7 @@ export default function Recomendacion() {
       <BotonAzul
        ancho={90}
        alto={55.08}
-       texto={"PUBLICAR EN COMUNIDAD"}
+       texto={"RECOMENDAR"}
        icon={""}
       />
     </Container>
