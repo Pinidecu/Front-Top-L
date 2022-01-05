@@ -6,7 +6,8 @@ import { Live } from "./navigation/Live";
 import Navegacion from "./navigation/Navegacion";
 import Navegacion2 from "./navigation/Navegacion2";
 import Navegacion3 from "./navigation/Navegacion3";
+import Navegacion4 from "./navigation/Navegacion4";
 
 export default function App() {
-  return <Navegacion3 />;
+  return <Navegacion4 />;
 }
