@@ -11,6 +11,7 @@ interface Props {
   texto1: string;
   texto2: string;
   icon?: string;
+  icon2?: string;
 }
 
 interface ContainerProps {
@@ -40,7 +41,11 @@ const Container = styled.View<ContainerProps>`
 `;
 const LeftContainer = styled.View`
   flex-direction: column;
-  
+`
+const CandContainer = styled.View`
+flex-direction: row;
+column-gap: 5px;
+align-items: center;
 `
 const Descripcion = styled.Text<StyledTextProps>`  
   color: ${(props) => props.color};
@@ -72,7 +77,7 @@ const Icono = styled.Image<StyledImgProps>`
   height: ${(props) => props.height};
 `;
 
-export default function CajaBlanca({ ancho, alto, texto1, texto2, icon }: Props) {
+export default function CajaBlanca({ ancho, alto, texto1, texto2, icon, icon2 }: Props) {
   return (
     <Container width={ancho} height={alto} color={Colors.white}>
       <LeftContainer>
@@ -84,6 +89,7 @@ export default function CajaBlanca({ ancho, alto, texto1, texto2, icon }: Props)
       >
       {texto1}
       </Descripcion>
+      <CandContainer>
       <Datos 
         weight={400} 
         size={16} 
@@ -92,6 +98,12 @@ export default function CajaBlanca({ ancho, alto, texto1, texto2, icon }: Props)
       >
       {texto2}
       </Datos>
+      {icon2 ? 
+        <Icono 
+          width={13} 
+          height={13}
+          source={require("../../assets/images/candado.png")} /> : null}
+      </CandContainer>
       </LeftContainer>
       {icon ? 
         <Icono 

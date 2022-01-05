@@ -14,10 +14,11 @@ export const Inicio3 = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="Recomendacion" component={Recomendacion} />
       <Stack.Screen name="NewRespuesta" component={NewRespuesta} />
       <Stack.Screen name="SalaDetalle3" component={SalaDetalle3} />
       <Stack.Screen name="GenteTop" component={GenteTop} />
-      <Stack.Screen name="Recomendacion" component={Recomendacion} />
+      
     </Stack.Navigator>
   );
 };

@@ -66,6 +66,7 @@ export default function Recomendacion() {
               texto1={"Tema de interés"}
               texto2={"Seleccionar"}
               icon={true}
+              icon2={""}
       />
       <CajaBlanca
               ancho={90}
@@ -73,13 +74,15 @@ export default function Recomendacion() {
               texto1={"Título de la publicación"}
               texto2={"    "}
               icon={""}
+              icon2={""}
       />
       <CajaBlanca
               ancho={90}
               alto={60}
               texto1={"Privacidad"}
-              texto2={"Mi comunidad (candado.png)"}
+              texto2={"Mi comunidad"}
               icon={true}
+              icon2={true}
       />
       <CajaBlanca
               ancho={90}
@@ -87,6 +90,7 @@ export default function Recomendacion() {
               texto1={"Filtros"}
               texto2={"#filter, #filter, #filter"}
               icon={true}
+              icon2={""}
       />
       <BotonAzul
        ancho={90}
