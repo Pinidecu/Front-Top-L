@@ -10,8 +10,8 @@ interface Props {
   alto: number;
   texto1: string;
   texto2: string;
-  icon?: string;
-  icon2?: string;
+  icon?: boolean;
+  icon2?: boolean;
 }
 
 interface ContainerProps {
