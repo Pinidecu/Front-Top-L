@@ -20,6 +20,7 @@ export default {
   verde:"#7FF0B0",
   ligthGray:'#F8F8F9',
   backP3: '#E5E5E5',
+  colorHeading: '#3385FF',
   light: {
     text: "#000",
     background: "#fff",
