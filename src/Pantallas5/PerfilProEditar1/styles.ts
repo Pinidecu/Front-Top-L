@@ -1,4 +1,5 @@
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
+import Colors from "../../../constants/Colors";
 
 interface StyledTextProps {
   size: number;
@@ -14,16 +15,14 @@ interface StyledImgIconProps {
   height: number;
 }
 
-export const TextView = styled.View`
-  justify-content: center;
-  width: 90%;
-  align-self: center;
-  margin: 5px;
+export const Container = styled.View`  
+  background-color: ${Colors.white};
+  flex:1;
 `;
 
 export const NotiView = styled.View`
-flex-direction: row;
-column-gap: 10px;
+  flex-direction: row;
+  column-gap: 10px;
   align-items: center;
   justify-content: space-space-between;
   align-self: center;
@@ -43,4 +42,30 @@ export const StyledText = styled.Text<StyledTextProps>`
 export const StyledImgIcon = styled.Image<StyledImgIconProps>`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
+`;
+
+export const Titulo = styled.Text`
+  font-family: ABeeZee;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 24px;
+  color: ${Colors.SecondaryGray};
+  width: 90%;
+  align-self: center;
+  margin-top: 20px;
+`;
+
+
+export const TextSubrayado = styled.Text`
+  font-family: Proxima Nova;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 29px;
+  color: ${Colors.mainCOlorPurpleLigth};
+  width: 80%;
+  align-self: center;
+  margin-top: 10px;
+  text-decoration: underline ${Colors.mainCOlorPurpleLigth};
 `;
