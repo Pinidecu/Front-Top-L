@@ -13,8 +13,9 @@ import {
   Boton,
   Botones
 } from "./styles";
-import Colors from "../../../../constants/Colors";
+import Colors from "../../../constants/Colors";
 import { Icon } from "react-native-elements";
+import { View } from "react-native";
 
 interface Props {
   nivel: string;
@@ -38,7 +39,7 @@ export default function InfoEducativa({
           <StyledImg
             width={30}
             height={30}
-            source={require("../../../../assets/images/badge.png")}
+            source={require("../../../assets/images/badge.png")}
           />
           <StyledText
             size={12}
@@ -72,6 +73,15 @@ export default function InfoEducativa({
           {"Año: "}
           <Valor>{año}</Valor>
         </Clave>
+        {especializacion ? (
+          <View>
+            <Linea />
+            <Clave>
+              {"Área de especialización: "}
+              <Valor>{especializacion}</Valor>
+            </Clave>
+          </View>
+        ) : null}
       </InfoView>
       <Botones>
         <BotonDisable>

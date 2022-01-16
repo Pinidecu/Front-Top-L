@@ -8,7 +8,7 @@ import {
   StyledImg,
   PuntuacionView,
 } from "./styles";
-import Colors from "../../../../constants/Colors";
+import Colors from "../../../constants/Colors";
 
 interface Props {
   nombre: string;
@@ -29,7 +29,7 @@ export default function PerfilInfo({
         width={40}
         height={40}
         radio={"50%"}
-        source={require("../../../../assets/images/Sala/10.png")}
+        source={require("../../../assets/images/Sala/10.png")}
       />
       <RigthView>
         <ContainerSuperior>
@@ -57,7 +57,7 @@ export default function PerfilInfo({
           <StyledImg
             width={20}
             height={20}
-            source={require("../../../../assets/images/estrella.png")}
+            source={require("../../../assets/images/estrella.png")}
           />
           <StyledText
             size={14}

@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Titulo, Texto } from "./styles";
-import Portada from "./Portada/Portada";
-import PerfilInfo from "./PerfilInfo/PerfilInfo";
 import Info from "./Info/Info";
+import Portada from "../../Componentes/Portada/Portada";
+import PerfilInfo from "../../Componentes/PerfilInfo/PerfilInfo";
 
 const texto =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada fringilla metus at tincidunt. Proin nec massa nec arcu efficitur fermentum. Fusce imperdiet feugiat felis, in ullamcorper quam accumsan ac. Maecenas quis neque sed velit hendrerit facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a consequat dui, non consectetur justo.";

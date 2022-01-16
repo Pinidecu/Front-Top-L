@@ -3,7 +3,7 @@ import {
   Container,
   StyledBookmark
 } from "./styles";
-import foto from "../../../../assets/images//Portada/1.png";
+import foto from "../../../assets/images/Portada/1.png";
 import Barra from "../Barra/Barra";
 
 export default function Portada() {
@@ -13,7 +13,7 @@ export default function Portada() {
       <StyledBookmark
         width={30}
         height={37}
-        source={require("../../../../assets/images/bookmark-clicked.png")}
+        source={require("../../../assets/images/bookmark-clicked.png")}
       />
     </Container>
   );

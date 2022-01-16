@@ -45,7 +45,6 @@ const StyledText = styled.Text<StyledTextProps>`
 `;
 const RigthContainer = styled.View`
   flex-direction: row;
-
   align-items: center;
 `;
 

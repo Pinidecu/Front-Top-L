@@ -1,6 +1,6 @@
 import React from "react";
 import { Icon } from "react-native-elements";
-import Colors from "../../../../constants/Colors";
+import Colors from "../../../constants/Colors";
 import { Container, RigthContainer, StyledImgIcon } from "./styles";
 
 export default function Barra() {
@@ -11,7 +11,7 @@ export default function Barra() {
         <StyledImgIcon
           width={23}
           height={23}
-          source={require("../../../../assets/images/Edit.png")}
+          source={require("../../../assets/images/Edit.png")}
         />
         <Icon name="more-horiz" color={Colors.mainCOlorPurpleLigth} size={30} />
       </RigthContainer>

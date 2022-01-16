@@ -1,8 +1,8 @@
 import React from "react";
+import InfoEducativa from "../../Componentes/InfoEducativa/InfoEducativa";
+import PerfilInfo from "../../Componentes/PerfilInfo/PerfilInfo";
+import Portada from "../../Componentes/Portada/Portada";
 import { Container, Titulo, TextSubrayado } from "./styles";
-import Portada from "./Portada/Portada";
-import PerfilInfo from "./PerfilInfo/PerfilInfo";
-import InfoEducativa from "./InfoEducativa/InfoEducativa";
 
 export default function PerfilProEditar1() {
   return (
@@ -20,7 +20,6 @@ export default function PerfilProEditar1() {
         area={"Inglés profesional"}
         centro={"Universidad del Atlántico"}
         año={"2016"}
-        especializacion={"addd"}
       />
       <TextSubrayado>Agregar otra formación</TextSubrayado>
     </Container>
