@@ -1,8 +1,5 @@
 import React from "react";
-import { ScrollView, TouchableOpacity } from "react-native";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { Container, Titulo, StyledText, TextSubrayado } from "./styles";
-import Colors from "../../../constants/Colors";
+import { Container, Titulo, TextSubrayado } from "./styles";
 import Portada from "./Portada/Portada";
 import PerfilInfo from "./PerfilInfo/PerfilInfo";
 import InfoEducativa from "./InfoEducativa/InfoEducativa";

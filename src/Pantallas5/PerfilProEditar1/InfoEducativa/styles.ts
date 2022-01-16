@@ -1,9 +1,6 @@
 import styled from "styled-components/native";
 import Colors from "../../../../constants/Colors";
 
-export const ContainerSuperior = styled.View`
-  height: 40px;
-`;
 export const Container = styled.View`
   width: 90%;
   align-self: center;
@@ -52,13 +49,6 @@ interface StyledImgProps {
   height: number;
   radio?: any;
 }
-export const StyledImgPerfil = styled.Image<StyledImgProps>`
-  width: ${(props) => props.width}px;
-  height: ${(props) => props.height}px;
-  border-radius: ${(props) => props.radio};
-  margin-right: 15px;
-`;
-
 export const StyledImg = styled.Image<StyledImgProps>`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
@@ -98,9 +88,11 @@ export const Linea = styled.View`
 
 export const Botones = styled.View`
   width: 90%;
+  align-self:center;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin: 15px;
 `;
 export const BotonDisable = styled.View`
   width: 48%;

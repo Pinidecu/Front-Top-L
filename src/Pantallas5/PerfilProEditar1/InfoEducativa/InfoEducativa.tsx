@@ -1,6 +1,4 @@
 import React from "react";
-import { ScrollView, TouchableOpacity } from "react-native";
-import { StackNavigationProp } from "@react-navigation/stack";
 import {
   Container,
   TituloView,
@@ -13,10 +11,10 @@ import {
   Linea,
   BotonDisable,
   Boton,
+  Botones
 } from "./styles";
 import Colors from "../../../../constants/Colors";
 import { Icon } from "react-native-elements";
-import { Botones } from "../../../Pantallas/StyledComponents/StyledComponents";
 
 interface Props {
   nivel: string;

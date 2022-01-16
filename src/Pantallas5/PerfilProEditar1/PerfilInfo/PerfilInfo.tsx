@@ -1,6 +1,4 @@
 import React from "react";
-import { ScrollView, TouchableOpacity } from "react-native";
-import { StackNavigationProp } from "@react-navigation/stack";
 import {
   Container,
   ContainerSuperior,
