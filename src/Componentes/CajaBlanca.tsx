@@ -12,6 +12,7 @@ interface Props {
   texto2: string;
   icon?: boolean;
   icon2?: boolean;
+  icon3?: boolean;
 }
 
 interface ContainerProps {
@@ -42,6 +43,10 @@ const Container = styled.View<ContainerProps>`
 const LeftContainer = styled.View`
   flex-direction: column;
 `
+const BarraCont = styled.View`
+  justify-items: center;
+`
+
 const CandContainer = styled.View`
   flex-direction: row;
   column-gap: 5px;
@@ -76,7 +81,7 @@ const Icono = styled.Image<StyledImgProps>`
   height: ${(props) => props.height};
 `;
 
-export default function CajaBlanca({ ancho, alto, texto1, texto2, icon, icon2 }: Props) {
+export default function CajaBlanca({ ancho, alto, texto1, texto2, icon, icon2, icon3 }: Props) {
   return (
     <Container width={ancho} height={alto} color={Colors.white}>
       <LeftContainer>
@@ -103,7 +108,14 @@ export default function CajaBlanca({ ancho, alto, texto1, texto2, icon, icon2 }:
           height={13}
           source={require("../../assets/images/candado.png")} /> : null}
       </CandContainer>
-      </LeftContainer>
+      <BarraCont>
+      {icon3 ? 
+        <Icono 
+          width={320} 
+          height={29}
+          source={require("../../assets/images/Group 133.png")} /> : null}
+      </BarraCont>
+      </LeftContainer>          
       {icon ? 
         <Icono 
           width={33} 
