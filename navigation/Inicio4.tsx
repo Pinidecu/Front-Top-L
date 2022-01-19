@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Recomendacion from "../src/Pantallas3/Recomendacion";
+import Agenda4 from "../src/Pantallas4/Agenda4";
 
 
 const Stack = createStackNavigator();
@@ -12,7 +12,7 @@ export const Inicio4 = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="Recomendacion" component={Recomendacion} />
+      <Stack.Screen name="Agenda4" component={Agenda4} />
       
     </Stack.Navigator>
   );

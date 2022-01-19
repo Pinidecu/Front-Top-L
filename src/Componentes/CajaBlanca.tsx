@@ -43,9 +43,9 @@ const LeftContainer = styled.View`
   flex-direction: column;
 `
 const CandContainer = styled.View`
-flex-direction: row;
-column-gap: 5px;
-align-items: center;
+  flex-direction: row;
+  column-gap: 5px;
+  align-items: center;
 `
 const Descripcion = styled.Text<StyledTextProps>`  
   color: ${(props) => props.color};
@@ -55,8 +55,7 @@ const Descripcion = styled.Text<StyledTextProps>`
   line-height: ${(props) => props.lh};
   text-align: left;
   position: top;
-  
-`;
+`
 
 const Datos = styled.Text<StyledTextProps>`
   color: ${(props) => props.color};
@@ -65,7 +64,7 @@ const Datos = styled.Text<StyledTextProps>`
   font-weight: ${(props) => props.weight};
   line-height: ${(props) => props.lh};
   text-align: left;
-`;
+`
 
 interface StyledImgProps {
   width: number;

@@ -1,8 +1,10 @@
 import React from "react";
 import { Text, View } from "react-native";
+import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
-import BarraP3 from "../Componentes/BarraP3";
+import BarraIconos from "../Componentes/BarraIconos";
+import BotonAzul from "../Componentes/BotonAzul";
 
 export const Container = styled.View`
   flex: 1;
@@ -10,75 +12,77 @@ export const Container = styled.View`
 `
 export const CenterContainer = styled.View`
   flex-direction: row;
-  align-self: center;
+  justify-content: space-between;
+  align-items: center;
 `
 export const ContainerItem = styled.View`
-  border-width: 1; 
-  border-color: ${Colors.SecondaryPurpleLight};
-  border-radius: 10; 
-  padding-left: 20; 
-  padding-right: 15; 
-  padding-bottom: 5; 
-  padding-top: 10;
+  border-width: 1px; 
+  padding: 15px;
+  border-color: ${Colors.mainCOlorPurpleLigth};
+  border-radius: 8px; 
+  height: 61px;
+  width: 90%;
+  align-self: center;
+  row-gap: 5px;
 `
-export const Heading = styled.Text`
-  color: ${Colors.colorHeading};
-  font-size: 14;
-  font-weight: bold;
+export const TextContainer = styled.View`
+  width: 90%;
+  align-self: center;
+  padding: 17px;
 `
-export const Title = styled.Text`
-  font-weight: bold;
-  font-size: 12;
-  color: ${Colors.colorBoton};
+export const BottomContainer = styled.View`
+
 `
-export const DateText = styled.Text`
-  font-size: 13;
-  font-weight: bold;
-  color: ${Colors.mainColorBlack};
-`
-export default function Agenda4() {
+interface StyledTextProps {
+  size: number;
+  weight: number;
+  color: string;
+  lh: number;
+}
+
+const StyledText = styled.Text<StyledTextProps>`
+  color: ${(props) => props.color};
+  font-family: ProximaNova;
+  font-size: ${(props) => props.size};
+  font-weight: ${(props) => props.weight};
+  line-height: ${(props) => props.lh};
+`;
+
+export default function Agenda4( ) {
   return (
     <Container>
-        {/* Header Begin */}
-        <AppHeader title='Agendar asesoría' color='#fff' />
-        {/* Header End */}
-
-        {/* Container */}
-        <View style={{ paddingLeft: 15, paddingRight: 15 }}>
-            <ContainerItem>
-                <View>
-                    <Title>Fecha y hora de la asesoría:</Title>
-                </View>
-                <View style={{ justifyContent: "space-between", flexDirection: "row", }}>
-                    <CenterContainer>
-                        <DateText> 15 April 2022 </DateText>
-                    </CenterContainer>
-                    <CenterContainer>
-                        <CenterContainer>
-                            <DateText>9:00 am - 10:00pm</DateText> {/*Padding5*/}
-                        </CenterContainer>
-                        <View style={{ alignSelf: 'center' }}>
-                            <Icon name="chevron-up" color="#5B74FB" size={15} />
-                            <Icon name="chevron-down" color="#5B74FB" size={15} />
-                        </View>
-                    </CenterContainer>
-
-                </View>
-            </ContainerItem>
-            <Text style={{ fontSize: 12, color: '#7E8FB9', paddingTop: 10 }}>Selecciona una fecha para agendar tu asesoría</Text>
-        </View>
-
-        {/* Button */}
-        <View style={{
-            flex: 1,
-            justifyContent: 'flex-end',
-        }}>
-            <AppButton onPress={() => { }} title="AGENDAR ASESORÍA" style={{
-                marginTop: 15,
-                backgroundColor: "#4E31EB",
-                borderColor: '#4E31EB',
-            }} textStyle={{ color: '#fff' }} />
-        </View>
+      <BarraIconos
+        titulo={"Agendar Asesoría"}
+        margin={"0px"}
+        colorIcons={Colors.mainCOlorPurpleLigth}
+        threePoints={true}
+      />
+      <ContainerItem>
+        <StyledText size={12} weight={700} color= {Colors.colorBoton} lh={14}>
+          Fecha y hora de la asesoría:
+        </StyledText>
+        <CenterContainer>
+          <StyledText size={14} weight={700} color= {Colors.mainColorBlack} lh={18}>15 April 2022 </StyledText>
+          <StyledText size={14} weight={700} color= {Colors.mainColorBlack} lh={18}>9:00 am - 10:00pm </StyledText>
+          <Icon
+            name={"unfold_more"}
+            color={Colors.mainCOlorPurpleLigth}
+            size={15}
+          />     
+        </CenterContainer>
+      </ContainerItem>
+      <TextContainer>
+      <StyledText size={14} weight={400} color= {Colors.SecondaryGray} lh={18}> Selecciona una fecha para agendar tu asesoría </StyledText>
+      </TextContainer>
+      {/*Calendario*/}
+      <BottomContainer>
+      <BotonAzul
+      ancho={90}
+      alto={55.08}
+      texto={"AGENDAR ASESORÍA"}
+      icon={""}
+      />
+      </BottomContainer>
     </Container>
-);
+  );
 };
