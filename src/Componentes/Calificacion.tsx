@@ -31,7 +31,6 @@ const Container2 = styled.View`
 `;
 const EstrellasView = styled.View`
   flex-direction: row;
-  :5px ;
 `;
 const StyledText = styled.Text<StyledTextProps>`
   font-family: Proxima Nova;
