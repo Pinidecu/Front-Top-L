@@ -8,6 +8,8 @@ import BarraHistorial from "../Componentes/BarraHistorial";
 import Ficha from './HistorialAsesoria/Ficha'
 import Notificaciones from "../Pantallas2/Notificaciones/Notificaciones";
 import Recomendacion from "./HistorialAsesoria/Recomendacion";
+import Documentos from "./HistorialAsesoria/Documentos";
+
 
 export const Container = styled.View`
   flex: 1;
@@ -36,7 +38,7 @@ export const StyledText = styled.Text<StyledTextProps>`
 `
 
 export default function DetalleAsesoria() {
-  const [Status, setStatus] = useState("Ficha Personal");
+  const [Status, setStatus] = useState("Documentos");
 
   return (
     <Container>
@@ -51,7 +53,7 @@ export default function DetalleAsesoria() {
       <BarraHistorial estado={Status} />
       {Status === "Ficha Personal" ? <Ficha /> : null}
       {Status === "Recomendaciones" ? <Recomendacion />  : null}
-      {Status === "Documentos" ? <Notificaciones /> : null}
+      {Status === "Documentos" ? <Documentos /> : null}
       {Status === "Historial" ? <Notificaciones /> : null}
     </Container>
   );

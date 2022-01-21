@@ -47,7 +47,7 @@ export default function Recomendacion() {
   return (
     <Container>
       <CajaFicha
-              ancho={90}
+              ancho={95}
               alto={232}
               fecha={"03/10/2022"}
               texto1={"Titulo de la anotación"}
