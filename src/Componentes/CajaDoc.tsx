@@ -6,8 +6,6 @@ import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 
 interface Props {
-  ancho: number;
-  alto: number;
   texto1: string;
   texto2: string;
   icon1?: boolean;
@@ -33,13 +31,15 @@ const Container = styled.View<ContainerProps>`
   row-gap: 5px;
   justify-content: center;
   padding: 6px 14px;
-  width: ${(props) => props.width}%;
-  height: ${(props) => props.height};
+  width:
+  height: 
   border-radius: 4px;
   align-self: center;
 `;
 
+
 const DocCont = styled.View`
+  background-color:  ${Colors.white};
   justify-items: center;
   align-items:center;
 `
@@ -69,9 +69,9 @@ const Icono = styled.Image<StyledImgProps>`
   height: ${(props) => props.height};
 `;
 
-export default function CajaFicha({ ancho, alto, texto1, texto2, icon1, icon2, icon3 }: Props) {
+export default function CajaFicha({ texto1, texto2, icon1, icon2, icon3 }: Props) {
   return (
-    <Container width={ancho} height={alto} color={Colors.white}>
+    <Container width={ancho} height={alto} color={Colors.SecondaryPurpleLight}>
       <StyledText
         weight={700}
         size={16}
@@ -80,25 +80,7 @@ export default function CajaFicha({ ancho, alto, texto1, texto2, icon1, icon2, i
       >
         Documentos recientes
       </StyledText>
-      
-      <TextoCont>
-        <StyledText
-          weight={400}
-          size={14}
-          lh={16.8}
-          color={Colors.black}
-        >
-          {texto1}
-        </StyledText>
-        <StyledText
-        weight={700}
-        size={12}
-        lh={14}
-        color={Colors.SecondaryGray}
-        >
-        {texto2}
-        </StyledText>
-      </TextoCont>
+      <DocCont>
       {icon1 ?
         <Icono
         width={36.65}
@@ -114,6 +96,25 @@ export default function CajaFicha({ ancho, alto, texto1, texto2, icon1, icon2, i
         width={36.65}
         height={49}
         source={require("../../assets/images/WordDoc.png")} /> : null}
+      </DocCont>
+      <TextoCont>
+        <StyledText
+          weight={400}
+          size={14}
+          lh={16.8}
+          color={Colors.black}
+        >
+          {texto1}
+        </StyledText>
+        <StyledText
+        weight={700}
+        size={12}
+        lh={14}
+        color={Colors.SecondaryGray}
+        >
+          {texto2}
+        </StyledText>
+      </TextoCont>      
     </Container>
   );
 }
