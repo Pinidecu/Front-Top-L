@@ -3,18 +3,30 @@ import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
+import ComponenteBarra from "./ComponenteBarra";
+import FPA from "../../assets/images/Barra/FichaPerA.png";
+import FPB from "../../assets/images/Barra/FichaPerB.png";
+import RecA from "../../assets/images/Barra/RecomendA.png";
+import RecB from "../../assets/images/Barra/RecomendB.png";
+import DocA from "../../assets/images/Barra/DocumA.png";
+import DocB from "../../assets/images/Barra/DocumB.png";
+import HistA from "../../assets/images/Barra/HistorialA.png";
+import HistB from "../../assets/images/Barra/HistorialB.png";
 
 const Container = styled.View`
-  flex-direction: row;
-  width: 90%;
-  margin: 20px;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
 `;
 
+const Barra = styled.View`
+  width: 100%;
+  flex-direction: row;
+`;
+
 const RigthContainer = styled.View`
   flex-direction: row;
-  column-gap:10px;
+  column-gap: 10px;
   align-items: center;
 `;
 
@@ -27,22 +39,73 @@ const StyledImg = styled.Image<StyledImgProps>`
   height: ${(props) => props.height}px;
 `;
 
-export default function BarraP3() {
+export const Linea = styled.View`
+  width: 100%;
+  height: 2px;
+  background-color: ${Colors.mainCOlorPurpleDark};
+`;
+
+interface Props {
+  estado: string;
+}
+export default function BarraHistorial({ estado }: Props) {
   return (
     <Container>
-      <StyledImg
-        width={85.15}
-        height={20.25}
-        source={require("../../assets/images/Logo.png")}
-      />
-      <RigthContainer>
-        <Icon name="add" color={Colors.black} size={35} />
-        <StyledImg
-          width={25}
-          height={25}
-          source={require("../../assets/images/campanaNegra.png")}
-        />
-      </RigthContainer>
+      <Linea />
+      <Barra>
+        {estado === "Ficha Personal" ? (
+          <ComponenteBarra
+            estado={estado}
+            foto={FPB}
+            color={Colors.mainCOlorPurpleDark}
+          />
+        ) : (
+          <ComponenteBarra
+            estado={estado}
+            foto={FPA}
+            color={Colors.SecondaryPurpleLight}
+          />
+        )}
+        {estado === "Recomendaciones" ? (
+          <ComponenteBarra
+            estado={estado}
+            foto={RecB}
+            color={Colors.mainCOlorPurpleDark}
+          />
+        ) : (
+          <ComponenteBarra
+            estado={estado}
+            foto={RecA}
+            color={Colors.SecondaryPurpleLight}
+          />
+        )}
+        {estado === "Documentos" ? (
+          <ComponenteBarra
+            estado={estado}
+            foto={DocB}
+            color={Colors.mainCOlorPurpleDark}
+          />
+        ) : (
+          <ComponenteBarra
+            estado={estado}
+            foto={DocA}
+            color={Colors.SecondaryPurpleLight}
+          />
+        )}
+        {estado === "Historial" ? (
+          <ComponenteBarra
+            estado={estado}
+            foto={HistB}
+            color={Colors.mainCOlorPurpleDark}
+          />
+        ) : (
+          <ComponenteBarra
+            estado={estado}
+            foto={HistA}
+            color={Colors.SecondaryPurpleLight}
+          />
+        )}
+      </Barra>
     </Container>
   );
 }
