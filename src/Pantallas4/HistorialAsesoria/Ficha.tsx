@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View } from "react-native";
 import styled from "styled-components/native";
 import Colors from "../../../constants/Colors";
-import CajaBlanca from "../../Componentes/CajaBlanca";
+import CajaFicha from "../../Componentes/CajaFicha";
 
 export const Container = styled.View`
   flex: 1;
@@ -46,33 +46,37 @@ export const RecomendacionView = styled.View`
 export default function Recomendacion() {
   return (
     <Container>
-      <CajaBlanca
+      <CajaFicha
               ancho={90}
-              alto={60}
+              alto={80}
+              fecha={"03/10/2022"}
+              texto1={"Nombre completo"}
+              texto2={"Morbi tincidunt metus quis justo lobortis tristique."}
+              texto3={""}
+      />
+      <CajaFicha
+             ancho={90}
+             alto={74}
+             fecha={"03/10/2022"}
+             texto1={"Edad"}
+             texto2={"28 años"}
+             texto3={""}
+      />
+      <CajaFicha
+              ancho={90}
+              alto={76}
+              fecha={"03/10/2022"}
+              texto1={"Tipo de marca"}
+              texto2={"Marca de cosmeticos venta en colombia"}
+              texto3={""}
+      />
+      <CajaFicha
+              ancho={90}
+              alto={126}
+              fecha={"03/10/2022"}
               texto1={"Tema de interés"}
-              texto2={"Seleccionar"}
-              icon={true}
-      />
-      <CajaBlanca
-              ancho={90}
-              alto={60}
-              texto1={"Título de la publicación"}
-              texto2={"    "}
-      />
-      <CajaBlanca
-              ancho={90}
-              alto={60}
-              texto1={"Privacidad"}
-              texto2={"Mi comunidad"}
-              icon={true}
-              icon2={true}
-      />
-      <CajaBlanca
-              ancho={90}
-              alto={60}
-              texto1={"Filtros"}
-              texto2={"#filter, #filter, #filter"}
-              icon={true}
+              texto2={"Crear parilla de contenido para redes sociales \nIdentificar oportunidades de negocio nuevas \nMejorar el SEO de la página web"}
+              texto3={""}
       />
     </Container>
   );
