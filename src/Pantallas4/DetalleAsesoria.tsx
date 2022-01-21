@@ -5,10 +5,9 @@ import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 import BarraIconos from "../Componentes/BarraIconos";
 import BarraHistorial from "../Componentes/BarraHistorial";
-import TextoGris from "../Componentes/TextoGris";
 import Ficha from './HistorialAsesoria/Ficha'
-import NewEquipoComp from "../Componentes/NewEquipo";
 import Notificaciones from "../Pantallas2/Notificaciones/Notificaciones";
+import Recomendacion from "./HistorialAsesoria/Recomendacion";
 
 export const Container = styled.View`
   flex: 1;
@@ -51,14 +50,9 @@ export default function DetalleAsesoria() {
 
       <BarraHistorial estado={Status} />
       {Status === "Ficha Personal" ? <Ficha /> : null}
-      {Status === "Recomendaciones" ? (
-        <NewEquipoComp
-          titulo={"Nombre del equipo"}
-          descripcion={"VideoMarketing"}
-        />
-      ) : null}
+      {Status === "Recomendaciones" ? <Recomendacion />  : null}
       {Status === "Documentos" ? <Notificaciones /> : null}
-      {Status === "Historial" ? <TextoGris texto={"Historial"} /> : null}
+      {Status === "Historial" ? <Notificaciones /> : null}
     </Container>
   );
 }

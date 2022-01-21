@@ -31,6 +31,7 @@ interface StyledTextProps {
 const Container = styled.View<ContainerProps>`
   background-color: ${(props) => props.color};
   row-gap: 5px;
+  justify-content: center;
   padding: 6px 14px;
   width: ${(props) => props.width}%;
   height: ${(props) => props.height};
@@ -41,10 +42,14 @@ const Container = styled.View<ContainerProps>`
 const TextoCont = styled.View`
   justify-items: left;
   margin-top: 8px;
+  row-gap: 10px;
 `
 
 const BarraCont = styled.View`
   justify-items: left;
+  flex-direction: row;
+  column-gap: 7px;
+  padding:1%;
 `
 
 const StyledText = styled.Text<StyledTextProps>`  
@@ -66,7 +71,7 @@ const Icono = styled.Image<StyledImgProps>`
   height: ${(props) => props.height};
 `;
 
-export default function CajaBlanca({ ancho, alto, fecha, texto1, texto2, texto3, icon }: Props) {
+export default function CajaFicha({ ancho, alto, fecha, texto1, texto2, texto3, icon }: Props) {
   return (
     <Container width={ancho} height={alto} color={Colors.white}>
       <StyledText
@@ -94,6 +99,7 @@ export default function CajaBlanca({ ancho, alto, fecha, texto1, texto2, texto3,
         >
           {texto2}
         </StyledText>
+        
         {texto3 ?
           <StyledText
             weight={400}
