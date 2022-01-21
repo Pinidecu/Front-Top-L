@@ -31,7 +31,7 @@ interface StyledTextProps {
 const Container = styled.View<ContainerProps>`
   background-color: ${(props) => props.color};
   row-gap: 5px;
-  padding: 8px 14px;
+  padding: 6px 14px;
   width: ${(props) => props.width}%;
   height: ${(props) => props.height};
   border-radius: 4px;
