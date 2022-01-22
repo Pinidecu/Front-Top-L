@@ -3,6 +3,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import PerfilProEditar1 from "../src/Pantallas5/PerfilProEditar1/PerfilProEditar1";
 import PerfilProEditar2 from "../src/Pantallas5/PerfilProEditar2/PerfilProEditar2";
 import PerfilContenidoCreado from "../src/Pantallas5/PerfilContenidoCreado/PerfilContenidoCreado";
+import CertificadoPro from "../src/Pantallas5/CertificadoPro/CertificadoPro";
+import PerfilAjusteAsesoria from "../src/Pantallas5/PerfilAjusteAsesoria/PerfilAjusteAsesoria";
 
 
 const Stack = createStackNavigator();
@@ -13,6 +15,11 @@ export const Inicio5 = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen
+        name="PerfilAjusteAsesoria"
+        component={PerfilAjusteAsesoria}
+      />
+      <Stack.Screen name="CertificadoPro" component={CertificadoPro} />
       <Stack.Screen
         name="PerfilContenidoCreado"
         component={PerfilContenidoCreado}

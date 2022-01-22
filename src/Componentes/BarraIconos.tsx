@@ -5,7 +5,8 @@ import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 
 interface Props {
-  titulo: string;
+  titulo?: string;
+  tituloAB?: string;
   margin: string;
   colorIcons: string;
   colorText?: string;
@@ -38,6 +39,15 @@ const StyledText = styled.Text<StyledTextProps>`
   color: ${(props) => props.color};
   font-family: Proxima Nova;
   font-style: normal;
+  font-size: 14;
+  font-weight: 700;
+  line-height: 18;
+  margin-left: 25px;
+`;
+const StyledTextAB = styled.Text<StyledTextProps>`
+  color: ${(props) => props.color};
+  font-family: ABeeZee;
+  font-style: italic;
   font-size: 14;
   font-weight: 700;
   line-height: 18;
@@ -76,6 +86,7 @@ const Punto = styled.View<PuntoProps>`
 
 export default function BarraIconos({
   titulo,
+  tituloAB,
   margin,
   colorIcons,
   colorText,
@@ -90,9 +101,18 @@ export default function BarraIconos({
   return (
     <Container margin={margin}>
       <Icon name="chevron-left" color={colorIcons} size={25} />
-      <StyledText color={colorText ? colorText : Colors.mainCOlorPurpleLigth}>
-        {titulo}
-      </StyledText>
+      {titulo ? (
+        <StyledText color={colorText ? colorText : Colors.mainCOlorPurpleLigth}>
+          {titulo}
+        </StyledText>
+      ) : null}
+      {tituloAB ? (
+        <StyledTextAB
+          color={colorText ? colorText : Colors.mainCOlorPurpleLigth}
+        >
+          {tituloAB}
+        </StyledTextAB>
+      ) : null}
       <RigthContainer>
         {lupa ? <Icon name="search" color={Colors.black} size={25} /> : null}
         {add ? <Icon name="add" color={colorIcons} size={25} /> : null}

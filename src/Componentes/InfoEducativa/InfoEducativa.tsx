@@ -18,11 +18,13 @@ import { Icon } from "react-native-elements";
 import { View } from "react-native";
 
 interface Props {
-  nivel: string;
-  area: string;
-  centro: string;
-  año: string;
+  nivel?: string;
+  area?: string;
+  centro?: string;
+  año?: string;
   especializacion?: string;
+  tiempo?: string;
+  valor?: string;
 }
 
 export default function InfoEducativa({
@@ -30,7 +32,7 @@ export default function InfoEducativa({
   area,
   centro,
   año,
-  especializacion,
+  especializacion,tiempo, valor
 }: Props) {
   return (
     <Container>
@@ -54,32 +56,67 @@ export default function InfoEducativa({
         <Icon name="more-horiz" color={Colors.mainCOlorPurpleLigth} size={30} />
       </TituloView>
       <InfoView>
-        <Clave>
-          {"Nivel educativo: "}
-          <Valor>{nivel}</Valor>
-        </Clave>
-        <Linea />
-        <Clave>
-          {"Área de experticia: "}
-          <Valor>{area}</Valor>
-        </Clave>{" "}
-        <Linea />
-        <Clave>
-          {"Centro educativo: "}
-          <Valor>{centro}</Valor>
-        </Clave>{" "}
-        <Linea />
-        <Clave>
-          {"Año: "}
-          <Valor>{año}</Valor>
-        </Clave>
+        {nivel ? (
+          <View>
+            <Clave>
+              {"Nivel educativo: "}
+              <Valor>{nivel}</Valor>
+            </Clave>
+            <Linea />
+          </View>
+        ) : null}
+        {area ? (
+          <View>
+            <Clave>
+              {"Área de experticia: "}
+              <Valor>{area}</Valor>
+            </Clave>{" "}
+            <Linea />
+          </View>
+        ) : null}
+        {centro ? (
+          <View>
+            <Clave>
+              {"Centro educativo: "}
+              <Valor>{centro}</Valor>
+            </Clave>{" "}
+            <Linea />
+          </View>
+        ) : null}
+        {año ? (
+          <View>
+            <Clave>
+              {"Año: "}
+              <Valor>{año}</Valor>
+            </Clave>
+            <Linea />
+          </View>
+        ) : null}
         {especializacion ? (
           <View>
-            <Linea />
             <Clave>
               {"Área de especialización: "}
               <Valor>{especializacion}</Valor>
             </Clave>
+            <Linea />
+          </View>
+        ) : null}
+        {tiempo ? (
+          <View>
+            <Clave>
+              {"Tiempo: "}
+              <Valor>{tiempo}</Valor>
+            </Clave>
+            <Linea />
+          </View>
+        ) : null}
+        {valor ? (
+          <View>
+            <Clave>
+              {"Valor: "}
+              <Valor>{valor}</Valor>
+            </Clave>
+            <Linea />
           </View>
         ) : null}
       </InfoView>

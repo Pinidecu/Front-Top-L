@@ -16,7 +16,6 @@ export const Inicio4 = () => {
       <Stack.Screen name="DetalleAsesoria" component={DetalleAsesoria} />
       <Stack.Screen name="Busqueda" component={Busqueda} />
       <Stack.Screen name="Agenda4" component={Agenda4} />
-      
     </Stack.Navigator>
   );
 };

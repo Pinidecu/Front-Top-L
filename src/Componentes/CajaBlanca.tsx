@@ -13,6 +13,7 @@ interface Props {
   icon?: boolean;
   icon2?: boolean;
   icon3?: boolean;
+  icon4?: boolean;
 }
 
 interface ContainerProps {
@@ -81,46 +82,63 @@ const Icono = styled.Image<StyledImgProps>`
   height: ${(props) => props.height};
 `;
 
-export default function CajaBlanca({ ancho, alto, texto1, texto2, icon, icon2, icon3 }: Props) {
+export default function CajaBlanca({
+  ancho,
+  alto,
+  texto1,
+  texto2,
+  icon,
+  icon2,
+  icon3,
+  icon4,
+}: Props) {
   return (
     <Container width={ancho} height={alto} color={Colors.white}>
       <LeftContainer>
-      <Descripcion 
-        weight={700} 
-        size={12}
-        lh={14} 
-        color={Colors.SecondaryGray}
-      >
-      {texto1}
-      </Descripcion>
-      <CandContainer>
-      <Datos 
-        weight={400} 
-        size={16} 
-        lh={24} 
-        color={Colors.mainColorBlack} 
-      >
-      {texto2}
-      </Datos>
-      {icon2 ? 
-        <Icono 
-          width={13} 
-          height={13}
-          source={require("../../assets/images/candado.png")} /> : null}
-      </CandContainer>
-      <BarraCont>
-      {icon3 ? 
-        <Icono 
-          width={320} 
-          height={29}
-          source={require("../../assets/images/Group 133.png")} /> : null}
-      </BarraCont>
-      </LeftContainer>          
-      {icon ? 
-        <Icono 
-          width={33} 
+        <Descripcion
+          weight={700}
+          size={12}
+          lh={14}
+          color={Colors.SecondaryGray}
+        >
+          {texto1}
+        </Descripcion>
+        <CandContainer>
+          <Datos weight={400} size={16} lh={24} color={Colors.mainColorBlack}>
+            {texto2}
+          </Datos>
+          {icon2 ? (
+            <Icono
+              width={13}
+              height={13}
+              source={require("../../assets/images/candado.png")}
+            />
+          ) : null}
+        </CandContainer>
+        <BarraCont>
+          {icon3 ? (
+            <Icono
+              width={320}
+              height={29}
+              source={require("../../assets/images/Group 133.png")}
+            />
+          ) : null}
+        </BarraCont>
+      </LeftContainer>
+      {icon ? (
+        <Icono
+          width={33}
           height={30}
-          source={require("../../assets/images/arrow.png")} /> : null}
+          source={require("../../assets/images/arrow.png")}
+        />
+      ) : null}
+      {icon4 ? (
+        <Icono
+          width={25}
+          height={25}
+          source={require("../../assets/images/ojo.png")}
+        />
+      ) : null}
     </Container>
   );
 }
