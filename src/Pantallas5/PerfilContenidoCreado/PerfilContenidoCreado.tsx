@@ -1,7 +1,6 @@
 import React from "react";
 import BarraIconos from "../../Componentes/BarraIconos";
 import InfoEducativa from "../../Componentes/InfoEducativa/InfoEducativa";
-import PerfilInfo from "../../Componentes/PerfilInfo/PerfilInfo";
 import { Container, Titulo, TextSubrayado } from "./styles";
 import Colors from "../../../constants/Colors";
 import PortadaAjuste from "./PortadaAjuste/PortadaAjuste";
