@@ -6,6 +6,11 @@ export const Container = styled.View`
   flex: 1;
 `;
 
+export const AgendaView = styled.View`
+  width: 90%;
+  align-self:center;
+`;
+
 export const Titulo = styled.Text`
   font-family: ABeeZee;
   font-size: 18px;
