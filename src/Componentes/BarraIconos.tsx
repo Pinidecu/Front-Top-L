@@ -15,6 +15,7 @@ interface Props {
   lupa?: boolean;
   lupaBlue?: boolean;
   campana?: boolean;
+  campanaSola?: boolean;
   right?: boolean;
   closeBlack?: boolean;
 }
@@ -95,7 +96,7 @@ export default function BarraIconos({
   lupaBlue,
   add,
   closeBlack,
-  campana,
+  campana,campanaSola,
   right,
 }: Props) {
   return (
@@ -129,6 +130,13 @@ export default function BarraIconos({
               source={require("../../assets/images/campana.png")}
             />
           </Campana>
+        ) : null}
+        {campanaSola ? (
+            <StyledImg
+              width={20}
+              height={20}
+              source={require("../../assets/images/campana.png")}
+            />
         ) : null}
         {right ? (
           <Icon name="chevron-right" color={colorIcons} size={25} />

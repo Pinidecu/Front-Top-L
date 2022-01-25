@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import BarraIconos from "../../Componentes/BarraIconos";
-import { Container, Titulo } from "./styles";
+import { AgendaView, Container, Titulo } from "./styles";
 import Colors from "../../../constants/Colors";
-import DatePicker from "react-datepicker";
-import CalendarPicker from "react-native-calendar-picker";
 import Calendario from "../../Componentes/Calendario";
-
+import Agenda from "./Agenda/Agenda";
 
 export default function AgendaAll() {
   const [startDate, setStartDate] = useState(new Date());
@@ -28,6 +26,13 @@ export default function AgendaAll() {
       <Calendario />
       <Titulo>Julio</Titulo>
       <Calendario />
+      <AgendaView>
+        <Agenda
+          titulo="Yoga para ti, para mí y para todos! 9:00AM - 4:00 PM"
+          mes="JUN"
+          dia="15"
+        />
+      </AgendaView>
     </Container>
   );
 }
