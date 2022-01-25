@@ -7,6 +7,7 @@ import CertificadoPro from "../src/Pantallas5/CertificadoPro/CertificadoPro";
 import PerfilAjusteAsesoria from "../src/Pantallas5/PerfilAjusteAsesoria/PerfilAjusteAsesoria";
 import AgendaAll from "../src/Pantallas5/AgendaAll/AgendaAll";
 import AgendaHistorialAsesoria from "../src/Pantallas5/AgendaHistorialAsesoria/AgendaHistorialAsesoria";
+import CuentaLogin from "../src/Pantallas5/CuentaLogin/CuentaLogin";
 
 
 const Stack = createStackNavigator();
@@ -17,6 +18,7 @@ export const Inicio5 = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="CuentaLogin" component={CuentaLogin} />
       <Stack.Screen
         name="AgendaHistorialAsesoria"
         component={AgendaHistorialAsesoria}
