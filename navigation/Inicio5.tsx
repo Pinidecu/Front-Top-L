@@ -8,6 +8,7 @@ import PerfilAjusteAsesoria from "../src/Pantallas5/PerfilAjusteAsesoria/PerfilA
 import AgendaAll from "../src/Pantallas5/AgendaAll/AgendaAll";
 import AgendaHistorialAsesoria from "../src/Pantallas5/AgendaHistorialAsesoria/AgendaHistorialAsesoria";
 import CuentaLogin from "../src/Pantallas5/CuentaLogin/CuentaLogin";
+import PerfilVistaPersonalPro from "../src/Pantallas5/PerfilVistaPersonalPro/PerfilVistaPersonalPro";
 
 
 const Stack = createStackNavigator();
@@ -18,6 +19,10 @@ export const Inicio5 = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen
+        name="PerfilVistaPersonalPro"
+        component={PerfilVistaPersonalPro}
+      />
       <Stack.Screen name="CuentaLogin" component={CuentaLogin} />
       <Stack.Screen
         name="AgendaHistorialAsesoria"

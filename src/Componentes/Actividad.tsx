@@ -22,6 +22,7 @@ const Container = styled.View`
   justify-content: "flex-start";
   width: 100%;
   margin: 10px 0px;
+  column-gap: 10px;
 `;
 
 const StyledText = styled.Text<StyledTextProps>`
