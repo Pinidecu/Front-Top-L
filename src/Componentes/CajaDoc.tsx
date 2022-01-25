@@ -15,8 +15,6 @@ interface Props {
 
 interface ContainerProps {
   color: string;
-  width: number;
-  height: number;
 }
 
 interface StyledTextProps {
@@ -30,24 +28,23 @@ const Container = styled.View<ContainerProps>`
   background-color: ${(props) => props.color};
   row-gap: 5px;
   justify-content: center;
-  padding: 6px 14px;
-  width:
-  height: 
-  border-radius: 4px;
-  align-self: center;
+  width: 112px;
+  height: 166px;
 `;
 
 
 const DocCont = styled.View`
   background-color:  ${Colors.white};
-  justify-items: center;
+  width: 113.37px;
+  height: 113.37px;
+  justify-content: center;
   align-items:center;
+  border-radius: 8px;
 `
 
 const TextoCont = styled.View`
   justify-items: left;
-  margin-top: 8px;
-  row-gap: 10px;
+  row-gap: 2px;
 `
 
 const StyledText = styled.Text<StyledTextProps>`  
@@ -71,15 +68,7 @@ const Icono = styled.Image<StyledImgProps>`
 
 export default function CajaFicha({ texto1, texto2, icon1, icon2, icon3 }: Props) {
   return (
-    <Container width={ancho} height={alto} color={Colors.SecondaryPurpleLight}>
-      <StyledText
-        weight={700}
-        size={16}
-        lh={24}
-        color={Colors.mainColorBlack}
-      >
-        Documentos recientes
-      </StyledText>
+    <Container color={Colors.SecondaryPurpleLight}>
       <DocCont>
       {icon1 ?
         <Icono
@@ -100,8 +89,8 @@ export default function CajaFicha({ texto1, texto2, icon1, icon2, icon3 }: Props
       <TextoCont>
         <StyledText
           weight={400}
-          size={14}
-          lh={16.8}
+          size={12}
+          lh={14}
           color={Colors.black}
         >
           {texto1}
