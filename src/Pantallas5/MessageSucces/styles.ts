@@ -4,6 +4,7 @@ import Colors from "../../../constants/Colors";
 export const Container = styled.View`
   background-color: ${Colors.white};
   flex: 1;
+  justify-content: space-between;
 `;
 
 export const BotonesView = styled.View`
@@ -17,9 +18,10 @@ export const IconView = styled.View`
 
 export const ContainerPrincipal = styled.View`
   width: 90%;
-  height: 90%;
-  align-self: center;
+  height: 80%;
+  align-self: center ;
   justify-content: space-evenly;
+  margin-bottom:50px;
 `;
 export const Texto = styled.Text`
   font-family: ABeeZee;

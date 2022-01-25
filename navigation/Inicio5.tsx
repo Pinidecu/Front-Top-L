@@ -10,6 +10,7 @@ import AgendaHistorialAsesoria from "../src/Pantallas5/AgendaHistorialAsesoria/A
 import CuentaLogin from "../src/Pantallas5/CuentaLogin/CuentaLogin";
 import PerfilVistaPersonalPro from "../src/Pantallas5/PerfilVistaPersonalPro/PerfilVistaPersonalPro";
 import MessageSucces from "../src/Pantallas5/MessageSucces/MessageSucces";
+import Home2 from "../src/Pantallas5/Home2/Home2";
 
 
 const Stack = createStackNavigator();
@@ -20,6 +21,7 @@ export const Inicio5 = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="Home2" component={Home2} />
       <Stack.Screen name="MessageSucces" component={MessageSucces} />
       <Stack.Screen
         name="PerfilVistaPersonalPro"
