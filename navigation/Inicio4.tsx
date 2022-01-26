@@ -5,7 +5,7 @@ import Agenda4 from "../src/Pantallas4/Agenda4";
 import Busqueda from "../src/Pantallas4/Busqueda";
 import DetalleAsesoria from "../src/Pantallas4/DetalleAsesoria";
 import AreaProf from "../src/Pantallas4/AreaProf";
-
+import Documento from "../src/Pantallas4/Documento";
 const Stack = createStackNavigator();
 export const Inicio4 = () => {
   return (
@@ -14,6 +14,7 @@ export const Inicio4 = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="Documento" component={Documento} />
       <Stack.Screen name="AreaProf" component={AreaProf} />
       <Stack.Screen name="DetalleAsesoria" component={DetalleAsesoria} />
       <Stack.Screen name="Busqueda" component={Busqueda} />
