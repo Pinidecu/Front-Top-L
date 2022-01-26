@@ -1,5 +1,5 @@
 import React from "react";
-import Colors from "../../../../constants/Colors";
+import Colors from "../../../../../constants/Colors";
 import CajaDoc from "./CajaDoc/CajaDoc";
 import { Container, DocView, StyledText } from "./styles";
 

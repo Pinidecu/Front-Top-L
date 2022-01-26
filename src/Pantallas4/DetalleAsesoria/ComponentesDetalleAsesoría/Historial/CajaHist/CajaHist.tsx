@@ -1,5 +1,5 @@
 import React from "react";
-import Colors from "../../../../../constants/Colors";
+import Colors from "../../../../../../constants/Colors";
 import { BullCont, Container, ImgCont, IndicadorView, LeftCont, LeftView, StyledImg, StyledText, TextoCont } from "./styles";
 
 interface Props {

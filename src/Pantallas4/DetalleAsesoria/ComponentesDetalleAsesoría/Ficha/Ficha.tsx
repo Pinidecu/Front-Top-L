@@ -1,5 +1,5 @@
 import React from "react";
-import CajaFicha from "../../../Componentes/CajaFicha";
+import CajaFicha from "../../../../Componentes/CajaFicha";
 import { Container } from "./styles";
 
 export default function Ficha() {

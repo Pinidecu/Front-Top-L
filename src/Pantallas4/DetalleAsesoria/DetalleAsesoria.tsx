@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Colors from "../../../constants/Colors";
 import BarraIconos from "../../Componentes/BarraIconos";
 import BarraHistorial from "./BarraHistorial/BarraHistorial";
-import Ficha from '../ComponentesDetalleAsesoría/Ficha/Ficha'
-import Recomendacion from "../ComponentesDetalleAsesoría/Recomendacion/Recomendacion";
-import Documentos from "../ComponentesDetalleAsesoría/Documentos/Documentos";
-import Historial from "../ComponentesDetalleAsesoría/Historial/Historial";
+import Ficha from './ComponentesDetalleAsesoría/Ficha/Ficha'
+import Recomendacion from "./ComponentesDetalleAsesoría/Recomendacion/Recomendacion";
+import Documentos from "./ComponentesDetalleAsesoría/Documentos/Documentos";
+import Historial from "./ComponentesDetalleAsesoría/Historial/Historial";
 import PerfilAgenda from "./PerfilAgenda/PerfilAgenda";
 import { Container } from "./styles";
 
