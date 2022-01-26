@@ -36,6 +36,7 @@ export const StyledText = styled.Text<StyledTextProps>`
 export const TextContainer = styled.View`
   width: 90%;
   align-self: left;
+  margin-top: 30px;
 `;
 
 export default function AreaProf() {
