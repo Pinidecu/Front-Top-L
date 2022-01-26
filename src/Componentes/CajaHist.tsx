@@ -97,7 +97,7 @@ export default function CajaHist({ cliente, categoria, fecha, hora, tiempo }: Pr
             weight={700}
             size={12}
             lh={14}
-            color={Colors.SecondaryGray}
+            color={Colors.mainColorBlack}
           >
             Cliente: 
           </StyledText>
@@ -105,7 +105,7 @@ export default function CajaHist({ cliente, categoria, fecha, hora, tiempo }: Pr
             weight={400}
             size={12}
             lh={14}
-            color={Colors.SecondaryGray}
+            color={Colors.mainColorBlack}
           >
             {cliente}
           </StyledText>
@@ -115,7 +115,7 @@ export default function CajaHist({ cliente, categoria, fecha, hora, tiempo }: Pr
             weight={700}
             size={12}
             lh={14}
-            color={Colors.SecondaryGray}
+            color={Colors.mainColorBlack}
           >
             Categoría:
           </StyledText>
@@ -123,7 +123,7 @@ export default function CajaHist({ cliente, categoria, fecha, hora, tiempo }: Pr
             weight={400}
             size={12}
             lh={14}
-            color={Colors.SecondaryGray}
+            color={Colors.mainColorBlack}
           >
             {categoria}
           </StyledText>
@@ -133,7 +133,7 @@ export default function CajaHist({ cliente, categoria, fecha, hora, tiempo }: Pr
             weight={700}
             size={12}
             lh={14}
-            color={Colors.SecondaryGray}
+            color={Colors.mainColorBlack}
           >
             Fecha de asesoría:
           </StyledText>
@@ -141,7 +141,7 @@ export default function CajaHist({ cliente, categoria, fecha, hora, tiempo }: Pr
             weight={400}
             size={12}
             lh={14}
-            color={Colors.SecondaryGray}
+            color={Colors.mainColorBlack}
           >
             {fecha}
           </StyledText>
@@ -151,7 +151,7 @@ export default function CajaHist({ cliente, categoria, fecha, hora, tiempo }: Pr
             weight={700}
             size={12}
             lh={14}
-            color={Colors.SecondaryGray}
+            color={Colors.mainColorBlack}
           >
             Hora:
           </StyledText>
@@ -159,7 +159,7 @@ export default function CajaHist({ cliente, categoria, fecha, hora, tiempo }: Pr
             weight={400}
             size={12}
             lh={14}
-            color={Colors.SecondaryGray}
+            color={Colors.mainColorBlack}
           >
             {hora}
           </StyledText>
@@ -169,7 +169,7 @@ export default function CajaHist({ cliente, categoria, fecha, hora, tiempo }: Pr
             weight={700}
             size={12}
             lh={14}
-            color={Colors.SecondaryGray}
+            color={Colors.mainColorBlack}
           >
             Tiempo:
           </StyledText>
@@ -177,7 +177,7 @@ export default function CajaHist({ cliente, categoria, fecha, hora, tiempo }: Pr
             weight={400}
             size={12}
             lh={14}
-            color={Colors.SecondaryGray}
+            color={Colors.mainColorBlack}
           >
             {tiempo}
           </StyledText>

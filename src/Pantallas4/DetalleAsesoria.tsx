@@ -10,6 +10,7 @@ import Notificaciones from "../Pantallas2/Notificaciones/Notificaciones";
 import Recomendacion from "./HistorialAsesoria/Recomendacion";
 import Documentos from "./HistorialAsesoria/Documentos";
 import Historial from "./HistorialAsesoria/Historial";
+import PerfilAgenda from "../Componentes/PerfilAgenda";
 
 
 export const Container = styled.View`
@@ -49,8 +50,14 @@ export default function DetalleAsesoria() {
         colorIcons={Colors.mainCOlorPurpleLigth}
         add={true}
       />
-      {/*PerfilAgenda*/}
-
+      <PerfilAgenda
+        name={"Antony Ruiz"}
+        user={"@anruizp"} 
+        categoria={" Yoga • Meditación holística"} 
+        fecha={" 18/11/2021"}
+        hora={" 4:00PM"}
+        tiempo={" 45 minutos"}
+      />
       <BarraHistorial estado={Status} />
       {Status === "Ficha Personal" ? <Ficha /> : null}
       {Status === "Recomendaciones" ? <Recomendacion />  : null}
