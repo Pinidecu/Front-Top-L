@@ -71,7 +71,7 @@ const Icono = styled.Image<StyledImgProps>`
   height: ${(props) => props.height};
 `;
 
-export default function CajaFicha({ ancho, alto, fecha, texto1, texto2, texto3, icon }: Props) {
+export default function CajaHist({ ancho, alto, fecha, texto1, texto2, texto3, icon }: Props) {
   return (
     <Container width={ancho} height={alto} color={Colors.white}>
       <StyledText

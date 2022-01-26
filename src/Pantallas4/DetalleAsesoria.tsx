@@ -9,6 +9,7 @@ import Ficha from './HistorialAsesoria/Ficha'
 import Notificaciones from "../Pantallas2/Notificaciones/Notificaciones";
 import Recomendacion from "./HistorialAsesoria/Recomendacion";
 import Documentos from "./HistorialAsesoria/Documentos";
+import Historial from "./HistorialAsesoria/Historial";
 
 
 export const Container = styled.View`
@@ -38,7 +39,7 @@ export const StyledText = styled.Text<StyledTextProps>`
 `
 
 export default function DetalleAsesoria() {
-  const [Status, setStatus] = useState("Documentos");
+  const [Status, setStatus] = useState("Historial");
 
   return (
     <Container>
@@ -54,7 +55,7 @@ export default function DetalleAsesoria() {
       {Status === "Ficha Personal" ? <Ficha /> : null}
       {Status === "Recomendaciones" ? <Recomendacion />  : null}
       {Status === "Documentos" ? <Documentos /> : null}
-      {Status === "Historial" ? <Notificaciones /> : null}
+      {Status === "Historial" ? <Historial /> : null}
     </Container>
   );
 }
