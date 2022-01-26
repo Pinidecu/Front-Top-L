@@ -28,7 +28,7 @@ const Container = styled.View<ContainerProps>`
   background-color: ${(props) => props.color};
   align-items: center;
   justify-content: center;
-
+  margin: 5px 0px;
   width: ${(props) => props.width}%;
   height: ${(props) => props.height};
   border-radius: 8px;

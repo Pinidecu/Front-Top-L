@@ -1,7 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
 import { Icon } from "react-native-elements";
-import { color } from "react-native-elements/dist/helpers";
 import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 
@@ -9,7 +7,7 @@ interface Props {
   ancho: number;
   alto: number;
   texto: string;
-  icon: string;
+  icon?: string;
 }
 interface ContainerProps {
   width: number;
@@ -26,7 +24,7 @@ const Container = styled.View<ContainerProps>`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
+  margin: 5px 0px;
   width: ${(props) => props.width}%;
   height: ${(props) => props.height};
   border: 1px solid ${Colors.mainCOlorPurpleDark};
