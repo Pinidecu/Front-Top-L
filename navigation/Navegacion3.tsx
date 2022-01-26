@@ -1,21 +1,20 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Text, View } from "react-native";
-import BarraIconos from "../src/Componentes/BarraIconos";
-import Destacado from "../src/Componentes/Destacado";
-import Explorar from "../src/Componentes/Explorar";
-import PerfilPublico from "../src/Pantallas/Perfil-Publico/Perfil-Publico";
-import Publicacion from "../src/Componentes/Publicacion";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Icon } from "react-native-elements";
-import Actividad from "../src/Componentes/Actividad";
-import { Inicio } from "./Inico";
 import { EquiposTab } from "./EquiposTab";
-import InfoPro from "../src/Componentes/InfoPro";
 import Colors from "../constants/Colors";
 import { Live } from "./Live";
 import { Inicio3 } from "./Inicio3";
+import styled from "styled-components/native";
+
+interface StyledImgProps {
+  width: number;
+  height: number;
+}
+export const StyledImg = styled.Image<StyledImgProps>`
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+`;
 
 const Tab = createBottomTabNavigator();
 
@@ -26,27 +25,36 @@ export default function Navegacion3() {
         screenOptions={({ route }) => ({
           headerShown: false,
           tabBarIcon: ({ focused, color, size }) => {
-            let iconName = "home";
+            let imagen = "Icon-Home";
 
             switch (route.name) {
               case "Inicio":
-                iconName = "home";
+                imagen = "Icon-Home";
                 break;
               case "Salas":
-                iconName = "videocam";
+                imagen = "Icon-Salas";
                 break;
-              case "Explorar":
-                iconName = "online-prediction";
+              case "Eventos":
+                imagen = "Icon-Livevideo";
+                break;
+              case "GenteTop":
+                imagen = "Icon-Community";
                 break;
               case "Perfil":
-                iconName = "person-outline";
+                imagen = "Icon-Profile";
                 break;
 
               default:
                 break;
             }
 
-            return <Icon name={iconName} size={size} color={color} />;
+            return (
+              <StyledImg
+                width={25}
+                height={25}
+                source={require(`../assets/images/NavP3/${imagen}.png`)}
+              />
+            );
           },
           tabBarActiveTintColor: `${Colors.mainCOlorPurpleDark}`,
           tabBarInactiveTintColor: `${Colors.SecondaryGray}`,
@@ -54,8 +62,9 @@ export default function Navegacion3() {
       >
         <Tab.Screen name="Inicio" component={Inicio3} />
         <Tab.Screen name="Salas" component={EquiposTab} />
-        <Tab.Screen name="Explorar" component={Live} />
-        <Tab.Screen name="Perfil" component={() => <InfoPro />} />
+        <Tab.Screen name="Eventos" component={Live} />
+        <Tab.Screen name="GenteTop" component={Live} />
+        <Tab.Screen name="Perfil" component={Live} />
       </Tab.Navigator>
     </NavigationContainer>
   );

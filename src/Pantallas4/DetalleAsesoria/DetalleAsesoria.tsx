@@ -10,7 +10,7 @@ import PerfilAgenda from "./PerfilAgenda/PerfilAgenda";
 import { Container } from "./styles";
 
 export default function DetalleAsesoria() {
-  const [Status, setStatus] = useState("Historial");
+  const [Status, setStatus] = useState("Documentos");
 
   return (
     <Container>

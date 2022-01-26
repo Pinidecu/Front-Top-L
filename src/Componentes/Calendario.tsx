@@ -4,7 +4,6 @@ import styled from "styled-components/native";
 import Colors from "../../constants/Colors";
 
 const Container = styled.View`
-   flex: 1;
     backgroundColor: ${Colors.white};
     margin-top: 100,
 `;

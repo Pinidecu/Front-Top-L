@@ -8,9 +8,12 @@ interface StyledTextProps {
   lh: number;
 }
 
-export const Container = styled.View`
+export const ContainerAll = styled.View`
   flex: 1;
   background-color: ${Colors.white};
+`;
+
+export const Container = styled.ScrollView`
 `;
 
 export const CenterContainer = styled.View`
@@ -47,11 +50,13 @@ export const Titulo = styled.Text`
   color: ${Colors.SecondaryGray};
   width: 90%;
   align-self: center;
-  margin-top: 20px;
+  margin: 10px 0px;
   text-align: center;
 `;
 
-export const BottomContainer = styled.View``;
+export const BottomContainer = styled.View`
+  width: 100%;
+`;
 
 export const StyledText = styled.Text<StyledTextProps>`
   color: ${(props) => props.color};

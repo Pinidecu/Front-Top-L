@@ -21,54 +21,62 @@ export default function BarraHistorial({ estado }: Props) {
       <Barra>
         {estado === "Ficha Personal" ? (
           <ComponenteBarra
-            estado={estado}
+            nombre={"Ficha Personal"}
             foto={FPB}
             color={Colors.mainCOlorPurpleDark}
+            colorText={Colors.white}
           />
         ) : (
           <ComponenteBarra
-            estado={estado}
+            nombre={"Ficha Personal"}
             foto={FPA}
             color={Colors.SecondaryPurpleLight}
+            colorText={Colors.mainCOlorPurpleLigth}
           />
         )}
         {estado === "Recomendaciones" ? (
           <ComponenteBarra
-            estado={estado}
+            nombre={"Recomendaciones"}
             foto={RecB}
             color={Colors.mainCOlorPurpleDark}
+            colorText={Colors.white}
           />
         ) : (
           <ComponenteBarra
-            estado={estado}
+            nombre={"Recomendaciones"}
             foto={RecA}
             color={Colors.SecondaryPurpleLight}
+            colorText={Colors.mainCOlorPurpleLigth}
           />
         )}
         {estado === "Documentos" ? (
           <ComponenteBarra
-            estado={estado}
+            nombre={"Documentos"}
             foto={DocB}
             color={Colors.mainCOlorPurpleDark}
+            colorText={Colors.white}
           />
         ) : (
           <ComponenteBarra
-            estado={estado}
+            nombre={"Documentos"}
             foto={DocA}
             color={Colors.SecondaryPurpleLight}
+            colorText={Colors.mainCOlorPurpleLigth}
           />
         )}
         {estado === "Historial" ? (
           <ComponenteBarra
-            estado={estado}
+            nombre={estado}
             foto={HistB}
             color={Colors.mainCOlorPurpleDark}
+            colorText={Colors.white}
           />
         ) : (
           <ComponenteBarra
-            estado={estado}
+            nombre={"Historial"}
             foto={HistA}
             color={Colors.SecondaryPurpleLight}
+            colorText={Colors.mainCOlorPurpleLigth}
           />
         )}
       </Barra>

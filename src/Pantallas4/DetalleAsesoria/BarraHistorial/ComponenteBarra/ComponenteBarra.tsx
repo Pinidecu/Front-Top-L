@@ -1,33 +1,33 @@
 import React from "react";
-import { Container, ContainerImg, StyledImg } from "./styles";
+import { Container, ContainerImg, StyledImg, StyledText } from "./styles";
 
 interface Props {
-  estado: string;
+  nombre: string;
   foto: string;
   color: string;
+  colorText: string;
 }
 
-export default function ComponenteBarra({ estado, foto, color }: Props) {
+export default function ComponenteBarra({
+  nombre,
+  foto,
+  color,
+  colorText,
+}: Props) {
   return (
     <Container color={color}>
       <ContainerImg>
-        {estado === "Ficha Personal" ? (
-          <StyledImg
-            width={100}
-            height={100}
-            source={{
-              uri: foto,
-            }}
-          />
-        ) : (
-          <StyledImg
-            width={100}
-            height={100}
-            source={{
-              uri: foto,
-            }}
-          />
-        )}
+        <StyledImg
+          width={25}
+          height={25}
+          resizeMode={"contain"}
+          source={{
+            uri: foto,
+          }}
+        />
+        <StyledText weight={400} size={12} lh={14} color={colorText}>
+          {nombre}
+        </StyledText>
       </ContainerImg>
     </Container>
   );
