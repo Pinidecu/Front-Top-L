@@ -1,11 +1,11 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Agenda4 from "../src/Pantallas4/Agenda4";
-import Busqueda from "../src/Pantallas4/Busqueda";
-import DetalleAsesoria from "../src/Pantallas4/DetalleAsesoria";
-import AreaProf from "../src/Pantallas4/AreaProf";
-import Documento from "../src/Pantallas4/Documento";
+import Agenda4 from "../src/Pantallas4/Agenda4/Agenda4";
+import Busqueda from "../src/Pantallas4/Busqueda/Busqueda";
+import DetalleAsesoria from "../src/Pantallas4/DetalleAsesoria/DetalleAsesoria";
+import AreaProf from "../src/Pantallas4/AreaProf/AreaProf";
+import Documento from "../src/Pantallas4/Documento/Documento";
 const Stack = createStackNavigator();
 export const Inicio4 = () => {
   return (

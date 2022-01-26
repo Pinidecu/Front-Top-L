@@ -1,43 +1,8 @@
 import React from "react";
-import { Text, View } from "react-native";
-import { Icon } from "react-native-elements";
-import styled from "styled-components/native";
-import Colors from "../../constants/Colors";
-import BarraIconos from "../Componentes/BarraIconos";
-import CajaArea from "../Componentes/CajaArea";
-
-
-export const Container = styled.View`
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 14px;
-  width: 100%;
-  background-color: ${Colors.white};
-`
-interface StyledTextProps {
-  size: number;
-  weight: number;
-  fs: string;
-  lh: number;
-  color: string;
-  sub?: boolean;
-}
-
-export const StyledText = styled.Text<StyledTextProps>`
-  font-family: Proxima Nova; 
-  font-size: ${(props) => props.size};
-  font-weight: ${(props) => props.weight};
-  font-style: ${(props) => props.fs};
-  line-height: ${(props) => props.lh};
-  color: ${(props) => props.color};
-`;
-
-export const TextContainer = styled.View`
-  width: 90%;
-  align-self: left;
-  margin-top: 30px;
-`;
+import Colors from "../../../constants/Colors";
+import BarraIconos from "../../Componentes/BarraIconos";
+import CajaArea from "./CajaArea/CajaArea";
+import { Container, StyledText, TextContainer } from "./styles";
 
 export default function AreaProf() {
   return (
