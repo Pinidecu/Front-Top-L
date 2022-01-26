@@ -20,17 +20,17 @@ export default function DescripDoc({icon1, icon2, icon3, categoria, fecha, hora,
         <Icono
         width={36.65}
         height={49}
-        source={require("../../assets/images/PDFDoc.png")} /> : null}
+        source={require("../../../../assets/images/PDFDoc.png")} /> : null}
       {icon2 ?
         <Icono
         width={36.65}
         height={49}
-        source={require("../../assets/images/VideoDoc.png")} /> : null}
+        source={require("../../../../assets/images/VideoDoc.png")} /> : null}
       {icon3 ?
         <Icono
         width={36.65}
         height={49}
-        source={require("../../assets/images/WordDoc.png")} /> : null}
+        source={require("../../../../assets/images/WordDoc.png")} /> : null}
       </DocCont>
         <NameContainer>
           <StyledText

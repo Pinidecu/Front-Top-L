@@ -2,13 +2,13 @@ import React from "react";
 import Colors from "../../../../constants/Colors";
 import ComponenteBarra from "./ComponenteBarra/ComponenteBarra";
 import FPA from "../../../../assets/images/Barra/FichaPerA.png";
-import FPB from "../../assets/images/Barra/FichaPerB.png";
-import RecA from "../../assets/images/Barra/RecomendA.png";
-import RecB from "../../assets/images/Barra/RecomendB.png";
-import DocA from "../../assets/images/Barra/DocumA.png";
-import DocB from "../../assets/images/Barra/DocumB.png";
-import HistA from "../../assets/images/Barra/HistorialA.png";
-import HistB from "../../assets/images/Barra/HistorialB.png";
+import FPB from "../../../../assets/images/Barra/FichaPerB.png";
+import RecA from "../../../../assets/images/Barra/RecomendA.png";
+import RecB from "../../../../assets/images/Barra/RecomendB.png";
+import DocA from "../../../../assets/images/Barra/DocumA.png";
+import DocB from "../../../../assets/images/Barra/DocumB.png";
+import HistA from "../../../../assets/images/Barra/HistorialA.png";
+import HistB from "../../../../assets/images/Barra/HistorialB.png";
 import { Barra, Container, Linea } from "./styles";
 
 interface Props {

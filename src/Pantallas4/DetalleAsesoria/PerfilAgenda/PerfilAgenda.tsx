@@ -19,7 +19,7 @@ export default function PerfilAgenda({ name, user, categoria, fecha, hora, tiemp
           width={40}
           height={40}
           radio={50}
-          source={require("../../assets/images/Sala/9.png")}
+          source={require("../../../../assets/images/Sala/9.png")}
         />
         <NameContainer>
           <StyledText

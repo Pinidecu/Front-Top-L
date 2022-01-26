@@ -28,14 +28,14 @@ export default function CajaArea({
           <Icono
             width={16}
             height={16}
-            source={require("../../assets/images/Bullet-selected.png")}
+            source={require("../../../../assets/images/Bullet-selected.png")}
           />
         ) : null}
         {icon2 ? (
           <Icono
             width={16}
             height={16}
-            source={require("../../assets/images/Bullet-select.png")}
+            source={require("../../../../assets/images/Bullet-select.png")}
           />
         ) : null}  
     </Containertext>

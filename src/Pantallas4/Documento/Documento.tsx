@@ -26,7 +26,7 @@ export default function Documento() {
           <Icono
             width={25}
             height={15}
-            source={require("../../assets/images/SF.png")} />
+            source={require("../../../assets/images/SF.png")} />
           <StyledText
             weight={700}
             size={12}

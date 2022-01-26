@@ -14,11 +14,11 @@ export const Inicio4 = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="Agenda4" component={Agenda4} />
       <Stack.Screen name="Documento" component={Documento} />
       <Stack.Screen name="AreaProf" component={AreaProf} />
       <Stack.Screen name="DetalleAsesoria" component={DetalleAsesoria} />
       <Stack.Screen name="Busqueda" component={Busqueda} />
-      <Stack.Screen name="Agenda4" component={Agenda4} />
     </Stack.Navigator>
   );
 };

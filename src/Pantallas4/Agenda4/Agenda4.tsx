@@ -3,7 +3,8 @@ import { Icon } from "react-native-elements";
 import Colors from "../../../constants/Colors";
 import BarraIconos from "../../Componentes/BarraIconos";
 import BotonAzul from "../../Componentes/BotonAzul";
-import { BottomContainer, CenterContainer, Container, ContainerItem, StyledText, TextContainer } from "./styles";
+import Calendario from "../../Componentes/Calendario";
+import { BottomContainer, CenterContainer, Container, ContainerItem, StyledText, TextContainer, Titulo } from "./styles";
 
 export default function Agenda4() {
   return (
@@ -48,7 +49,10 @@ export default function Agenda4() {
           Selecciona una fecha para agendar tu asesoría{" "}
         </StyledText>
       </TextContainer>
-      {/*Calendario*/}
+      <Titulo>April</Titulo>
+      <Calendario />
+      <Titulo>May</Titulo>
+      <Calendario />
       <BottomContainer>
         <BotonAzul
           ancho={90}

@@ -121,7 +121,7 @@ export default function CajaHist({ cliente, categoria, fecha, hora, tiempo }: Pr
           <StyledImg
             width={16}
             height={16}
-            source={require("../../assets/images/BulletGray.png")}
+            source={require("../../../../../assets/images/BulletGray.png")}
           />
           </BullCont>
         </IndicadorView>

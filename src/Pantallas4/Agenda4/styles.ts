@@ -38,6 +38,19 @@ export const TextContainer = styled.View`
   padding: 17px 10px;
 `;
 
+export const Titulo = styled.Text`
+  font-family: ABeeZee;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 21.28px;
+  color: ${Colors.SecondaryGray};
+  width: 90%;
+  align-self: center;
+  margin-top: 20px;
+  text-align: center;
+`;
+
 export const BottomContainer = styled.View``;
 
 export const StyledText = styled.Text<StyledTextProps>`
