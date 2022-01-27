@@ -1,10 +1,10 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Recomendacion from "../src/Pantallas3/Recomendacion";
-import GenteTop from "../src/Pantallas3/GenteTop";
-import NewRespuesta from "../src/Pantallas3/NewRespuesta";
-import SalaDetalle3 from "../src/Pantallas3/Sala-Detalle3";
+import Recomendacion from "../src/Pantallas3/Recomendacion/Recomendacion";
+import GenteTop from "../src/Pantallas3/GenteTop/GenteTop";
+import NewRespuesta from "../src/Pantallas3/NewRespuesta/NewRespuesta";
+import SalaDetalle3 from "../src/Pantallas3/SalaDetalle3/SalaDetalle3";
 
 const Stack = createStackNavigator();
 export const Inicio3 = () => {

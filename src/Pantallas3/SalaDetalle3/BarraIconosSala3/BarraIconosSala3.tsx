@@ -1,8 +1,7 @@
 import React from "react";
-import { Text, View, Image } from "react-native";
 import { Icon } from "react-native-elements";
-import styled from "styled-components/native";
-import Colors from "../../../constants/Colors";
+import Colors from "../../../../constants/Colors";
+import { Campana, Container, LeftContainer, LiveUsersView, Punto, RigthContainer, StyledImg, StyledText } from "./styles";
 
 interface Props {
   titulo: string;
@@ -18,73 +17,7 @@ interface Props {
   closeBlack?: boolean;
 }
 
-interface StyledContainerProps {
-  margin: string;
-}
-
-const Container = styled.View<StyledContainerProps>`
-  flex-direction: row;
-  width: 100%;
-  padding: 10px 20px;
-  margin-bottom: ${(props) => props.margin};
-  justify-content: space-between;
-  align-items: center;
-`;
-
-interface StyledTextProps {
-  color: string;
-}
-const StyledText = styled.Text<StyledTextProps>`
-  color: ${(props) => props.color};
-  font-family: Proxima Nova;
-  font-style: normal;
-  font-size: 14;
-  font-weight: 700;
-  line-height: 18;
-`;
-const LeftContainer = styled.View`
-  flex-direction: row;
-  align-items: space-between;
-  column-gap: 15px;
-`;
-const LiveUsersView = styled.View`
-  flex-direction: row;
-  align-items: space-between;
-  align-items: center;
-  column-gap:5px;
-`;
-const RigthContainer = styled.View`
-  flex-direction: row
-  align-items: center;
-`;
-
-interface StyledImgProps {
-  width: number;
-  height: number;
-}
-const StyledImg = styled.Image<StyledImgProps>`
-  width: ${(props) => props.width}px;
-  height: ${(props) => props.height}px;
-`;
-const Campana = styled.View`
-  margin-bottom: 5px;
-`;
-
-interface PuntoProps {
-  color: string;
-}
-const Punto = styled.View<PuntoProps>`
-  background-color: ${(props) => props.color};
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  position: relative;
-  left: 10px;
-  top: 5px;
-  z-index: 1;
-`;
-
-export default function BarraIconos({
+export default function BarraIconosSala3({
   titulo,
   margin,
   colorIcons,
