@@ -12,5 +12,5 @@ import Navegacion5 from "./navigation/Navegacion5";
 import PerfilProEditar1 from "./src/Pantallas5/PerfilProEditar1/PerfilProEditar1";
 
 export default function App() {
-  return <Navegacion4 />;
+  return <Navegacion3 />;
 }

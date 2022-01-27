@@ -109,7 +109,7 @@ export default function Publicacion3({
                 height={10}
                 radio={""}
                 margin={"0px"}
-                source={require("../../../assets/images/comentario.png")}
+                source={require("../../../../assets/images/comentario.png")}
               />{" "}
               <StyledText
                 size={12}
@@ -127,7 +127,7 @@ export default function Publicacion3({
                 height={10}
                 radio={""}
                 margin={"0px"}
-                source={require("../../../assets/images/send.png")}
+                source={require("../../../../assets/images/send.png")}
               />
               <StyledText
                 size={12}

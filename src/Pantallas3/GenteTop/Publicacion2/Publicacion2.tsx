@@ -1,9 +1,9 @@
 import React from "react";
 import { Icon } from "react-native-elements";
 import Colors from "../../../../constants/Colors";
-import PublicacionSinImg from "../../../Componentes/PublicacionSinImg";
 import fotoPerfilPublicacion from "../../../../assets/images/Sala/12.png";
 import { Container, Funciones, Info, MasView, MegustaView, NombreView, StyledImg, StyledImgPerfil, StyledText, Titulo, TituloView } from "./styles";
+import PublicacionSinImg from "./PublicacionSinImg/PublicacionSinImg";
 
 interface Props {
   fotoPerfil: string;
@@ -44,11 +44,7 @@ export default function Publicacion2({
       </TituloView>
       <Info>
         <MasView>
-          <Icon
-            name="add"
-            color={Colors.mainCOlorPurpleLigth}
-            size={15}
-          />
+          <Icon name="add" color={Colors.mainCOlorPurpleLigth} size={15} />
         </MasView>
         <StyledImgPerfil
           width={45}
@@ -102,7 +98,7 @@ export default function Publicacion2({
                 height={10}
                 radio={""}
                 margin={"0px"}
-                source={require("../../../assets/images/comentario.png")}
+                source={require("../../../../assets/images/comentario.png")}
               />{" "}
               <StyledText
                 size={12}
@@ -120,7 +116,7 @@ export default function Publicacion2({
                 height={10}
                 radio={""}
                 margin={"0px"}
-                source={require("../../../assets/images/send.png")}
+                source={require("../../../../assets/images/send.png")}
               />
               <StyledText
                 size={12}

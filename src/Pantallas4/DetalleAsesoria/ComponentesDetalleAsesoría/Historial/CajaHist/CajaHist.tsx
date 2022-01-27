@@ -21,7 +21,7 @@ export default function CajaHist({ cliente, categoria, fecha, hora, tiempo }: Pr
             lh={14}
             color={Colors.mainColorBlack}
           >
-            Cliente: 
+            Cliente:
           </StyledText>
           <StyledText
             weight={400}
@@ -118,11 +118,11 @@ export default function CajaHist({ cliente, categoria, fecha, hora, tiempo }: Pr
             </StyledText>
           </LeftView>
           <BullCont>
-          <StyledImg
-            width={16}
-            height={16}
-            source={require("../../../../../assets/images/BulletGray.png")}
-          />
+            <StyledImg
+              width={16}
+              height={16}
+              source={require("../../../../../../assets/images/BulletGray.png")}
+            />
           </BullCont>
         </IndicadorView>
       </ImgCont>

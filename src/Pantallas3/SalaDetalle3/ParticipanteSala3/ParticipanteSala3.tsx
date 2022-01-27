@@ -23,7 +23,7 @@ export default function ParticipanteSala3({
             width={35}
             height={35}
             radio={"50%"}
-            source={require("../../../assets/images/mute.png")}
+            source={require("../../../../assets/images/mute.png")}
           />
         </MuteView>
       ) : null}

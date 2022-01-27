@@ -38,7 +38,7 @@ export default function BarraIconosSala3({
           <StyledImg
             width={15}
             height={15}
-            source={require("../../../assets/images/ojo.png")}
+            source={require("../../../../assets/images/ojo.png")}
           />
           <StyledText
             color={colorText ? colorText : Colors.mainCOlorPurpleLigth}
@@ -60,7 +60,7 @@ export default function BarraIconosSala3({
             <StyledImg
               width={20}
               height={20}
-              source={require("../../../assets/images/campana.png")}
+              source={require("../../../../assets/images/campana.png")}
             />
           </Campana>
         ) : null}

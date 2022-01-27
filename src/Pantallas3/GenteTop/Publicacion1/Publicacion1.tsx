@@ -67,7 +67,7 @@ export default function Publicacion1({
               height={10}
               radio={""}
               margin={"0px"}
-              source={require("../../../assets/images/candado.png")}
+              source={require("../../../../assets/images/candado.png")}
             />
           </NombreView>
           <StyledText
@@ -122,7 +122,7 @@ export default function Publicacion1({
                 height={10}
                 radio={""}
                 margin={"0px"}
-                source={require("../../../assets/images/comentario.png")}
+                source={require("../../../../assets/images/comentario.png")}
               />{" "}
               <StyledText
                 size={12}
@@ -140,7 +140,7 @@ export default function Publicacion1({
                 height={10}
                 radio={""}
                 margin={"0px"}
-                source={require("../../../assets/images/send.png")}
+                source={require("../../../../assets/images/send.png")}
               />
               <StyledText
                 size={12}

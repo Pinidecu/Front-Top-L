@@ -21,7 +21,7 @@ export default function PerfilSalaDetalle3() {
         width={40}
         height={40}
         radio={"50%"}
-        source={require("../../../assets/images/AddCall.png")}
+        source={require("../../../../assets/images/AddCall.png")}
       />
     </Container>
   );
